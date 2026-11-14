@@ -1,0 +1,11 @@
+Session: nv_20261005_153748
+Provider: NVIDIA NeMo Local (no cloud)
+ASR: nemotron-3.5 | Diarization: nemotron-3-diarization
+Audio: 36.48s | Wall: 46.48s | RTF: 1.274
+First Text: 3585.14ms | First Partial: 3585.14ms | Final Turn: 38819.19ms
+================================================================
+
+Doctor: Good morning, Mister Johnson. How are you feeling today? Good morning, doctor. I've been experiencing some pain in my chest and shortness of breath. It's been bothering me for a few weeks now. I'm glad you came in. It's important not to ignore any chest related symptoms let me ask you a few questions to better understand your condition. Have you noticed if these symptoms occurred during any specific activities or times of the day? Yes, I've no
+
+Doctor: 
+

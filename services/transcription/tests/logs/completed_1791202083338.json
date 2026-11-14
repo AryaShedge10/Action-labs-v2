@@ -1,0 +1,3704 @@
+{
+  "audio_processed": 221.05599975585938,
+  "event_id": "event_2656",
+  "transcript": "Good morning Mr. Johnson. How are you feeling today? Good morning, doctor. I've been experiencing some pain in my chest and shortness of breath. It's been bothering me for a few weeks now. I'm glad you came in. It's important not to ignore any chest related symptoms. Let me ask you a few questions to better understand your condition. Have you noticed if these symptoms occurred during any specific activities or times of the day? Yes, I've noticed that it happens mostly when I push myself physically like when I'm climbing stairs or walking fast. All right, do you have any history of heart disease in your family? Not that I'm aware of. My parents and siblings don't have any heart related issues based on your symptoms and their relation to physical activity. It's important to consider your heart health. I'd like to order an electrocardiogram also called ECG to get a baseline assessment of your heart's electrical activity, it will help us determine if any abnormalities are present. I trust your judgment, doctor please go ahead with the necessary tests. I want to make sure everything is okay. Thank you for your trust, Mister Johnson in the meantime. I recommend making some lifestyle changes to support your heart health. Have you been following a balanced diet and engaging in regular exercise? I must admit my diet hasn't been the healthiest lately and my exercise routine is almost nonexistent due to work. It's never too late to make positive changes. Mister Johnson, a heart healthy diet with fruits, vegetables, whole grains, and lean proteins, along with regular physical activity, can significantly improve your heart's condition. It's also essential to manage stress and get enough sleep that would be great, doctor. I'm ready to command to a healthier lifestyle. Are there any medications I should be taking or any other treatments we should consider? We'll wait for the ECG results before discussing specific medications as they will depend on the findings if necessary we may consider prescribing medications to manage your symptoms and support your heart health in the meantime. I encourage you to take it easy and avoid any heavy activities. I appreciate your guidance, doctor. I'll be cautious and prioritize my health. Is there anything else I should be aware of or any warning signs I should watch out for? Some warning signs to watch out for include severe chest pain or pressure. Pain radiating to your arms or jaw, and sudden shortness of brad fever in at rest. If you experience any of these symptoms, it's crucial to see immediate medical attention. I'll keep a close eye on those symptoms and won't hesitate to reach out for help. Thank you for your time and expertise. You're welcome Mr. Johnson, remember we're here to support you every step of the way. Let's focus on getting your test schedule and making those positive lifestyle changes. We'll discuss the results and next steps once we have more information. Take care and feel better. Thank you, Doctor. I appreciate your care and concern. I'll be in touch and follow your advice. Goodbye. Goodbye, Mister Johnson. Take care and stay well",
+  "type": "conversation.item.input_audio_transcription.completed",
+  "words": [
+    {
+      "confidence": 1,
+      "end": 2,
+      "speaker": 1,
+      "start": 1.92,
+      "word": "Good"
+    },
+    {
+      "confidence": 1,
+      "end": 2.4,
+      "speaker": 1,
+      "start": 2.16,
+      "word": "morning"
+    },
+    {
+      "confidence": 1,
+      "end": 3.04,
+      "speaker": 1,
+      "start": 2.96,
+      "word": "Mr."
+    },
+    {
+      "confidence": 1,
+      "end": 3.6,
+      "speaker": 1,
+      "start": 3.2,
+      "word": "Johnson."
+    },
+    {
+      "confidence": 1,
+      "end": 4.16,
+      "speaker": 1,
+      "start": 4.08,
+      "word": "How"
+    },
+    {
+      "confidence": 1,
+      "end": 4.32,
+      "speaker": 1,
+      "start": 4.24,
+      "word": "are"
+    },
+    {
+      "confidence": 1,
+      "end": 4.48,
+      "speaker": 1,
+      "start": 4.4,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 4.72,
+      "speaker": 1,
+      "start": 4.48,
+      "word": "feeling"
+    },
+    {
+      "confidence": 1,
+      "end": 4.96,
+      "speaker": 1,
+      "start": 4.88,
+      "word": "today?"
+    },
+    {
+      "confidence": 1,
+      "end": 6.72,
+      "speaker": 1,
+      "start": 6.64,
+      "word": "Good"
+    },
+    {
+      "confidence": 1,
+      "end": 7.04,
+      "speaker": 1,
+      "start": 6.8,
+      "word": "morning,"
+    },
+    {
+      "confidence": 1,
+      "end": 7.92,
+      "speaker": 1,
+      "start": 7.76,
+      "word": "doctor."
+    },
+    {
+      "confidence": 1,
+      "end": 8.88,
+      "speaker": 2,
+      "start": 8.72,
+      "word": "I've"
+    },
+    {
+      "confidence": 1,
+      "end": 8.96,
+      "speaker": 2,
+      "start": 8.88,
+      "word": "been"
+    },
+    {
+      "confidence": 1,
+      "end": 9.52,
+      "speaker": 2,
+      "start": 9.04,
+      "word": "experiencing"
+    },
+    {
+      "confidence": 1,
+      "end": 10.08,
+      "speaker": 2,
+      "start": 10,
+      "word": "some"
+    },
+    {
+      "confidence": 1,
+      "end": 10.48,
+      "speaker": 2,
+      "start": 10.24,
+      "word": "pain"
+    },
+    {
+      "confidence": 1,
+      "end": 10.8,
+      "speaker": 2,
+      "start": 10.72,
+      "word": "in"
+    },
+    {
+      "confidence": 1,
+      "end": 10.96,
+      "speaker": 2,
+      "start": 10.88,
+      "word": "my"
+    },
+    {
+      "confidence": 1,
+      "end": 11.36,
+      "speaker": 2,
+      "start": 11.04,
+      "word": "chest"
+    },
+    {
+      "confidence": 1,
+      "end": 11.76,
+      "speaker": 2,
+      "start": 11.68,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 12.16,
+      "speaker": 2,
+      "start": 11.76,
+      "word": "shortness"
+    },
+    {
+      "confidence": 1,
+      "end": 12.24,
+      "speaker": 2,
+      "start": 12.16,
+      "word": "of"
+    },
+    {
+      "confidence": 1,
+      "end": 12.48,
+      "speaker": 2,
+      "start": 12.32,
+      "word": "breath."
+    },
+    {
+      "confidence": 1,
+      "end": 13.52,
+      "speaker": 2,
+      "start": 13.36,
+      "word": "It's"
+    },
+    {
+      "confidence": 1,
+      "end": 13.68,
+      "speaker": 2,
+      "start": 13.6,
+      "word": "been"
+    },
+    {
+      "confidence": 1,
+      "end": 14.16,
+      "speaker": 2,
+      "start": 13.84,
+      "word": "bothering"
+    },
+    {
+      "confidence": 1,
+      "end": 14.32,
+      "speaker": 2,
+      "start": 14.24,
+      "word": "me"
+    },
+    {
+      "confidence": 1,
+      "end": 14.64,
+      "speaker": 2,
+      "start": 14.56,
+      "word": "for"
+    },
+    {
+      "confidence": 1,
+      "end": 14.8,
+      "speaker": 2,
+      "start": 14.72,
+      "word": "a"
+    },
+    {
+      "confidence": 1,
+      "end": 14.96,
+      "speaker": 2,
+      "start": 14.88,
+      "word": "few"
+    },
+    {
+      "confidence": 1,
+      "end": 15.28,
+      "speaker": 2,
+      "start": 15.12,
+      "word": "weeks"
+    },
+    {
+      "confidence": 1,
+      "end": 15.6,
+      "speaker": 2,
+      "start": 15.52,
+      "word": "now."
+    },
+    {
+      "confidence": 1,
+      "end": 17.44,
+      "speaker": 1,
+      "start": 17.28,
+      "word": "I'm"
+    },
+    {
+      "confidence": 1,
+      "end": 17.76,
+      "speaker": 1,
+      "start": 17.52,
+      "word": "glad"
+    },
+    {
+      "confidence": 1,
+      "end": 17.84,
+      "speaker": 1,
+      "start": 17.76,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 18,
+      "speaker": 1,
+      "start": 17.84,
+      "word": "came"
+    },
+    {
+      "confidence": 1,
+      "end": 18.16,
+      "speaker": 1,
+      "start": 18.08,
+      "word": "in."
+    },
+    {
+      "confidence": 1,
+      "end": 18.88,
+      "speaker": 1,
+      "start": 18.64,
+      "word": "It's"
+    },
+    {
+      "confidence": 1,
+      "end": 19.12,
+      "speaker": 1,
+      "start": 18.96,
+      "word": "important"
+    },
+    {
+      "confidence": 1,
+      "end": 19.36,
+      "speaker": 1,
+      "start": 19.28,
+      "word": "not"
+    },
+    {
+      "confidence": 1,
+      "end": 19.52,
+      "speaker": 1,
+      "start": 19.44,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 19.84,
+      "speaker": 1,
+      "start": 19.68,
+      "word": "ignore"
+    },
+    {
+      "confidence": 1,
+      "end": 20.08,
+      "speaker": 1,
+      "start": 20,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 20.64,
+      "speaker": 1,
+      "start": 20.32,
+      "word": "chest"
+    },
+    {
+      "confidence": 1,
+      "end": 20.96,
+      "speaker": 1,
+      "start": 20.64,
+      "word": "related"
+    },
+    {
+      "confidence": 1,
+      "end": 21.44,
+      "speaker": 1,
+      "start": 21.12,
+      "word": "symptoms."
+    },
+    {
+      "confidence": 1,
+      "end": 22.4,
+      "speaker": 1,
+      "start": 22.24,
+      "word": "Let"
+    },
+    {
+      "confidence": 1,
+      "end": 22.48,
+      "speaker": 1,
+      "start": 22.4,
+      "word": "me"
+    },
+    {
+      "confidence": 1,
+      "end": 22.64,
+      "speaker": 1,
+      "start": 22.56,
+      "word": "ask"
+    },
+    {
+      "confidence": 1,
+      "end": 22.8,
+      "speaker": 1,
+      "start": 22.72,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 23.12,
+      "speaker": 1,
+      "start": 23.04,
+      "word": "a"
+    },
+    {
+      "confidence": 1,
+      "end": 23.28,
+      "speaker": 1,
+      "start": 23.2,
+      "word": "few"
+    },
+    {
+      "confidence": 1,
+      "end": 23.6,
+      "speaker": 1,
+      "start": 23.36,
+      "word": "questions"
+    },
+    {
+      "confidence": 1,
+      "end": 24,
+      "speaker": 1,
+      "start": 23.92,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 24.32,
+      "speaker": 1,
+      "start": 24.08,
+      "word": "better"
+    },
+    {
+      "confidence": 1,
+      "end": 24.88,
+      "speaker": 1,
+      "start": 24.64,
+      "word": "understand"
+    },
+    {
+      "confidence": 1,
+      "end": 25.04,
+      "speaker": 1,
+      "start": 24.96,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 25.36,
+      "speaker": 1,
+      "start": 25.2,
+      "word": "condition."
+    },
+    {
+      "confidence": 1,
+      "end": 26.32,
+      "speaker": 1,
+      "start": 26.24,
+      "word": "Have"
+    },
+    {
+      "confidence": 1,
+      "end": 26.48,
+      "speaker": 1,
+      "start": 26.4,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 26.72,
+      "speaker": 1,
+      "start": 26.48,
+      "word": "noticed"
+    },
+    {
+      "confidence": 1,
+      "end": 26.96,
+      "speaker": 1,
+      "start": 26.88,
+      "word": "if"
+    },
+    {
+      "confidence": 1,
+      "end": 27.12,
+      "speaker": 1,
+      "start": 27.04,
+      "word": "these"
+    },
+    {
+      "confidence": 1,
+      "end": 27.52,
+      "speaker": 1,
+      "start": 27.28,
+      "word": "symptoms"
+    },
+    {
+      "confidence": 1,
+      "end": 28,
+      "speaker": 1,
+      "start": 27.68,
+      "word": "occurred"
+    },
+    {
+      "confidence": 1,
+      "end": 28.24,
+      "speaker": 1,
+      "start": 28.08,
+      "word": "during"
+    },
+    {
+      "confidence": 1,
+      "end": 28.56,
+      "speaker": 1,
+      "start": 28.48,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 29.04,
+      "speaker": 1,
+      "start": 28.64,
+      "word": "specific"
+    },
+    {
+      "confidence": 1,
+      "end": 29.6,
+      "speaker": 1,
+      "start": 29.12,
+      "word": "activities"
+    },
+    {
+      "confidence": 1,
+      "end": 30.16,
+      "speaker": 1,
+      "start": 30.08,
+      "word": "or"
+    },
+    {
+      "confidence": 1,
+      "end": 30.4,
+      "speaker": 1,
+      "start": 30.16,
+      "word": "times"
+    },
+    {
+      "confidence": 1,
+      "end": 30.48,
+      "speaker": 1,
+      "start": 30.4,
+      "word": "of"
+    },
+    {
+      "confidence": 1,
+      "end": 30.64,
+      "speaker": 1,
+      "start": 30.56,
+      "word": "the"
+    },
+    {
+      "confidence": 1,
+      "end": 30.72,
+      "speaker": 1,
+      "start": 30.64,
+      "word": "day?"
+    },
+    {
+      "confidence": 1,
+      "end": 32.24,
+      "speaker": 2,
+      "start": 32.16,
+      "word": "Yes,"
+    },
+    {
+      "confidence": 1,
+      "end": 33.36,
+      "speaker": 2,
+      "start": 33.2,
+      "word": "I've"
+    },
+    {
+      "confidence": 1,
+      "end": 33.68,
+      "speaker": 2,
+      "start": 33.52,
+      "word": "noticed"
+    },
+    {
+      "confidence": 1,
+      "end": 33.92,
+      "speaker": 2,
+      "start": 33.84,
+      "word": "that"
+    },
+    {
+      "confidence": 1,
+      "end": 34.16,
+      "speaker": 2,
+      "start": 34.08,
+      "word": "it"
+    },
+    {
+      "confidence": 1,
+      "end": 34.48,
+      "speaker": 2,
+      "start": 34.32,
+      "word": "happens"
+    },
+    {
+      "confidence": 1,
+      "end": 35.04,
+      "speaker": 2,
+      "start": 34.88,
+      "word": "mostly"
+    },
+    {
+      "confidence": 1,
+      "end": 35.36,
+      "speaker": 2,
+      "start": 35.28,
+      "word": "when"
+    },
+    {
+      "confidence": 1,
+      "end": 35.52,
+      "speaker": 2,
+      "start": 35.44,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 35.84,
+      "speaker": 2,
+      "start": 35.6,
+      "word": "push"
+    },
+    {
+      "confidence": 1,
+      "end": 36.24,
+      "speaker": 2,
+      "start": 35.84,
+      "word": "myself"
+    },
+    {
+      "confidence": 1,
+      "end": 36.88,
+      "speaker": 2,
+      "start": 36.48,
+      "word": "physically"
+    },
+    {
+      "confidence": 1,
+      "end": 38,
+      "speaker": 2,
+      "start": 37.92,
+      "word": "like"
+    },
+    {
+      "confidence": 1,
+      "end": 38.16,
+      "speaker": 2,
+      "start": 38.08,
+      "word": "when"
+    },
+    {
+      "confidence": 1,
+      "end": 38.32,
+      "speaker": 2,
+      "start": 38.16,
+      "word": "I'm"
+    },
+    {
+      "confidence": 1,
+      "end": 38.56,
+      "speaker": 2,
+      "start": 38.4,
+      "word": "climbing"
+    },
+    {
+      "confidence": 1,
+      "end": 39.12,
+      "speaker": 2,
+      "start": 38.88,
+      "word": "stairs"
+    },
+    {
+      "confidence": 1,
+      "end": 39.44,
+      "speaker": 2,
+      "start": 39.36,
+      "word": "or"
+    },
+    {
+      "confidence": 1,
+      "end": 39.84,
+      "speaker": 2,
+      "start": 39.68,
+      "word": "walking"
+    },
+    {
+      "confidence": 1,
+      "end": 40.32,
+      "speaker": 2,
+      "start": 40.16,
+      "word": "fast."
+    },
+    {
+      "confidence": 1,
+      "end": 42.16,
+      "speaker": 1,
+      "start": 42.08,
+      "word": "All"
+    },
+    {
+      "confidence": 1,
+      "end": 42.24,
+      "speaker": 1,
+      "start": 42.16,
+      "word": "right,"
+    },
+    {
+      "confidence": 1,
+      "end": 42.88,
+      "speaker": 1,
+      "start": 42.8,
+      "word": "do"
+    },
+    {
+      "confidence": 1,
+      "end": 42.96,
+      "speaker": 1,
+      "start": 42.88,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 43.12,
+      "speaker": 1,
+      "start": 43.04,
+      "word": "have"
+    },
+    {
+      "confidence": 1,
+      "end": 43.44,
+      "speaker": 1,
+      "start": 43.36,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 43.76,
+      "speaker": 1,
+      "start": 43.52,
+      "word": "history"
+    },
+    {
+      "confidence": 1,
+      "end": 43.92,
+      "speaker": 1,
+      "start": 43.84,
+      "word": "of"
+    },
+    {
+      "confidence": 1,
+      "end": 44.4,
+      "speaker": 1,
+      "start": 44.16,
+      "word": "heart"
+    },
+    {
+      "confidence": 1,
+      "end": 44.64,
+      "speaker": 1,
+      "start": 44.4,
+      "word": "disease"
+    },
+    {
+      "confidence": 1,
+      "end": 44.8,
+      "speaker": 1,
+      "start": 44.72,
+      "word": "in"
+    },
+    {
+      "confidence": 1,
+      "end": 44.96,
+      "speaker": 1,
+      "start": 44.88,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 45.2,
+      "speaker": 1,
+      "start": 45.04,
+      "word": "family?"
+    },
+    {
+      "confidence": 1,
+      "end": 46.88,
+      "speaker": 2,
+      "start": 46.8,
+      "word": "Not"
+    },
+    {
+      "confidence": 1,
+      "end": 47.04,
+      "speaker": 2,
+      "start": 46.96,
+      "word": "that"
+    },
+    {
+      "confidence": 1,
+      "end": 47.2,
+      "speaker": 2,
+      "start": 47.04,
+      "word": "I'm"
+    },
+    {
+      "confidence": 1,
+      "end": 47.44,
+      "speaker": 2,
+      "start": 47.28,
+      "word": "aware"
+    },
+    {
+      "confidence": 1,
+      "end": 47.6,
+      "speaker": 2,
+      "start": 47.52,
+      "word": "of."
+    },
+    {
+      "confidence": 1,
+      "end": 48.64,
+      "speaker": 2,
+      "start": 48.56,
+      "word": "My"
+    },
+    {
+      "confidence": 1,
+      "end": 48.96,
+      "speaker": 2,
+      "start": 48.72,
+      "word": "parents"
+    },
+    {
+      "confidence": 1,
+      "end": 49.68,
+      "speaker": 2,
+      "start": 49.6,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 50.16,
+      "speaker": 2,
+      "start": 49.76,
+      "word": "siblings"
+    },
+    {
+      "confidence": 1,
+      "end": 50.4,
+      "speaker": 2,
+      "start": 50.24,
+      "word": "don't"
+    },
+    {
+      "confidence": 1,
+      "end": 50.48,
+      "speaker": 2,
+      "start": 50.4,
+      "word": "have"
+    },
+    {
+      "confidence": 1,
+      "end": 50.8,
+      "speaker": 2,
+      "start": 50.72,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 51.44,
+      "speaker": 2,
+      "start": 51.2,
+      "word": "heart"
+    },
+    {
+      "confidence": 1,
+      "end": 51.76,
+      "speaker": 2,
+      "start": 51.44,
+      "word": "related"
+    },
+    {
+      "confidence": 1,
+      "end": 52,
+      "speaker": 2,
+      "start": 51.84,
+      "word": "issues"
+    },
+    {
+      "confidence": 1,
+      "end": 53.92,
+      "speaker": 1,
+      "start": 53.68,
+      "word": "based"
+    },
+    {
+      "confidence": 1,
+      "end": 54.08,
+      "speaker": 1,
+      "start": 54,
+      "word": "on"
+    },
+    {
+      "confidence": 1,
+      "end": 54.24,
+      "speaker": 1,
+      "start": 54.16,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 54.48,
+      "speaker": 1,
+      "start": 54.24,
+      "word": "symptoms"
+    },
+    {
+      "confidence": 1,
+      "end": 55.12,
+      "speaker": 1,
+      "start": 55.04,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 55.28,
+      "speaker": 1,
+      "start": 55.2,
+      "word": "their"
+    },
+    {
+      "confidence": 1,
+      "end": 55.52,
+      "speaker": 1,
+      "start": 55.36,
+      "word": "relation"
+    },
+    {
+      "confidence": 1,
+      "end": 55.68,
+      "speaker": 1,
+      "start": 55.6,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 56,
+      "speaker": 1,
+      "start": 55.76,
+      "word": "physical"
+    },
+    {
+      "confidence": 1,
+      "end": 56.56,
+      "speaker": 1,
+      "start": 56.16,
+      "word": "activity."
+    },
+    {
+      "confidence": 1,
+      "end": 57.36,
+      "speaker": 1,
+      "start": 57.12,
+      "word": "It's"
+    },
+    {
+      "confidence": 1,
+      "end": 57.52,
+      "speaker": 1,
+      "start": 57.44,
+      "word": "important"
+    },
+    {
+      "confidence": 1,
+      "end": 57.84,
+      "speaker": 1,
+      "start": 57.76,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 58.24,
+      "speaker": 1,
+      "start": 57.92,
+      "word": "consider"
+    },
+    {
+      "confidence": 1,
+      "end": 58.48,
+      "speaker": 1,
+      "start": 58.4,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 58.96,
+      "speaker": 1,
+      "start": 58.72,
+      "word": "heart"
+    },
+    {
+      "confidence": 1,
+      "end": 59.2,
+      "speaker": 1,
+      "start": 59.04,
+      "word": "health."
+    },
+    {
+      "confidence": 1,
+      "end": 59.92,
+      "speaker": 1,
+      "start": 59.76,
+      "word": "I'd"
+    },
+    {
+      "confidence": 1,
+      "end": 60.08,
+      "speaker": 1,
+      "start": 60,
+      "word": "like"
+    },
+    {
+      "confidence": 1,
+      "end": 60.56,
+      "speaker": 1,
+      "start": 60.48,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 60.8,
+      "speaker": 1,
+      "start": 60.64,
+      "word": "order"
+    },
+    {
+      "confidence": 1,
+      "end": 61.04,
+      "speaker": 1,
+      "start": 60.96,
+      "word": "an"
+    },
+    {
+      "confidence": 1,
+      "end": 61.92,
+      "speaker": 1,
+      "start": 61.2,
+      "word": "electrocardiogram"
+    },
+    {
+      "confidence": 1,
+      "end": 62.48,
+      "speaker": 1,
+      "start": 62.4,
+      "word": "also"
+    },
+    {
+      "confidence": 1,
+      "end": 62.8,
+      "speaker": 1,
+      "start": 62.56,
+      "word": "called"
+    },
+    {
+      "confidence": 1,
+      "end": 63.36,
+      "speaker": 1,
+      "start": 63.04,
+      "word": "ECG"
+    },
+    {
+      "confidence": 1,
+      "end": 64.16,
+      "speaker": 1,
+      "start": 64.08,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 64.24,
+      "speaker": 1,
+      "start": 64.16,
+      "word": "get"
+    },
+    {
+      "confidence": 1,
+      "end": 64.4,
+      "speaker": 1,
+      "start": 64.32,
+      "word": "a"
+    },
+    {
+      "confidence": 1,
+      "end": 64.88,
+      "speaker": 1,
+      "start": 64.48,
+      "word": "baseline"
+    },
+    {
+      "confidence": 1,
+      "end": 65.2,
+      "speaker": 1,
+      "start": 64.96,
+      "word": "assessment"
+    },
+    {
+      "confidence": 1,
+      "end": 65.44,
+      "speaker": 1,
+      "start": 65.36,
+      "word": "of"
+    },
+    {
+      "confidence": 1,
+      "end": 65.52,
+      "speaker": 1,
+      "start": 65.44,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 66.16,
+      "speaker": 1,
+      "start": 65.76,
+      "word": "heart's"
+    },
+    {
+      "confidence": 1,
+      "end": 66.56,
+      "speaker": 1,
+      "start": 66.24,
+      "word": "electrical"
+    },
+    {
+      "confidence": 1,
+      "end": 66.96,
+      "speaker": 1,
+      "start": 66.56,
+      "word": "activity,"
+    },
+    {
+      "confidence": 1,
+      "end": 67.44,
+      "speaker": 1,
+      "start": 67.36,
+      "word": "it"
+    },
+    {
+      "confidence": 1,
+      "end": 67.6,
+      "speaker": 1,
+      "start": 67.52,
+      "word": "will"
+    },
+    {
+      "confidence": 1,
+      "end": 67.68,
+      "speaker": 1,
+      "start": 67.6,
+      "word": "help"
+    },
+    {
+      "confidence": 1,
+      "end": 67.84,
+      "speaker": 1,
+      "start": 67.76,
+      "word": "us"
+    },
+    {
+      "confidence": 1,
+      "end": 68.4,
+      "speaker": 1,
+      "start": 68.08,
+      "word": "determine"
+    },
+    {
+      "confidence": 1,
+      "end": 68.64,
+      "speaker": 1,
+      "start": 68.56,
+      "word": "if"
+    },
+    {
+      "confidence": 1,
+      "end": 69.6,
+      "speaker": 1,
+      "start": 69.52,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 70.64,
+      "speaker": 1,
+      "start": 69.92,
+      "word": "abnormalities"
+    },
+    {
+      "confidence": 1,
+      "end": 70.96,
+      "speaker": 1,
+      "start": 70.88,
+      "word": "are"
+    },
+    {
+      "confidence": 1,
+      "end": 71.2,
+      "speaker": 1,
+      "start": 71.04,
+      "word": "present."
+    },
+    {
+      "confidence": 1,
+      "end": 72.56,
+      "speaker": 2,
+      "start": 72.48,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 72.8,
+      "speaker": 2,
+      "start": 72.64,
+      "word": "trust"
+    },
+    {
+      "confidence": 1,
+      "end": 73.04,
+      "speaker": 2,
+      "start": 72.96,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 73.44,
+      "speaker": 2,
+      "start": 73.2,
+      "word": "judgment,"
+    },
+    {
+      "confidence": 1,
+      "end": 74.16,
+      "speaker": 2,
+      "start": 74,
+      "word": "doctor"
+    },
+    {
+      "confidence": 1,
+      "end": 75.2,
+      "speaker": 2,
+      "start": 75.12,
+      "word": "please"
+    },
+    {
+      "confidence": 1,
+      "end": 75.44,
+      "speaker": 2,
+      "start": 75.36,
+      "word": "go"
+    },
+    {
+      "confidence": 1,
+      "end": 75.68,
+      "speaker": 2,
+      "start": 75.52,
+      "word": "ahead"
+    },
+    {
+      "confidence": 1,
+      "end": 76.08,
+      "speaker": 2,
+      "start": 76,
+      "word": "with"
+    },
+    {
+      "confidence": 1,
+      "end": 76.4,
+      "speaker": 2,
+      "start": 76.32,
+      "word": "the"
+    },
+    {
+      "confidence": 1,
+      "end": 76.8,
+      "speaker": 2,
+      "start": 76.56,
+      "word": "necessary"
+    },
+    {
+      "confidence": 1,
+      "end": 77.36,
+      "speaker": 2,
+      "start": 77.12,
+      "word": "tests."
+    },
+    {
+      "confidence": 1,
+      "end": 77.92,
+      "speaker": 2,
+      "start": 77.84,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 78.08,
+      "speaker": 2,
+      "start": 78,
+      "word": "want"
+    },
+    {
+      "confidence": 1,
+      "end": 78.24,
+      "speaker": 2,
+      "start": 78.16,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 78.32,
+      "speaker": 2,
+      "start": 78.24,
+      "word": "make"
+    },
+    {
+      "confidence": 1,
+      "end": 78.48,
+      "speaker": 2,
+      "start": 78.4,
+      "word": "sure"
+    },
+    {
+      "confidence": 1,
+      "end": 79.04,
+      "speaker": 2,
+      "start": 78.8,
+      "word": "everything"
+    },
+    {
+      "confidence": 1,
+      "end": 79.28,
+      "speaker": 2,
+      "start": 79.2,
+      "word": "is"
+    },
+    {
+      "confidence": 1,
+      "end": 79.6,
+      "speaker": 2,
+      "start": 79.52,
+      "word": "okay."
+    },
+    {
+      "confidence": 1,
+      "end": 81.6,
+      "speaker": 1,
+      "start": 81.52,
+      "word": "Thank"
+    },
+    {
+      "confidence": 1,
+      "end": 81.76,
+      "speaker": 1,
+      "start": 81.68,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 81.84,
+      "speaker": 1,
+      "start": 81.76,
+      "word": "for"
+    },
+    {
+      "confidence": 1,
+      "end": 82,
+      "speaker": 1,
+      "start": 81.92,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 82.4,
+      "speaker": 1,
+      "start": 82.08,
+      "word": "trust,"
+    },
+    {
+      "confidence": 1,
+      "end": 83.28,
+      "speaker": 1,
+      "start": 83.04,
+      "word": "Mister"
+    },
+    {
+      "confidence": 1,
+      "end": 83.6,
+      "speaker": 1,
+      "start": 83.28,
+      "word": "Johnson"
+    },
+    {
+      "confidence": 1,
+      "end": 84.08,
+      "speaker": 1,
+      "start": 84,
+      "word": "in"
+    },
+    {
+      "confidence": 1,
+      "end": 84.16,
+      "speaker": 1,
+      "start": 84.08,
+      "word": "the"
+    },
+    {
+      "confidence": 1,
+      "end": 84.32,
+      "speaker": 1,
+      "start": 84.08,
+      "word": "meantime."
+    },
+    {
+      "confidence": 1,
+      "end": 84.8,
+      "speaker": 1,
+      "start": 84.72,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 85.12,
+      "speaker": 1,
+      "start": 84.88,
+      "word": "recommend"
+    },
+    {
+      "confidence": 1,
+      "end": 85.44,
+      "speaker": 1,
+      "start": 85.28,
+      "word": "making"
+    },
+    {
+      "confidence": 1,
+      "end": 85.6,
+      "speaker": 1,
+      "start": 85.52,
+      "word": "some"
+    },
+    {
+      "confidence": 1,
+      "end": 86.24,
+      "speaker": 1,
+      "start": 85.76,
+      "word": "lifestyle"
+    },
+    {
+      "confidence": 1,
+      "end": 86.4,
+      "speaker": 1,
+      "start": 86.24,
+      "word": "changes"
+    },
+    {
+      "confidence": 1,
+      "end": 86.64,
+      "speaker": 1,
+      "start": 86.56,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 86.88,
+      "speaker": 1,
+      "start": 86.72,
+      "word": "support"
+    },
+    {
+      "confidence": 1,
+      "end": 87.12,
+      "speaker": 1,
+      "start": 87.04,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 87.52,
+      "speaker": 1,
+      "start": 87.36,
+      "word": "heart"
+    },
+    {
+      "confidence": 1,
+      "end": 87.76,
+      "speaker": 1,
+      "start": 87.6,
+      "word": "health."
+    },
+    {
+      "confidence": 1,
+      "end": 88.72,
+      "speaker": 1,
+      "start": 88.56,
+      "word": "Have"
+    },
+    {
+      "confidence": 1,
+      "end": 88.8,
+      "speaker": 1,
+      "start": 88.72,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 88.88,
+      "speaker": 1,
+      "start": 88.8,
+      "word": "been"
+    },
+    {
+      "confidence": 1,
+      "end": 89.28,
+      "speaker": 1,
+      "start": 89.12,
+      "word": "following"
+    },
+    {
+      "confidence": 1,
+      "end": 89.68,
+      "speaker": 1,
+      "start": 89.6,
+      "word": "a"
+    },
+    {
+      "confidence": 1,
+      "end": 90.16,
+      "speaker": 1,
+      "start": 89.84,
+      "word": "balanced"
+    },
+    {
+      "confidence": 1,
+      "end": 90.4,
+      "speaker": 1,
+      "start": 90.16,
+      "word": "diet"
+    },
+    {
+      "confidence": 1,
+      "end": 90.8,
+      "speaker": 1,
+      "start": 90.72,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 91.2,
+      "speaker": 1,
+      "start": 90.88,
+      "word": "engaging"
+    },
+    {
+      "confidence": 1,
+      "end": 91.36,
+      "speaker": 1,
+      "start": 91.28,
+      "word": "in"
+    },
+    {
+      "confidence": 1,
+      "end": 91.76,
+      "speaker": 1,
+      "start": 91.52,
+      "word": "regular"
+    },
+    {
+      "confidence": 1,
+      "end": 92.32,
+      "speaker": 1,
+      "start": 92,
+      "word": "exercise?"
+    },
+    {
+      "confidence": 1,
+      "end": 93.84,
+      "speaker": 2,
+      "start": 93.76,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 94.16,
+      "speaker": 2,
+      "start": 94,
+      "word": "must"
+    },
+    {
+      "confidence": 1,
+      "end": 94.32,
+      "speaker": 2,
+      "start": 94.16,
+      "word": "admit"
+    },
+    {
+      "confidence": 1,
+      "end": 94.8,
+      "speaker": 2,
+      "start": 94.72,
+      "word": "my"
+    },
+    {
+      "confidence": 1,
+      "end": 95.2,
+      "speaker": 2,
+      "start": 94.88,
+      "word": "diet"
+    },
+    {
+      "confidence": 1,
+      "end": 95.52,
+      "speaker": 2,
+      "start": 95.28,
+      "word": "hasn't"
+    },
+    {
+      "confidence": 1,
+      "end": 95.68,
+      "speaker": 2,
+      "start": 95.6,
+      "word": "been"
+    },
+    {
+      "confidence": 1,
+      "end": 95.84,
+      "speaker": 2,
+      "start": 95.76,
+      "word": "the"
+    },
+    {
+      "confidence": 1,
+      "end": 96.48,
+      "speaker": 2,
+      "start": 96,
+      "word": "healthiest"
+    },
+    {
+      "confidence": 1,
+      "end": 96.72,
+      "speaker": 2,
+      "start": 96.48,
+      "word": "lately"
+    },
+    {
+      "confidence": 1,
+      "end": 97.84,
+      "speaker": 2,
+      "start": 97.76,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 97.92,
+      "speaker": 2,
+      "start": 97.84,
+      "word": "my"
+    },
+    {
+      "confidence": 1,
+      "end": 98.72,
+      "speaker": 2,
+      "start": 98.24,
+      "word": "exercise"
+    },
+    {
+      "confidence": 1,
+      "end": 99.36,
+      "speaker": 2,
+      "start": 99.04,
+      "word": "routine"
+    },
+    {
+      "confidence": 1,
+      "end": 99.44,
+      "speaker": 2,
+      "start": 99.36,
+      "word": "is"
+    },
+    {
+      "confidence": 1,
+      "end": 99.84,
+      "speaker": 2,
+      "start": 99.68,
+      "word": "almost"
+    },
+    {
+      "confidence": 1,
+      "end": 100.96,
+      "speaker": 2,
+      "start": 100.32,
+      "word": "nonexistent"
+    },
+    {
+      "confidence": 1,
+      "end": 101.2,
+      "speaker": 2,
+      "start": 101.12,
+      "word": "due"
+    },
+    {
+      "confidence": 1,
+      "end": 101.36,
+      "speaker": 2,
+      "start": 101.28,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 101.52,
+      "speaker": 2,
+      "start": 101.44,
+      "word": "work."
+    },
+    {
+      "confidence": 1,
+      "end": 103.6,
+      "speaker": 1,
+      "start": 103.28,
+      "word": "It's"
+    },
+    {
+      "confidence": 1,
+      "end": 103.76,
+      "speaker": 1,
+      "start": 103.6,
+      "word": "never"
+    },
+    {
+      "confidence": 1,
+      "end": 103.92,
+      "speaker": 1,
+      "start": 103.84,
+      "word": "too"
+    },
+    {
+      "confidence": 1,
+      "end": 104.16,
+      "speaker": 1,
+      "start": 104,
+      "word": "late"
+    },
+    {
+      "confidence": 1,
+      "end": 104.32,
+      "speaker": 1,
+      "start": 104.24,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 104.4,
+      "speaker": 1,
+      "start": 104.32,
+      "word": "make"
+    },
+    {
+      "confidence": 1,
+      "end": 104.88,
+      "speaker": 1,
+      "start": 104.64,
+      "word": "positive"
+    },
+    {
+      "confidence": 1,
+      "end": 105.28,
+      "speaker": 1,
+      "start": 105.04,
+      "word": "changes."
+    },
+    {
+      "confidence": 1,
+      "end": 106.16,
+      "speaker": 1,
+      "start": 106,
+      "word": "Mister"
+    },
+    {
+      "confidence": 1,
+      "end": 106.48,
+      "speaker": 1,
+      "start": 106.24,
+      "word": "Johnson,"
+    },
+    {
+      "confidence": 1,
+      "end": 107.2,
+      "speaker": 1,
+      "start": 107.12,
+      "word": "a"
+    },
+    {
+      "confidence": 1,
+      "end": 107.68,
+      "speaker": 1,
+      "start": 107.52,
+      "word": "heart"
+    },
+    {
+      "confidence": 1,
+      "end": 108,
+      "speaker": 1,
+      "start": 107.68,
+      "word": "healthy"
+    },
+    {
+      "confidence": 1,
+      "end": 108.24,
+      "speaker": 1,
+      "start": 108,
+      "word": "diet"
+    },
+    {
+      "confidence": 1,
+      "end": 108.4,
+      "speaker": 1,
+      "start": 108.32,
+      "word": "with"
+    },
+    {
+      "confidence": 1,
+      "end": 108.72,
+      "speaker": 1,
+      "start": 108.48,
+      "word": "fruits,"
+    },
+    {
+      "confidence": 1,
+      "end": 109.76,
+      "speaker": 1,
+      "start": 109.36,
+      "word": "vegetables,"
+    },
+    {
+      "confidence": 1,
+      "end": 110.48,
+      "speaker": 1,
+      "start": 110.24,
+      "word": "whole"
+    },
+    {
+      "confidence": 1,
+      "end": 110.88,
+      "speaker": 1,
+      "start": 110.48,
+      "word": "grains,"
+    },
+    {
+      "confidence": 1,
+      "end": 111.2,
+      "speaker": 1,
+      "start": 111.12,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 111.6,
+      "speaker": 1,
+      "start": 111.36,
+      "word": "lean"
+    },
+    {
+      "confidence": 1,
+      "end": 112,
+      "speaker": 1,
+      "start": 111.68,
+      "word": "proteins,"
+    },
+    {
+      "confidence": 1,
+      "end": 113.28,
+      "speaker": 1,
+      "start": 113.12,
+      "word": "along"
+    },
+    {
+      "confidence": 1,
+      "end": 113.36,
+      "speaker": 1,
+      "start": 113.28,
+      "word": "with"
+    },
+    {
+      "confidence": 1,
+      "end": 113.76,
+      "speaker": 1,
+      "start": 113.6,
+      "word": "regular"
+    },
+    {
+      "confidence": 1,
+      "end": 114.24,
+      "speaker": 1,
+      "start": 114,
+      "word": "physical"
+    },
+    {
+      "confidence": 1,
+      "end": 114.8,
+      "speaker": 1,
+      "start": 114.4,
+      "word": "activity,"
+    },
+    {
+      "confidence": 1,
+      "end": 115.68,
+      "speaker": 1,
+      "start": 115.6,
+      "word": "can"
+    },
+    {
+      "confidence": 1,
+      "end": 116.16,
+      "speaker": 1,
+      "start": 115.76,
+      "word": "significantly"
+    },
+    {
+      "confidence": 1,
+      "end": 116.56,
+      "speaker": 1,
+      "start": 116.32,
+      "word": "improve"
+    },
+    {
+      "confidence": 1,
+      "end": 116.72,
+      "speaker": 1,
+      "start": 116.64,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 117.28,
+      "speaker": 1,
+      "start": 116.96,
+      "word": "heart's"
+    },
+    {
+      "confidence": 1,
+      "end": 117.52,
+      "speaker": 1,
+      "start": 117.36,
+      "word": "condition."
+    },
+    {
+      "confidence": 1,
+      "end": 118.24,
+      "speaker": 1,
+      "start": 118,
+      "word": "It's"
+    },
+    {
+      "confidence": 1,
+      "end": 118.32,
+      "speaker": 1,
+      "start": 118.24,
+      "word": "also"
+    },
+    {
+      "confidence": 1,
+      "end": 118.8,
+      "speaker": 1,
+      "start": 118.56,
+      "word": "essential"
+    },
+    {
+      "confidence": 1,
+      "end": 119.12,
+      "speaker": 1,
+      "start": 119.04,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 119.36,
+      "speaker": 1,
+      "start": 119.2,
+      "word": "manage"
+    },
+    {
+      "confidence": 1,
+      "end": 119.92,
+      "speaker": 1,
+      "start": 119.68,
+      "word": "stress"
+    },
+    {
+      "confidence": 1,
+      "end": 120.16,
+      "speaker": 1,
+      "start": 120.08,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 120.48,
+      "speaker": 1,
+      "start": 120.4,
+      "word": "get"
+    },
+    {
+      "confidence": 1,
+      "end": 121.28,
+      "speaker": 1,
+      "start": 121.12,
+      "word": "enough"
+    },
+    {
+      "confidence": 1,
+      "end": 121.6,
+      "speaker": 1,
+      "start": 121.44,
+      "word": "sleep"
+    },
+    {
+      "confidence": 1,
+      "end": 123.12,
+      "speaker": 2,
+      "start": 123.04,
+      "word": "that"
+    },
+    {
+      "confidence": 1,
+      "end": 123.2,
+      "speaker": 2,
+      "start": 123.12,
+      "word": "would"
+    },
+    {
+      "confidence": 1,
+      "end": 123.36,
+      "speaker": 2,
+      "start": 123.28,
+      "word": "be"
+    },
+    {
+      "confidence": 1,
+      "end": 123.6,
+      "speaker": 2,
+      "start": 123.52,
+      "word": "great,"
+    },
+    {
+      "confidence": 1,
+      "end": 124.4,
+      "speaker": 2,
+      "start": 124.16,
+      "word": "doctor."
+    },
+    {
+      "confidence": 1,
+      "end": 125.2,
+      "speaker": 2,
+      "start": 125.12,
+      "word": "I'm"
+    },
+    {
+      "confidence": 1,
+      "end": 125.44,
+      "speaker": 2,
+      "start": 125.28,
+      "word": "ready"
+    },
+    {
+      "confidence": 1,
+      "end": 125.6,
+      "speaker": 2,
+      "start": 125.52,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 126.08,
+      "speaker": 2,
+      "start": 125.76,
+      "word": "command"
+    },
+    {
+      "confidence": 1,
+      "end": 126.32,
+      "speaker": 2,
+      "start": 126.24,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 126.4,
+      "speaker": 2,
+      "start": 126.32,
+      "word": "a"
+    },
+    {
+      "confidence": 1,
+      "end": 126.88,
+      "speaker": 2,
+      "start": 126.48,
+      "word": "healthier"
+    },
+    {
+      "confidence": 1,
+      "end": 127.52,
+      "speaker": 2,
+      "start": 126.96,
+      "word": "lifestyle."
+    },
+    {
+      "confidence": 1,
+      "end": 128.56,
+      "speaker": 2,
+      "start": 128.48,
+      "word": "Are"
+    },
+    {
+      "confidence": 1,
+      "end": 128.72,
+      "speaker": 2,
+      "start": 128.64,
+      "word": "there"
+    },
+    {
+      "confidence": 1,
+      "end": 128.8,
+      "speaker": 2,
+      "start": 128.72,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 129.36,
+      "speaker": 2,
+      "start": 128.96,
+      "word": "medications"
+    },
+    {
+      "confidence": 1,
+      "end": 129.76,
+      "speaker": 2,
+      "start": 129.68,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 129.92,
+      "speaker": 2,
+      "start": 129.84,
+      "word": "should"
+    },
+    {
+      "confidence": 1,
+      "end": 130,
+      "speaker": 2,
+      "start": 129.92,
+      "word": "be"
+    },
+    {
+      "confidence": 1,
+      "end": 130.4,
+      "speaker": 2,
+      "start": 130.24,
+      "word": "taking"
+    },
+    {
+      "confidence": 1,
+      "end": 130.96,
+      "speaker": 2,
+      "start": 130.88,
+      "word": "or"
+    },
+    {
+      "confidence": 1,
+      "end": 131.28,
+      "speaker": 2,
+      "start": 131.2,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 131.44,
+      "speaker": 2,
+      "start": 131.36,
+      "word": "other"
+    },
+    {
+      "confidence": 1,
+      "end": 132.08,
+      "speaker": 2,
+      "start": 131.68,
+      "word": "treatments"
+    },
+    {
+      "confidence": 1,
+      "end": 132.32,
+      "speaker": 2,
+      "start": 132.24,
+      "word": "we"
+    },
+    {
+      "confidence": 1,
+      "end": 132.48,
+      "speaker": 2,
+      "start": 132.4,
+      "word": "should"
+    },
+    {
+      "confidence": 1,
+      "end": 132.96,
+      "speaker": 2,
+      "start": 132.64,
+      "word": "consider?"
+    },
+    {
+      "confidence": 1,
+      "end": 134.72,
+      "speaker": 1,
+      "start": 134.56,
+      "word": "We'll"
+    },
+    {
+      "confidence": 1,
+      "end": 134.88,
+      "speaker": 1,
+      "start": 134.8,
+      "word": "wait"
+    },
+    {
+      "confidence": 1,
+      "end": 134.96,
+      "speaker": 1,
+      "start": 134.88,
+      "word": "for"
+    },
+    {
+      "confidence": 1,
+      "end": 135.28,
+      "speaker": 1,
+      "start": 135.2,
+      "word": "the"
+    },
+    {
+      "confidence": 1,
+      "end": 135.76,
+      "speaker": 1,
+      "start": 135.36,
+      "word": "ECG"
+    },
+    {
+      "confidence": 1,
+      "end": 136,
+      "speaker": 1,
+      "start": 135.84,
+      "word": "results"
+    },
+    {
+      "confidence": 1,
+      "end": 137.28,
+      "speaker": 1,
+      "start": 137.12,
+      "word": "before"
+    },
+    {
+      "confidence": 1,
+      "end": 137.68,
+      "speaker": 1,
+      "start": 137.36,
+      "word": "discussing"
+    },
+    {
+      "confidence": 1,
+      "end": 138.16,
+      "speaker": 1,
+      "start": 137.76,
+      "word": "specific"
+    },
+    {
+      "confidence": 1,
+      "end": 138.8,
+      "speaker": 1,
+      "start": 138.4,
+      "word": "medications"
+    },
+    {
+      "confidence": 1,
+      "end": 139.44,
+      "speaker": 1,
+      "start": 139.36,
+      "word": "as"
+    },
+    {
+      "confidence": 1,
+      "end": 139.52,
+      "speaker": 1,
+      "start": 139.44,
+      "word": "they"
+    },
+    {
+      "confidence": 1,
+      "end": 139.68,
+      "speaker": 1,
+      "start": 139.6,
+      "word": "will"
+    },
+    {
+      "confidence": 1,
+      "end": 140,
+      "speaker": 1,
+      "start": 139.68,
+      "word": "depend"
+    },
+    {
+      "confidence": 1,
+      "end": 140.08,
+      "speaker": 1,
+      "start": 140,
+      "word": "on"
+    },
+    {
+      "confidence": 1,
+      "end": 140.24,
+      "speaker": 1,
+      "start": 140.16,
+      "word": "the"
+    },
+    {
+      "confidence": 1,
+      "end": 140.64,
+      "speaker": 1,
+      "start": 140.32,
+      "word": "findings"
+    },
+    {
+      "confidence": 1,
+      "end": 141.28,
+      "speaker": 1,
+      "start": 141.2,
+      "word": "if"
+    },
+    {
+      "confidence": 1,
+      "end": 141.68,
+      "speaker": 1,
+      "start": 141.36,
+      "word": "necessary"
+    },
+    {
+      "confidence": 1,
+      "end": 142.48,
+      "speaker": 1,
+      "start": 142.4,
+      "word": "we"
+    },
+    {
+      "confidence": 1,
+      "end": 142.64,
+      "speaker": 1,
+      "start": 142.56,
+      "word": "may"
+    },
+    {
+      "confidence": 1,
+      "end": 142.96,
+      "speaker": 1,
+      "start": 142.8,
+      "word": "consider"
+    },
+    {
+      "confidence": 1,
+      "end": 143.76,
+      "speaker": 1,
+      "start": 143.36,
+      "word": "prescribing"
+    },
+    {
+      "confidence": 1,
+      "end": 144.4,
+      "speaker": 1,
+      "start": 143.84,
+      "word": "medications"
+    },
+    {
+      "confidence": 1,
+      "end": 144.72,
+      "speaker": 1,
+      "start": 144.64,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 145.04,
+      "speaker": 1,
+      "start": 144.8,
+      "word": "manage"
+    },
+    {
+      "confidence": 1,
+      "end": 145.28,
+      "speaker": 1,
+      "start": 145.2,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 145.6,
+      "speaker": 1,
+      "start": 145.36,
+      "word": "symptoms"
+    },
+    {
+      "confidence": 1,
+      "end": 146.48,
+      "speaker": 1,
+      "start": 146.4,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 146.8,
+      "speaker": 1,
+      "start": 146.64,
+      "word": "support"
+    },
+    {
+      "confidence": 1,
+      "end": 146.96,
+      "speaker": 1,
+      "start": 146.88,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 147.44,
+      "speaker": 1,
+      "start": 147.2,
+      "word": "heart"
+    },
+    {
+      "confidence": 1,
+      "end": 147.68,
+      "speaker": 1,
+      "start": 147.52,
+      "word": "health"
+    },
+    {
+      "confidence": 1,
+      "end": 148.08,
+      "speaker": 1,
+      "start": 148,
+      "word": "in"
+    },
+    {
+      "confidence": 1,
+      "end": 148.16,
+      "speaker": 1,
+      "start": 148.08,
+      "word": "the"
+    },
+    {
+      "confidence": 1,
+      "end": 148.64,
+      "speaker": 1,
+      "start": 148.32,
+      "word": "meantime."
+    },
+    {
+      "confidence": 1,
+      "end": 149.52,
+      "speaker": 1,
+      "start": 149.44,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 150,
+      "speaker": 1,
+      "start": 149.68,
+      "word": "encourage"
+    },
+    {
+      "confidence": 1,
+      "end": 150.16,
+      "speaker": 1,
+      "start": 150.08,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 150.32,
+      "speaker": 1,
+      "start": 150.24,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 150.4,
+      "speaker": 1,
+      "start": 150.32,
+      "word": "take"
+    },
+    {
+      "confidence": 1,
+      "end": 150.8,
+      "speaker": 1,
+      "start": 150.72,
+      "word": "it"
+    },
+    {
+      "confidence": 1,
+      "end": 151.28,
+      "speaker": 1,
+      "start": 150.88,
+      "word": "easy"
+    },
+    {
+      "confidence": 1,
+      "end": 151.44,
+      "speaker": 1,
+      "start": 151.36,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 151.92,
+      "speaker": 1,
+      "start": 151.6,
+      "word": "avoid"
+    },
+    {
+      "confidence": 1,
+      "end": 152,
+      "speaker": 1,
+      "start": 151.92,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 152.4,
+      "speaker": 1,
+      "start": 152.16,
+      "word": "heavy"
+    },
+    {
+      "confidence": 1,
+      "end": 152.72,
+      "speaker": 1,
+      "start": 152.4,
+      "word": "activities."
+    },
+    {
+      "confidence": 1,
+      "end": 154.16,
+      "speaker": 2,
+      "start": 154.08,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 154.64,
+      "speaker": 2,
+      "start": 154.24,
+      "word": "appreciate"
+    },
+    {
+      "confidence": 1,
+      "end": 154.88,
+      "speaker": 2,
+      "start": 154.8,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 155.36,
+      "speaker": 2,
+      "start": 155.12,
+      "word": "guidance,"
+    },
+    {
+      "confidence": 1,
+      "end": 156.08,
+      "speaker": 2,
+      "start": 155.92,
+      "word": "doctor."
+    },
+    {
+      "confidence": 1,
+      "end": 157.04,
+      "speaker": 2,
+      "start": 156.96,
+      "word": "I'll"
+    },
+    {
+      "confidence": 1,
+      "end": 157.36,
+      "speaker": 2,
+      "start": 157.28,
+      "word": "be"
+    },
+    {
+      "confidence": 1,
+      "end": 157.76,
+      "speaker": 2,
+      "start": 157.44,
+      "word": "cautious"
+    },
+    {
+      "confidence": 1,
+      "end": 158,
+      "speaker": 2,
+      "start": 157.92,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 158.88,
+      "speaker": 2,
+      "start": 158.32,
+      "word": "prioritize"
+    },
+    {
+      "confidence": 1,
+      "end": 159.04,
+      "speaker": 2,
+      "start": 158.96,
+      "word": "my"
+    },
+    {
+      "confidence": 1,
+      "end": 159.36,
+      "speaker": 2,
+      "start": 159.2,
+      "word": "health."
+    },
+    {
+      "confidence": 1,
+      "end": 160.32,
+      "speaker": 2,
+      "start": 160.24,
+      "word": "Is"
+    },
+    {
+      "confidence": 1,
+      "end": 160.48,
+      "speaker": 2,
+      "start": 160.4,
+      "word": "there"
+    },
+    {
+      "confidence": 1,
+      "end": 160.56,
+      "speaker": 2,
+      "start": 160.48,
+      "word": "anything"
+    },
+    {
+      "confidence": 1,
+      "end": 160.88,
+      "speaker": 2,
+      "start": 160.8,
+      "word": "else"
+    },
+    {
+      "confidence": 1,
+      "end": 161.2,
+      "speaker": 2,
+      "start": 161.12,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 161.28,
+      "speaker": 2,
+      "start": 161.2,
+      "word": "should"
+    },
+    {
+      "confidence": 1,
+      "end": 161.44,
+      "speaker": 2,
+      "start": 161.36,
+      "word": "be"
+    },
+    {
+      "confidence": 1,
+      "end": 161.84,
+      "speaker": 2,
+      "start": 161.6,
+      "word": "aware"
+    },
+    {
+      "confidence": 1,
+      "end": 161.92,
+      "speaker": 2,
+      "start": 161.84,
+      "word": "of"
+    },
+    {
+      "confidence": 1,
+      "end": 162.4,
+      "speaker": 2,
+      "start": 162.32,
+      "word": "or"
+    },
+    {
+      "confidence": 1,
+      "end": 162.64,
+      "speaker": 2,
+      "start": 162.56,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 162.96,
+      "speaker": 2,
+      "start": 162.8,
+      "word": "warning"
+    },
+    {
+      "confidence": 1,
+      "end": 163.52,
+      "speaker": 2,
+      "start": 163.36,
+      "word": "signs"
+    },
+    {
+      "confidence": 1,
+      "end": 163.92,
+      "speaker": 2,
+      "start": 163.84,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 164,
+      "speaker": 2,
+      "start": 163.92,
+      "word": "should"
+    },
+    {
+      "confidence": 1,
+      "end": 164.32,
+      "speaker": 2,
+      "start": 164.16,
+      "word": "watch"
+    },
+    {
+      "confidence": 1,
+      "end": 164.56,
+      "speaker": 2,
+      "start": 164.48,
+      "word": "out"
+    },
+    {
+      "confidence": 1,
+      "end": 164.8,
+      "speaker": 2,
+      "start": 164.72,
+      "word": "for?"
+    },
+    {
+      "confidence": 1,
+      "end": 166.48,
+      "speaker": 1,
+      "start": 166.4,
+      "word": "Some"
+    },
+    {
+      "confidence": 1,
+      "end": 166.8,
+      "speaker": 1,
+      "start": 166.64,
+      "word": "warning"
+    },
+    {
+      "confidence": 1,
+      "end": 167.2,
+      "speaker": 1,
+      "start": 166.88,
+      "word": "signs"
+    },
+    {
+      "confidence": 1,
+      "end": 167.36,
+      "speaker": 1,
+      "start": 167.28,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 167.68,
+      "speaker": 1,
+      "start": 167.44,
+      "word": "watch"
+    },
+    {
+      "confidence": 1,
+      "end": 167.76,
+      "speaker": 1,
+      "start": 167.68,
+      "word": "out"
+    },
+    {
+      "confidence": 1,
+      "end": 167.92,
+      "speaker": 1,
+      "start": 167.84,
+      "word": "for"
+    },
+    {
+      "confidence": 1,
+      "end": 168.32,
+      "speaker": 1,
+      "start": 168.08,
+      "word": "include"
+    },
+    {
+      "confidence": 1,
+      "end": 168.72,
+      "speaker": 1,
+      "start": 168.48,
+      "word": "severe"
+    },
+    {
+      "confidence": 1,
+      "end": 169.12,
+      "speaker": 1,
+      "start": 168.8,
+      "word": "chest"
+    },
+    {
+      "confidence": 1,
+      "end": 169.44,
+      "speaker": 1,
+      "start": 169.12,
+      "word": "pain"
+    },
+    {
+      "confidence": 1,
+      "end": 170,
+      "speaker": 1,
+      "start": 169.92,
+      "word": "or"
+    },
+    {
+      "confidence": 1,
+      "end": 170.32,
+      "speaker": 1,
+      "start": 170.16,
+      "word": "pressure."
+    },
+    {
+      "confidence": 1,
+      "end": 171.36,
+      "speaker": 1,
+      "start": 171.2,
+      "word": "Pain"
+    },
+    {
+      "confidence": 1,
+      "end": 171.84,
+      "speaker": 1,
+      "start": 171.52,
+      "word": "radiating"
+    },
+    {
+      "confidence": 1,
+      "end": 172,
+      "speaker": 1,
+      "start": 171.92,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 172.08,
+      "speaker": 1,
+      "start": 172,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 172.48,
+      "speaker": 1,
+      "start": 172.16,
+      "word": "arms"
+    },
+    {
+      "confidence": 1,
+      "end": 172.8,
+      "speaker": 1,
+      "start": 172.72,
+      "word": "or"
+    },
+    {
+      "confidence": 1,
+      "end": 173.12,
+      "speaker": 1,
+      "start": 172.96,
+      "word": "jaw,"
+    },
+    {
+      "confidence": 1,
+      "end": 173.68,
+      "speaker": 1,
+      "start": 173.6,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 173.92,
+      "speaker": 1,
+      "start": 173.76,
+      "word": "sudden"
+    },
+    {
+      "confidence": 1,
+      "end": 174.48,
+      "speaker": 1,
+      "start": 174.08,
+      "word": "shortness"
+    },
+    {
+      "confidence": 1,
+      "end": 174.56,
+      "speaker": 1,
+      "start": 174.48,
+      "word": "of"
+    },
+    {
+      "confidence": 1,
+      "end": 175.04,
+      "speaker": 1,
+      "start": 174.88,
+      "word": "brad"
+    },
+    {
+      "confidence": 1,
+      "end": 175.28,
+      "speaker": 1,
+      "start": 175.12,
+      "word": "fever"
+    },
+    {
+      "confidence": 1,
+      "end": 175.44,
+      "speaker": 1,
+      "start": 175.36,
+      "word": "in"
+    },
+    {
+      "confidence": 1,
+      "end": 175.52,
+      "speaker": 1,
+      "start": 175.44,
+      "word": "at"
+    },
+    {
+      "confidence": 1,
+      "end": 175.76,
+      "speaker": 1,
+      "start": 175.6,
+      "word": "rest."
+    },
+    {
+      "confidence": 1,
+      "end": 176.64,
+      "speaker": 1,
+      "start": 176.56,
+      "word": "If"
+    },
+    {
+      "confidence": 1,
+      "end": 176.8,
+      "speaker": 1,
+      "start": 176.72,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 177.2,
+      "speaker": 1,
+      "start": 176.88,
+      "word": "experience"
+    },
+    {
+      "confidence": 1,
+      "end": 177.68,
+      "speaker": 1,
+      "start": 177.6,
+      "word": "any"
+    },
+    {
+      "confidence": 1,
+      "end": 178,
+      "speaker": 1,
+      "start": 177.92,
+      "word": "of"
+    },
+    {
+      "confidence": 1,
+      "end": 178.24,
+      "speaker": 1,
+      "start": 178.16,
+      "word": "these"
+    },
+    {
+      "confidence": 1,
+      "end": 178.56,
+      "speaker": 1,
+      "start": 178.32,
+      "word": "symptoms,"
+    },
+    {
+      "confidence": 1,
+      "end": 179.2,
+      "speaker": 1,
+      "start": 178.96,
+      "word": "it's"
+    },
+    {
+      "confidence": 1,
+      "end": 179.44,
+      "speaker": 1,
+      "start": 179.28,
+      "word": "crucial"
+    },
+    {
+      "confidence": 1,
+      "end": 179.6,
+      "speaker": 1,
+      "start": 179.52,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 179.76,
+      "speaker": 1,
+      "start": 179.68,
+      "word": "see"
+    },
+    {
+      "confidence": 1,
+      "end": 180.4,
+      "speaker": 1,
+      "start": 180.16,
+      "word": "immediate"
+    },
+    {
+      "confidence": 1,
+      "end": 180.72,
+      "speaker": 1,
+      "start": 180.48,
+      "word": "medical"
+    },
+    {
+      "confidence": 1,
+      "end": 181.04,
+      "speaker": 1,
+      "start": 180.8,
+      "word": "attention."
+    },
+    {
+      "confidence": 1,
+      "end": 182.64,
+      "speaker": 2,
+      "start": 182.56,
+      "word": "I'll"
+    },
+    {
+      "confidence": 1,
+      "end": 182.96,
+      "speaker": 2,
+      "start": 182.8,
+      "word": "keep"
+    },
+    {
+      "confidence": 1,
+      "end": 183.12,
+      "speaker": 2,
+      "start": 183.04,
+      "word": "a"
+    },
+    {
+      "confidence": 1,
+      "end": 183.36,
+      "speaker": 2,
+      "start": 183.12,
+      "word": "close"
+    },
+    {
+      "confidence": 1,
+      "end": 183.44,
+      "speaker": 2,
+      "start": 183.36,
+      "word": "eye"
+    },
+    {
+      "confidence": 1,
+      "end": 183.6,
+      "speaker": 2,
+      "start": 183.52,
+      "word": "on"
+    },
+    {
+      "confidence": 1,
+      "end": 183.92,
+      "speaker": 2,
+      "start": 183.84,
+      "word": "those"
+    },
+    {
+      "confidence": 1,
+      "end": 184.32,
+      "speaker": 2,
+      "start": 183.92,
+      "word": "symptoms"
+    },
+    {
+      "confidence": 1,
+      "end": 185.36,
+      "speaker": 2,
+      "start": 185.28,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 185.68,
+      "speaker": 2,
+      "start": 185.44,
+      "word": "won't"
+    },
+    {
+      "confidence": 1,
+      "end": 185.92,
+      "speaker": 2,
+      "start": 185.68,
+      "word": "hesitate"
+    },
+    {
+      "confidence": 1,
+      "end": 186.08,
+      "speaker": 2,
+      "start": 186,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 186.4,
+      "speaker": 2,
+      "start": 186.24,
+      "word": "reach"
+    },
+    {
+      "confidence": 1,
+      "end": 186.56,
+      "speaker": 2,
+      "start": 186.48,
+      "word": "out"
+    },
+    {
+      "confidence": 1,
+      "end": 186.8,
+      "speaker": 2,
+      "start": 186.72,
+      "word": "for"
+    },
+    {
+      "confidence": 1,
+      "end": 186.96,
+      "speaker": 2,
+      "start": 186.88,
+      "word": "help."
+    },
+    {
+      "confidence": 1,
+      "end": 187.76,
+      "speaker": 2,
+      "start": 187.68,
+      "word": "Thank"
+    },
+    {
+      "confidence": 1,
+      "end": 187.92,
+      "speaker": 2,
+      "start": 187.84,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 188.08,
+      "speaker": 2,
+      "start": 188,
+      "word": "for"
+    },
+    {
+      "confidence": 1,
+      "end": 188.16,
+      "speaker": 2,
+      "start": 188.08,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 188.4,
+      "speaker": 2,
+      "start": 188.32,
+      "word": "time"
+    },
+    {
+      "confidence": 1,
+      "end": 189.04,
+      "speaker": 2,
+      "start": 188.96,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 189.44,
+      "speaker": 2,
+      "start": 189.2,
+      "word": "expertise."
+    },
+    {
+      "confidence": 1,
+      "end": 191.6,
+      "speaker": 1,
+      "start": 191.52,
+      "word": "You're"
+    },
+    {
+      "confidence": 1,
+      "end": 191.84,
+      "speaker": 1,
+      "start": 191.68,
+      "word": "welcome"
+    },
+    {
+      "confidence": 1,
+      "end": 192.08,
+      "speaker": 1,
+      "start": 192,
+      "word": "Mr."
+    },
+    {
+      "confidence": 1,
+      "end": 192.48,
+      "speaker": 1,
+      "start": 192.16,
+      "word": "Johnson,"
+    },
+    {
+      "confidence": 1,
+      "end": 193.12,
+      "speaker": 1,
+      "start": 192.96,
+      "word": "remember"
+    },
+    {
+      "confidence": 1,
+      "end": 194.08,
+      "speaker": 1,
+      "start": 193.84,
+      "word": "we're"
+    },
+    {
+      "confidence": 1,
+      "end": 194.24,
+      "speaker": 1,
+      "start": 194.16,
+      "word": "here"
+    },
+    {
+      "confidence": 1,
+      "end": 194.32,
+      "speaker": 1,
+      "start": 194.24,
+      "word": "to"
+    },
+    {
+      "confidence": 1,
+      "end": 194.64,
+      "speaker": 1,
+      "start": 194.4,
+      "word": "support"
+    },
+    {
+      "confidence": 1,
+      "end": 195.12,
+      "speaker": 1,
+      "start": 195.04,
+      "word": "you"
+    },
+    {
+      "confidence": 1,
+      "end": 195.44,
+      "speaker": 1,
+      "start": 195.28,
+      "word": "every"
+    },
+    {
+      "confidence": 1,
+      "end": 195.6,
+      "speaker": 1,
+      "start": 195.44,
+      "word": "step"
+    },
+    {
+      "confidence": 1,
+      "end": 195.68,
+      "speaker": 1,
+      "start": 195.6,
+      "word": "of"
+    },
+    {
+      "confidence": 1,
+      "end": 195.76,
+      "speaker": 1,
+      "start": 195.68,
+      "word": "the"
+    },
+    {
+      "confidence": 1,
+      "end": 195.92,
+      "speaker": 1,
+      "start": 195.84,
+      "word": "way."
+    },
+    {
+      "confidence": 1,
+      "end": 196.88,
+      "speaker": 1,
+      "start": 196.72,
+      "word": "Let's"
+    },
+    {
+      "confidence": 1,
+      "end": 197.2,
+      "speaker": 1,
+      "start": 196.96,
+      "word": "focus"
+    },
+    {
+      "confidence": 1,
+      "end": 197.36,
+      "speaker": 1,
+      "start": 197.28,
+      "word": "on"
+    },
+    {
+      "confidence": 1,
+      "end": 197.68,
+      "speaker": 1,
+      "start": 197.52,
+      "word": "getting"
+    },
+    {
+      "confidence": 1,
+      "end": 197.84,
+      "speaker": 1,
+      "start": 197.76,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 198.16,
+      "speaker": 1,
+      "start": 198.08,
+      "word": "test"
+    },
+    {
+      "confidence": 1,
+      "end": 198.72,
+      "speaker": 1,
+      "start": 198.4,
+      "word": "schedule"
+    },
+    {
+      "confidence": 1,
+      "end": 199.12,
+      "speaker": 1,
+      "start": 199.04,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 199.36,
+      "speaker": 1,
+      "start": 199.12,
+      "word": "making"
+    },
+    {
+      "confidence": 1,
+      "end": 199.44,
+      "speaker": 1,
+      "start": 199.36,
+      "word": "those"
+    },
+    {
+      "confidence": 1,
+      "end": 199.92,
+      "speaker": 1,
+      "start": 199.68,
+      "word": "positive"
+    },
+    {
+      "confidence": 1,
+      "end": 200.72,
+      "speaker": 1,
+      "start": 200.32,
+      "word": "lifestyle"
+    },
+    {
+      "confidence": 1,
+      "end": 201.04,
+      "speaker": 1,
+      "start": 200.8,
+      "word": "changes."
+    },
+    {
+      "confidence": 1,
+      "end": 202.08,
+      "speaker": 1,
+      "start": 201.92,
+      "word": "We'll"
+    },
+    {
+      "confidence": 1,
+      "end": 202.32,
+      "speaker": 1,
+      "start": 202.16,
+      "word": "discuss"
+    },
+    {
+      "confidence": 1,
+      "end": 202.48,
+      "speaker": 1,
+      "start": 202.4,
+      "word": "the"
+    },
+    {
+      "confidence": 1,
+      "end": 202.8,
+      "speaker": 1,
+      "start": 202.56,
+      "word": "results"
+    },
+    {
+      "confidence": 1,
+      "end": 203.36,
+      "speaker": 1,
+      "start": 203.28,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 203.68,
+      "speaker": 1,
+      "start": 203.52,
+      "word": "next"
+    },
+    {
+      "confidence": 1,
+      "end": 203.92,
+      "speaker": 1,
+      "start": 203.68,
+      "word": "steps"
+    },
+    {
+      "confidence": 1,
+      "end": 204.08,
+      "speaker": 1,
+      "start": 203.92,
+      "word": "once"
+    },
+    {
+      "confidence": 1,
+      "end": 204.16,
+      "speaker": 1,
+      "start": 204.08,
+      "word": "we"
+    },
+    {
+      "confidence": 1,
+      "end": 204.32,
+      "speaker": 1,
+      "start": 204.24,
+      "word": "have"
+    },
+    {
+      "confidence": 1,
+      "end": 204.48,
+      "speaker": 1,
+      "start": 204.4,
+      "word": "more"
+    },
+    {
+      "confidence": 1,
+      "end": 204.72,
+      "speaker": 1,
+      "start": 204.64,
+      "word": "information."
+    },
+    {
+      "confidence": 1,
+      "end": 205.84,
+      "speaker": 1,
+      "start": 205.68,
+      "word": "Take"
+    },
+    {
+      "confidence": 1,
+      "end": 205.92,
+      "speaker": 1,
+      "start": 205.84,
+      "word": "care"
+    },
+    {
+      "confidence": 1,
+      "end": 206.32,
+      "speaker": 1,
+      "start": 206.24,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 206.64,
+      "speaker": 1,
+      "start": 206.48,
+      "word": "feel"
+    },
+    {
+      "confidence": 1,
+      "end": 206.8,
+      "speaker": 1,
+      "start": 206.64,
+      "word": "better."
+    },
+    {
+      "confidence": 1,
+      "end": 208.4,
+      "speaker": 2,
+      "start": 208.32,
+      "word": "Thank"
+    },
+    {
+      "confidence": 1,
+      "end": 208.56,
+      "speaker": 2,
+      "start": 208.48,
+      "word": "you,"
+    },
+    {
+      "confidence": 1,
+      "end": 209.04,
+      "speaker": 2,
+      "start": 208.88,
+      "word": "Doctor."
+    },
+    {
+      "confidence": 1,
+      "end": 209.84,
+      "speaker": 2,
+      "start": 209.76,
+      "word": "I"
+    },
+    {
+      "confidence": 1,
+      "end": 210.24,
+      "speaker": 2,
+      "start": 209.92,
+      "word": "appreciate"
+    },
+    {
+      "confidence": 1,
+      "end": 210.48,
+      "speaker": 2,
+      "start": 210.4,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 210.8,
+      "speaker": 2,
+      "start": 210.72,
+      "word": "care"
+    },
+    {
+      "confidence": 1,
+      "end": 211.28,
+      "speaker": 2,
+      "start": 211.2,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 211.76,
+      "speaker": 2,
+      "start": 211.44,
+      "word": "concern."
+    },
+    {
+      "confidence": 1,
+      "end": 212.8,
+      "speaker": 2,
+      "start": 212.72,
+      "word": "I'll"
+    },
+    {
+      "confidence": 1,
+      "end": 213.12,
+      "speaker": 2,
+      "start": 213.04,
+      "word": "be"
+    },
+    {
+      "confidence": 1,
+      "end": 213.28,
+      "speaker": 2,
+      "start": 213.2,
+      "word": "in"
+    },
+    {
+      "confidence": 1,
+      "end": 213.52,
+      "speaker": 2,
+      "start": 213.36,
+      "word": "touch"
+    },
+    {
+      "confidence": 1,
+      "end": 213.84,
+      "speaker": 2,
+      "start": 213.76,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 214.08,
+      "speaker": 2,
+      "start": 213.92,
+      "word": "follow"
+    },
+    {
+      "confidence": 1,
+      "end": 214.32,
+      "speaker": 2,
+      "start": 214.24,
+      "word": "your"
+    },
+    {
+      "confidence": 1,
+      "end": 214.72,
+      "speaker": 2,
+      "start": 214.48,
+      "word": "advice."
+    },
+    {
+      "confidence": 1,
+      "end": 215.84,
+      "speaker": 2,
+      "start": 215.52,
+      "word": "Goodbye."
+    },
+    {
+      "confidence": 1,
+      "end": 217.68,
+      "speaker": 1,
+      "start": 217.28,
+      "word": "Goodbye,"
+    },
+    {
+      "confidence": 1,
+      "end": 218,
+      "speaker": 1,
+      "start": 217.84,
+      "word": "Mister"
+    },
+    {
+      "confidence": 1,
+      "end": 218.4,
+      "speaker": 1,
+      "start": 218.08,
+      "word": "Johnson."
+    },
+    {
+      "confidence": 1,
+      "end": 219.12,
+      "speaker": 1,
+      "start": 218.96,
+      "word": "Take"
+    },
+    {
+      "confidence": 1,
+      "end": 219.2,
+      "speaker": 1,
+      "start": 219.12,
+      "word": "care"
+    },
+    {
+      "confidence": 1,
+      "end": 219.76,
+      "speaker": 1,
+      "start": 219.68,
+      "word": "and"
+    },
+    {
+      "confidence": 1,
+      "end": 220,
+      "speaker": 1,
+      "start": 219.92,
+      "word": "stay"
+    },
+    {
+      "confidence": 1,
+      "end": 220.16,
+      "speaker": 1,
+      "start": 220.08,
+      "word": "well"
+    }
+  ]
+}

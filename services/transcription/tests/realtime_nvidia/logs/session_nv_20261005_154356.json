@@ -1,0 +1,909 @@
+{
+  "session_id": "nv_20261005_154356",
+  "provider": "nvidia_nemo_local",
+  "asr_model": "nemotron-3.5",
+  "diarization_model": "nemotron-3-diarization",
+  "created_at": "2026-10-05T15:43:56.443298",
+  "metrics": {
+    "session_id": "nv_20261005_154356",
+    "audio_duration_seconds": 50.69,
+    "wall_clock_processing_seconds": 60.97,
+    "time_to_first_audio_frame_ms": 2245.02,
+    "time_to_first_partial_ms": 3225.98,
+    "time_to_first_visible_text_ms": 3225.98,
+    "time_to_stable_text_ms": null,
+    "time_to_final_turn_ms": 53259.4,
+    "time_to_speaker_revision_ms": null,
+    "stop_to_final_ms": 8059.41,
+    "session_total_latency_ms": 60972.99,
+    "rtf": 1.203,
+    "total_audio_frames_sent": 396,
+    "total_bytes_sent": 1622016,
+    "partial_count": 389,
+    "final_count": 1,
+    "speaker_revisions_count": 1,
+    "duplicate_count": 0,
+    "dropped_frames_count": 0,
+    "backlog_ms": 0.0,
+    "gpu_utilization_pct": null,
+    "vram_used_mib": null
+  },
+  "segments": [
+    {
+      "segment_id": "seg_0001",
+      "turn_id": 1,
+      "start_time": 1.0240000486373901,
+      "end_time": 50.88,
+      "speaker_id": "speaker_0",
+      "role": "Doctor",
+      "text": "Good morning, Mister Johnson. How are you feeling today? Good morning, doctor. I've been experiencing some pain in my chest and shortness of breath. It's been bothering me for a few weeks now. I'm glad you came in it's important not to ignore any chest related symptoms. Let me ask you a few questions to better understand your condition Have you noticed if these symptoms occurred during any specific activities or times of the day? Yes, I've noticed that it happens mostly when I push myself physically, like when I'm climbing stairs or walking fast. All right, do you have any history of heart disease in your family? Not that I'm aware of. My parents and siblings don't have any heart related issues",
+      "status": "FINAL",
+      "is_final": true,
+      "confidence": null,
+      "words": [
+        {
+          "text": "Good",
+          "start": 0.8,
+          "end": 0.88,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "morning,",
+          "start": 0.96,
+          "end": 1.2,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "Mister",
+          "start": 1.76,
+          "end": 2.0,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "Johnson.",
+          "start": 2.0,
+          "end": 2.4,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "How",
+          "start": 2.96,
+          "end": 3.04,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "are",
+          "start": 3.04,
+          "end": 3.12,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "you",
+          "start": 3.2,
+          "end": 3.28,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "feeling",
+          "start": 3.36,
+          "end": 3.52,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "today?",
+          "start": 3.68,
+          "end": 3.76,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "Good",
+          "start": 5.44,
+          "end": 5.52,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "morning,",
+          "start": 5.68,
+          "end": 5.84,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "doctor.",
+          "start": 6.64,
+          "end": 6.8,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "I've",
+          "start": 7.44,
+          "end": 7.6,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "been",
+          "start": 7.6,
+          "end": 7.68,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "experiencing",
+          "start": 7.84,
+          "end": 8.32,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "some",
+          "start": 8.72,
+          "end": 8.8,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "pain",
+          "start": 9.04,
+          "end": 9.36,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "in",
+          "start": 9.6,
+          "end": 9.68,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "my",
+          "start": 9.68,
+          "end": 9.76,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "chest",
+          "start": 9.84,
+          "end": 10.08,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "and",
+          "start": 10.4,
+          "end": 10.48,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "shortness",
+          "start": 10.56,
+          "end": 10.88,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "of",
+          "start": 10.96,
+          "end": 11.04,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "breath.",
+          "start": 11.2,
+          "end": 11.36,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "It's",
+          "start": 12.16,
+          "end": 12.4,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "been",
+          "start": 12.4,
+          "end": 12.48,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "bothering",
+          "start": 12.72,
+          "end": 13.04,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "me",
+          "start": 13.04,
+          "end": 13.12,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "for",
+          "start": 13.36,
+          "end": 13.44,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "a",
+          "start": 13.52,
+          "end": 13.6,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "few",
+          "start": 13.68,
+          "end": 13.76,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "weeks",
+          "start": 13.92,
+          "end": 14.08,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "now.",
+          "start": 14.4,
+          "end": 14.48,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "I'm",
+          "start": 16.32,
+          "end": 16.4,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "glad",
+          "start": 16.48,
+          "end": 16.72,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "you",
+          "start": 16.72,
+          "end": 16.8,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "came",
+          "start": 16.8,
+          "end": 16.96,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "in",
+          "start": 17.12,
+          "end": 17.2,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "it's",
+          "start": 17.6,
+          "end": 17.84,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "important",
+          "start": 17.92,
+          "end": 18.08,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "not",
+          "start": 18.24,
+          "end": 18.32,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "to",
+          "start": 18.4,
+          "end": 18.48,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "ignore",
+          "start": 18.72,
+          "end": 18.96,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "any",
+          "start": 18.96,
+          "end": 19.04,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "chest",
+          "start": 19.36,
+          "end": 19.52,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "related",
+          "start": 19.6,
+          "end": 19.84,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "symptoms.",
+          "start": 19.84,
+          "end": 20.24,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "Let",
+          "start": 20.96,
+          "end": 21.04,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "me",
+          "start": 21.04,
+          "end": 21.12,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "ask",
+          "start": 21.28,
+          "end": 21.36,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "you",
+          "start": 21.52,
+          "end": 21.6,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "a",
+          "start": 21.92,
+          "end": 22.0,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "few",
+          "start": 22.08,
+          "end": 22.16,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "questions",
+          "start": 22.24,
+          "end": 22.4,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "to",
+          "start": 22.72,
+          "end": 22.8,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "better",
+          "start": 22.96,
+          "end": 23.2,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "understand",
+          "start": 23.44,
+          "end": 23.76,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "your",
+          "start": 23.84,
+          "end": 23.92,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "condition",
+          "start": 24.08,
+          "end": 24.24,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "Have",
+          "start": 25.12,
+          "end": 25.28,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "you",
+          "start": 25.28,
+          "end": 25.36,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "noticed",
+          "start": 25.36,
+          "end": 25.6,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "if",
+          "start": 25.76,
+          "end": 25.84,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "these",
+          "start": 25.92,
+          "end": 26.0,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "symptoms",
+          "start": 26.16,
+          "end": 26.4,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "occurred",
+          "start": 26.56,
+          "end": 26.8,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "during",
+          "start": 26.88,
+          "end": 27.04,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "any",
+          "start": 27.36,
+          "end": 27.44,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "specific",
+          "start": 27.52,
+          "end": 27.92,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "activities",
+          "start": 28.0,
+          "end": 28.4,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "or",
+          "start": 28.8,
+          "end": 28.88,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "times",
+          "start": 29.04,
+          "end": 29.28,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "of",
+          "start": 29.28,
+          "end": 29.36,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "the",
+          "start": 29.36,
+          "end": 29.44,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "day?",
+          "start": 29.44,
+          "end": 29.52,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "Yes,",
+          "start": 31.04,
+          "end": 31.12,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "I've",
+          "start": 32.0,
+          "end": 32.24,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "noticed",
+          "start": 32.32,
+          "end": 32.48,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "that",
+          "start": 32.64,
+          "end": 32.72,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "it",
+          "start": 32.96,
+          "end": 33.04,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "happens",
+          "start": 33.2,
+          "end": 33.36,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "mostly",
+          "start": 33.68,
+          "end": 33.92,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "when",
+          "start": 34.08,
+          "end": 34.16,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "I",
+          "start": 34.24,
+          "end": 34.32,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "push",
+          "start": 34.48,
+          "end": 34.72,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "myself",
+          "start": 34.72,
+          "end": 35.12,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "physically,",
+          "start": 35.36,
+          "end": 35.68,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "like",
+          "start": 36.72,
+          "end": 36.8,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "when",
+          "start": 36.88,
+          "end": 36.96,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "I'm",
+          "start": 37.04,
+          "end": 37.12,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "climbing",
+          "start": 37.2,
+          "end": 37.36,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "stairs",
+          "start": 37.76,
+          "end": 38.0,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "or",
+          "start": 38.16,
+          "end": 38.24,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "walking",
+          "start": 38.48,
+          "end": 38.64,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "fast.",
+          "start": 38.96,
+          "end": 39.2,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "All",
+          "start": 41.04,
+          "end": 41.12,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "right,",
+          "start": 41.2,
+          "end": 41.28,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "do",
+          "start": 41.6,
+          "end": 41.68,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "you",
+          "start": 41.76,
+          "end": 41.84,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "have",
+          "start": 41.92,
+          "end": 42.0,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "any",
+          "start": 42.08,
+          "end": 42.16,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "history",
+          "start": 42.4,
+          "end": 42.56,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "of",
+          "start": 42.72,
+          "end": 42.8,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "heart",
+          "start": 43.04,
+          "end": 43.28,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "disease",
+          "start": 43.28,
+          "end": 43.6,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "in",
+          "start": 43.68,
+          "end": 43.76,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "your",
+          "start": 43.84,
+          "end": 43.92,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "family?",
+          "start": 43.92,
+          "end": 44.08,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "Not",
+          "start": 45.68,
+          "end": 45.76,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "that",
+          "start": 45.84,
+          "end": 45.92,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "I'm",
+          "start": 45.92,
+          "end": 46.08,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "aware",
+          "start": 46.16,
+          "end": 46.32,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "of.",
+          "start": 46.4,
+          "end": 46.48,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "My",
+          "start": 47.44,
+          "end": 47.52,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "parents",
+          "start": 47.68,
+          "end": 47.92,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "and",
+          "start": 48.48,
+          "end": 48.56,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "siblings",
+          "start": 48.64,
+          "end": 49.04,
+          "speaker": "speaker_0",
+          "word_is_final": true
+        },
+        {
+          "text": "don't",
+          "start": 49.12,
+          "end": 49.28,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "have",
+          "start": 49.28,
+          "end": 49.36,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "any",
+          "start": 49.6,
+          "end": 49.68,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "heart",
+          "start": 50.08,
+          "end": 50.24,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "related",
+          "start": 50.32,
+          "end": 50.56,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        },
+        {
+          "text": "issues",
+          "start": 50.64,
+          "end": 50.88,
+          "speaker": "speaker_1",
+          "word_is_final": true
+        }
+      ],
+      "version": 390
+    }
+  ]
+}

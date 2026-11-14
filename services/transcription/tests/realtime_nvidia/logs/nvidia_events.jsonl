@@ -1,0 +1,4 @@
+{"elapsed_s": 0.001, "event_id": "event_1162", "session": {"input_audio_format": "pcm16", "model": ".nemotron-3.5-asr-streaming-0.6b.q8_0.gguf", "sample_rate": 16000}, "type": "session.created"}
+{"elapsed_s": 0.002, "event_id": "event_1163", "session": {"automatic_punctuation": true, "endpointing_ms": 2000, "language": "en-US", "sample_rate": 16000, "speaker_diarization": true, "word_timestamps": true}, "type": "session.updated"}
+{"elapsed_s": 34.839, "audio_processed": 31.299999237060547, "event_id": "event_1164", "transcript": "", "type": "conversation.item.input_audio_transcription.completed", "words": []}
+{"elapsed_s": 34.84, "event_id": "event_1165", "type": "input_audio_buffer.committed"}

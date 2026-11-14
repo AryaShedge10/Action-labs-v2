@@ -1,0 +1,65 @@
+{
+  "consultation_id": "SYNTH-NEGATION-003",
+  "language": "en-US",
+  "patient": {
+    "id": "PT-1003",
+    "name": "David Clark",
+    "age": null,
+    "sex": "male",
+    "allergies": [],
+    "medications": ["amlodipine 5mg"],
+    "medical_history": ["childhood asthma (resolved)", "previous lisinopril (discontinued)"]
+  },
+  "segments": [
+    {
+      "speaker": "DOCTOR",
+      "start_time": 0.0,
+      "end_time": 4.0,
+      "text": "Good afternoon David. How can I help you today?",
+      "confidence": 0.98
+    },
+    {
+      "speaker": "PATIENT",
+      "start_time": 4.2,
+      "end_time": 10.5,
+      "text": "I came in for my blood pressure follow up. I've had occasional morning headaches, but no chest pain and no nausea.",
+      "confidence": 0.97
+    },
+    {
+      "speaker": "DOCTOR",
+      "start_time": 11.0,
+      "end_time": 16.0,
+      "text": "Are you experiencing any shortness of breath or dizziness when you stand up?",
+      "confidence": 0.96
+    },
+    {
+      "speaker": "PATIENT",
+      "start_time": 16.3,
+      "end_time": 23.0,
+      "text": "No shortness of breath. I had asthma as a child twenty years ago, but that resolved completely. I don't use inhalers now.",
+      "confidence": 0.97
+    },
+    {
+      "speaker": "DOCTOR",
+      "start_time": 23.5,
+      "end_time": 28.0,
+      "text": "And regarding medications, are you still on amlodipine? You used to take lisinopril in the past.",
+      "confidence": 0.98
+    },
+    {
+      "speaker": "PATIENT",
+      "start_time": 28.5,
+      "end_time": 35.0,
+      "text": "Yes, I take amlodipine 5mg daily. The lisinopril was discontinued two years ago due to cough. I am not taking lisinopril.",
+      "confidence": 0.98
+    },
+    {
+      "speaker": "DOCTOR",
+      "start_time": 35.5,
+      "end_time": 42.0,
+      "text": "Your blood pressure today is 132/84 mmHg. Lungs are completely clear. Continue amlodipine 5mg daily and monitor at home.",
+      "confidence": 0.97
+    }
+  ]
+}
+

@@ -1,0 +1,71 @@
+{
+  "targets": [
+    {
+      "label": "tests/moss_env",
+      "path": "A:\\VIT-3rd-sem\\3rd_sem\\EDI_Accion_lab\\tests\\moss_env",
+      "exists": true,
+      "bytes": 5522370348,
+      "mb": 5266.54,
+      "gb": 5.143,
+      "file_count": 37057
+    },
+    {
+      "label": "tests/moss_hybrid",
+      "path": "A:\\VIT-3rd-sem\\3rd_sem\\EDI_Accion_lab\\tests\\moss_hybrid",
+      "exists": true,
+      "bytes": 6005490,
+      "mb": 5.73,
+      "gb": 0.006,
+      "file_count": 243
+    },
+    {
+      "label": "tests/moss_profile_env",
+      "path": "A:\\VIT-3rd-sem\\3rd_sem\\EDI_Accion_lab\\tests\\moss_profile_env",
+      "exists": true,
+      "bytes": 10455628050,
+      "mb": 9971.26,
+      "gb": 9.738,
+      "file_count": 30056
+    },
+    {
+      "label": "tests/moss_profile_env_clean",
+      "path": "A:\\VIT-3rd-sem\\3rd_sem\\EDI_Accion_lab\\tests\\moss_profile_env_clean",
+      "exists": true,
+      "bytes": 5834684799,
+      "mb": 5564.39,
+      "gb": 5.434,
+      "file_count": 48850
+    },
+    {
+      "label": "tests/moss_realtime",
+      "path": "A:\\VIT-3rd-sem\\3rd_sem\\EDI_Accion_lab\\tests\\moss_realtime",
+      "exists": true,
+      "bytes": 64831925,
+      "mb": 61.83,
+      "gb": 0.06,
+      "file_count": 80
+    },
+    {
+      "label": "tests/moss_test",
+      "path": "A:\\VIT-3rd-sem\\3rd_sem\\EDI_Accion_lab\\tests\\moss_test",
+      "exists": true,
+      "bytes": 1038330,
+      "mb": 0.99,
+      "gb": 0.001,
+      "file_count": 123
+    },
+    {
+      "label": "HuggingFace MOSS Cache",
+      "path": "C:\\Users\\sahil\\.cache\\huggingface\\hub\\models--OpenMOSS-Team--MOSS-Transcribe-Diarize",
+      "exists": true,
+      "bytes": 3666178556,
+      "mb": 3496.34,
+      "gb": 3.414,
+      "file_count": 36
+    }
+  ],
+  "grand_total_bytes": 25550737498,
+  "grand_total_mb": 24367.08,
+  "grand_total_gb": 23.796,
+  "git_status": " M app/api/live_routes.py\n M app/api/routes.py\n M app/audio/preprocessing.py\n M app/main.py\n M app/services/diarization.py\n M app/services/llm_correction.py\n M app/services/merge.py\n M app/services/roles.py\n M app/services/text_cleanup.py\n M app/transcription/transcript_formatter.py\n M app/transcription/whisper_service.py\n M output/temp_processed.wav\n M static/index.html\n M static/transcript.html\n M tests/test_swap_endpoint.py\n?? Port\n?? app/services/alignment.py\n?? app/services/pipeline.py\n?? app/services/utterance_manager.py\n?? tests/moss_env/\n?? tests/moss_hybrid/\n?? tests/moss_profile_env/\n?? tests/moss_profile_env_clean/\n?? tests/moss_realtime/\n?? tests/moss_test/\n?? tests/realtime_stt_eval/\n?? tests/test_alignment.py\n?? tests/test_utterance_manager.py\n?? tests/test_window_refiner.py\n"
+}

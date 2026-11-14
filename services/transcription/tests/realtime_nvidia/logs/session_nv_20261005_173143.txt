@@ -1,0 +1,25 @@
+Session: nv_20261005_173143
+Provider: NVIDIA NeMo Local (no cloud)
+ASR: nemotron-3.5 | Diarization: nemotron-3-diarization
+Audio: 18.82s | Wall: 28.41s | RTF: 1.51
+First Text: 3702.2ms | First Partial: 3702.2ms | Final Turn: 20685.57ms
+================================================================
+
+Doctor: Good morning. What's the problem?
+
+Patient: Good morning, doctor. I have a headache.
+
+Doctor: How long have you had it?
+
+Patient: Four two days.
+
+Doctor: Do you have a fever?
+
+Patient: No, just headache.
+
+Doctor: Okay, take this medicine after meals.
+
+Patient: Thank you, doctor.
+
+Doctor: You'll be fine soon
+

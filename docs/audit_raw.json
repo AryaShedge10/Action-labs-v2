@@ -1,0 +1,1913 @@
+{
+  "repo_a": [
+    {
+      "repo": "repo_a",
+      "rel_path": ".env.example",
+      "size_bytes": 604
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": ".gitignore",
+      "size_bytes": 585
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "BUG_FIXES_SUMMARY.md",
+      "size_bytes": 7740
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "create_sample_audio.py",
+      "size_bytes": 1840
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "CURRENT_STATUS.txt",
+      "size_bytes": 8281
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "INSTALLATION_GUIDE.md",
+      "size_bytes": 3105
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "install_fix.bat",
+      "size_bytes": 1050
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "NEXT_STEPS.md",
+      "size_bytes": 7837
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "Port",
+      "size_bytes": 57
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "PROJECT_DOCUMENTATION.md",
+      "size_bytes": 45460
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "quick_test.py",
+      "size_bytes": 3441
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "README.md",
+      "size_bytes": 11351
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "README_WINDOWS_SETUP.md",
+      "size_bytes": 3759
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "record_live_audio.py",
+      "size_bytes": 8471
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "requirements-simple.txt",
+      "size_bytes": 245
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "requirements.txt",
+      "size_bytes": 256
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "SETUP_GUIDE.md",
+      "size_bytes": 5114
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "START_HERE.md",
+      "size_bytes": 7021
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "TEAM_B_COMPATIBILITY_SUMMARY.md",
+      "size_bytes": 6922
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "TEAM_B_INTEGRATION.md",
+      "size_bytes": 9855
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "TESTING_GUIDE.md",
+      "size_bytes": 9456
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "test_transcription.py",
+      "size_bytes": 3615
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "WHATS_NEW.md",
+      "size_bytes": 8199
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\main.py",
+      "size_bytes": 3691
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\__init__.py",
+      "size_bytes": 69
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\api\\live_routes.py",
+      "size_bytes": 14537
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\api\\routes.py",
+      "size_bytes": 4706
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\api\\__init__.py",
+      "size_bytes": 14
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\audio\\audio_loader.py",
+      "size_bytes": 4828
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\audio\\preprocessing.py",
+      "size_bytes": 7801
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\audio\\__init__.py",
+      "size_bytes": 27
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\services\\alignment.py",
+      "size_bytes": 10758
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\services\\diarization.py",
+      "size_bytes": 9201
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\services\\llm_correction.py",
+      "size_bytes": 18318
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\services\\merge.py",
+      "size_bytes": 12090
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\services\\pipeline.py",
+      "size_bytes": 18239
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\services\\roles.py",
+      "size_bytes": 7286
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\services\\text_cleanup.py",
+      "size_bytes": 8625
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\services\\utterance_manager.py",
+      "size_bytes": 11205
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\services\\__init__.py",
+      "size_bytes": 19
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\speaker\\diarization_interface.py",
+      "size_bytes": 4912
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\speaker\\__init__.py",
+      "size_bytes": 30
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\transcription\\transcript_formatter.py",
+      "size_bytes": 3701
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\transcription\\whisper_service.py",
+      "size_bytes": 9072
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "app\\transcription\\__init__.py",
+      "size_bytes": 24
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "output\\.gitkeep",
+      "size_bytes": 40
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "output\\temp_processed.wav",
+      "size_bytes": 13440044
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "sample_audio\\.gitkeep",
+      "size_bytes": 40
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "sample_audio\\test.m4a",
+      "size_bytes": 347855
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "static\\index.html",
+      "size_bytes": 39238
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "static\\transcript.html",
+      "size_bytes": 19024
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\test_alignment.py",
+      "size_bytes": 4016
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\test_merge.py",
+      "size_bytes": 3601
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\test_roles.py",
+      "size_bytes": 3297
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\test_swap_endpoint.py",
+      "size_bytes": 6248
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\test_utterance_manager.py",
+      "size_bytes": 4139
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\test_window_refiner.py",
+      "size_bytes": 3286
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\__init__.py",
+      "size_bytes": 17
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\logs\\all_completed_events.jsonl",
+      "size_bytes": 95808
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\logs\\completed_1791201724294.json",
+      "size_bytes": 5659
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\logs\\completed_1791201724307.json",
+      "size_bytes": 161
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\logs\\completed_1791202083338.json",
+      "size_bytes": 70578
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\logs\\completed_1791202083374.json",
+      "size_bytes": 162
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\logs\\completed_1791832894444.json",
+      "size_bytes": 70607
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\logs\\completed_1791832894550.json",
+      "size_bytes": 162
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\logs\\nvidia_events.jsonl",
+      "size_bytes": 941252
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\.env.example",
+      "size_bytes": 3323
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\ASSEMBLYAI_CLEANUP_REPORT.md",
+      "size_bytes": 3979
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\DISK_USAGE_REPORT.md",
+      "size_bytes": 3367
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\INSTALLATION_GUIDE.md",
+      "size_bytes": 6055
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\ISOLATION_REPORT.md",
+      "size_bytes": 4406
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\MIGRATION_FROM_ASSEMBLYAI.md",
+      "size_bytes": 7474
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\MOSS_REMAINING_ARTIFACTS.md",
+      "size_bytes": 1972
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\README.md",
+      "size_bytes": 7142
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\run_nemo_server.bat",
+      "size_bytes": 4088
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\run_test_backend.bat",
+      "size_bytes": 2356
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\run_test_backend.ps1",
+      "size_bytes": 1991
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\verify_isolation.py",
+      "size_bytes": 9051
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\backend\\requirements.txt",
+      "size_bytes": 719
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\backend\\__init__.py",
+      "size_bytes": 45
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\backend\\app\\config.py",
+      "size_bytes": 5449
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\backend\\app\\main.py",
+      "size_bytes": 12605
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\backend\\app\\models.py",
+      "size_bytes": 2380
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\backend\\app\\provider.py",
+      "size_bytes": 23879
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\backend\\app\\session_manager.py",
+      "size_bytes": 23288
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\backend\\app\\__init__.py",
+      "size_bytes": 49
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\frontend\\index.html",
+      "size_bytes": 17059
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\.gitkeep",
+      "size_bytes": 2
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\example_event_flow.json",
+      "size_bytes": 905
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\nvidia_events.jsonl",
+      "size_bytes": 708
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_152910.json",
+      "size_bytes": 23291
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_152910.txt",
+      "size_bytes": 1039
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_153748.json",
+      "size_bytes": 15366
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_153748.txt",
+      "size_bytes": 783
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_154356.json",
+      "size_bytes": 22978
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_154356.txt",
+      "size_bytes": 1026
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_162733.json",
+      "size_bytes": 21218
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_162733.txt",
+      "size_bytes": 965
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_173143.json",
+      "size_bytes": 36981
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_173143.txt",
+      "size_bytes": 645
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_173419.json",
+      "size_bytes": 882819
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261005_173419.txt",
+      "size_bytes": 3662
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261013_004745.json",
+      "size_bytes": 883076
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\logs\\session_nv_20261013_004745.txt",
+      "size_bytes": 3649
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\model_cache\\.gitkeep",
+      "size_bytes": 2
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\recordings\\.gitkeep",
+      "size_bytes": 2
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\recordings\\clinical_test_dialogue.wav",
+      "size_bytes": 1001644
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\recordings\\test_filler_pause.wav",
+      "size_bytes": 284844
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\recordings\\test_interruption.wav",
+      "size_bytes": 168044
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\recordings\\test_long_silence.wav",
+      "size_bytes": 576044
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\recordings\\test_medical_terms.wav",
+      "size_bytes": 390444
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\recordings\\test_quiet_patient.wav",
+      "size_bytes": 294444
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\recordings\\test_rapid_switching.wav",
+      "size_bytes": 358444
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\reports\\NVIDIA_REALTIME_REPORT.md",
+      "size_bytes": 8812
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\reports\\NVIDIA_RUNTIME_VERSION.md",
+      "size_bytes": 5303
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\reports\\REALTIME_EVENT_DEBUG.md",
+      "size_bytes": 4256
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\runtime\\.gitkeep",
+      "size_bytes": 2
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\scripts\\benchmark_latency.py",
+      "size_bytes": 13755
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\scripts\\create_test_audio.py",
+      "size_bytes": 7870
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\scripts\\debug_nemo_events.py",
+      "size_bytes": 3933
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\scripts\\test_3min_session.py",
+      "size_bytes": 9796
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_nvidia\\scripts\\test_realtime_events.py",
+      "size_bytes": 19299
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\.env.example",
+      "size_bytes": 422
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\CLEANUP_AFTER.md",
+      "size_bytes": 2802
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\CLEANUP_BEFORE.md",
+      "size_bytes": 4082
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\inventory_after.json",
+      "size_bytes": 1964
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\inventory_before.json",
+      "size_bytes": 2763
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\measure_inventory.py",
+      "size_bytes": 3085
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\perform_cleanup.py",
+      "size_bytes": 3519
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\README.md",
+      "size_bytes": 4508
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\run_test_server.bat",
+      "size_bytes": 772
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\run_test_server.ps1",
+      "size_bytes": 1251
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\verify_isolation.py",
+      "size_bytes": 3832
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\backend\\requirements.txt",
+      "size_bytes": 151
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\backend\\__init__.py",
+      "size_bytes": 19
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\backend\\app\\config.py",
+      "size_bytes": 2105
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\backend\\app\\main.py",
+      "size_bytes": 7377
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\backend\\app\\models.py",
+      "size_bytes": 2094
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\backend\\app\\provider.py",
+      "size_bytes": 8291
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\backend\\app\\session_manager.py",
+      "size_bytes": 14430
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\backend\\app\\__init__.py",
+      "size_bytes": 24
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\frontend\\index.html",
+      "size_bytes": 14027
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\recordings\\clinical_test_dialogue.wav",
+      "size_bytes": 1262370
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\reports\\ASSEMBLYAI_REALTIME_REPORT.md",
+      "size_bytes": 9229
+    },
+    {
+      "repo": "repo_a",
+      "rel_path": "tests\\realtime_stt_eval\\tests\\create_test_audio.py",
+      "size_bytes": 4394
+    }
+  ],
+  "repo_b": [
+    {
+      "repo": "repo_b",
+      "rel_path": ".dockerignore",
+      "size_bytes": 93
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": ".env.example",
+      "size_bytes": 1024
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": ".gitignore",
+      "size_bytes": 404
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docker-compose.yml",
+      "size_bytes": 2419
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "Dockerfile",
+      "size_bytes": 638
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "pytest.ini",
+      "size_bytes": 29
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "README.md",
+      "size_bytes": 6555
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "requirements-dev.txt",
+      "size_bytes": 94
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "requirements.txt",
+      "size_bytes": 90
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "streamlit_app.py",
+      "size_bytes": 11929
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\config.py",
+      "size_bytes": 3712
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\main.py",
+      "size_bytes": 7557
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\pipeline.py",
+      "size_bytes": 8392
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\__init__.py",
+      "size_bytes": 418
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\evaluation\\harness.py",
+      "size_bytes": 20520
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\evaluation\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\export\\team_c.py",
+      "size_bytes": 3064
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\export\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\extraction\\extractor.py",
+      "size_bytes": 5478
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\extraction\\llm_extractor.py",
+      "size_bytes": 9533
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\extraction\\rule_based.py",
+      "size_bytes": 31515
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\extraction\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\generation\\llm_soap.py",
+      "size_bytes": 3467
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\generation\\prescriptions.py",
+      "size_bytes": 2039
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\generation\\soap_generator.py",
+      "size_bytes": 5538
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\generation\\template.py",
+      "size_bytes": 12415
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\generation\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\grounding\\verifier.py",
+      "size_bytes": 11419
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\grounding\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\ingestion\\adapter.py",
+      "size_bytes": 4813
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\ingestion\\team_a_client.py",
+      "size_bytes": 2083
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\ingestion\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\knowledge\\drugs.py",
+      "size_bytes": 19315
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\knowledge\\terms.py",
+      "size_bytes": 11781
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\knowledge\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\models\\contracts.py",
+      "size_bytes": 2308
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\models\\schemas.py",
+      "size_bytes": 13574
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\models\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\nlp\\context.py",
+      "size_bytes": 13049
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\nlp\\matcher.py",
+      "size_bytes": 3652
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\nlp\\text.py",
+      "size_bytes": 4926
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\nlp\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\privacy\\phi.py",
+      "size_bytes": 2977
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\privacy\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\safety\\allergy_rules.py",
+      "size_bytes": 5300
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\safety\\clinical_rules.py",
+      "size_bytes": 9546
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\safety\\demographic_rules.py",
+      "size_bytes": 6501
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\safety\\engine.py",
+      "size_bytes": 3576
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\safety\\medication_rules.py",
+      "size_bytes": 5437
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\safety\\rules.py",
+      "size_bytes": 3424
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\safety\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\storage\\repository.py",
+      "size_bytes": 2516
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\storage\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\utils\\llm.py",
+      "size_bytes": 4288
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "app\\utils\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\pytest.ini",
+      "size_bytes": 45
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\requirements.txt",
+      "size_bytes": 221
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\auth.py",
+      "size_bytes": 1547
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\config.py",
+      "size_bytes": 961
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\database.py",
+      "size_bytes": 544
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\logging_config.py",
+      "size_bytes": 1283
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\main.py",
+      "size_bytes": 2110
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\api\\ehr.py",
+      "size_bytes": 1300
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\api\\encounters.py",
+      "size_bytes": 10366
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\api\\__init__.py",
+      "size_bytes": 63
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\integrations\\ehr.py",
+      "size_bytes": 1453
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\integrations\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\models\\orm.py",
+      "size_bytes": 3060
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\models\\__init__.py",
+      "size_bytes": 117
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\schemas\\team_b.py",
+      "size_bytes": 2490
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\schemas\\__init__.py",
+      "size_bytes": 401
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\services\\demo.py",
+      "size_bytes": 6569
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\services\\encounter.py",
+      "size_bytes": 2557
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\services\\fhir.py",
+      "size_bytes": 8272
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\services\\pdf.py",
+      "size_bytes": 5972
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\services\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\validators\\conflicts.py",
+      "size_bytes": 11539
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\validators\\grounding.py",
+      "size_bytes": 4631
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\app\\validators\\__init__.py",
+      "size_bytes": 174
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\tests\\test_api_contract.py",
+      "size_bytes": 835
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\tests\\test_pipeline.py",
+      "size_bytes": 445
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "backend\\tests\\test_safety.py",
+      "size_bytes": 4720
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "data\\evaluation\\cases.jsonl",
+      "size_bytes": 23668
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "data\\samples\\demo_conflict_001.json",
+      "size_bytes": 729
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "data\\samples\\team_a_20261031_143022.json",
+      "size_bytes": 1324
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docker\\backend.Dockerfile",
+      "size_bytes": 274
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docker\\frontend.Dockerfile",
+      "size_bytes": 356
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docker\\init-db.sql",
+      "size_bytes": 27
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docker\\mock_ehr.Dockerfile",
+      "size_bytes": 276
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docker\\nginx.conf",
+      "size_bytes": 409
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docker\\README.md",
+      "size_bytes": 454
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docs\\api.md",
+      "size_bytes": 1771
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docs\\architecture.md",
+      "size_bytes": 2595
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docs\\CURRENT_STATE.md",
+      "size_bytes": 2605
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docs\\DATASETS.md",
+      "size_bytes": 2412
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docs\\PROJECT_DOCUMENTATION.md",
+      "size_bytes": 39463
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docs\\team-b.example.json",
+      "size_bytes": 1328
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docs\\samples\\team_c_response_20261031_143022.json",
+      "size_bytes": 22705
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "docs\\samples\\team_c_response_conflict.json",
+      "size_bytes": 15520
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\index.html",
+      "size_bytes": 416
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\package-lock.json",
+      "size_bytes": 114314
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\package.json",
+      "size_bytes": 824
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\postcss.config.js",
+      "size_bytes": 87
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\tailwind.config.js",
+      "size_bytes": 2214
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\tsconfig.json",
+      "size_bytes": 600
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\vite.config.ts",
+      "size_bytes": 240
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\App.tsx",
+      "size_bytes": 1319
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\index.css",
+      "size_bytes": 3051
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\main.tsx",
+      "size_bytes": 1063
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\vite-env.d.ts",
+      "size_bytes": 166
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\components\\audit\\AuditDrawer.tsx",
+      "size_bytes": 3277
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\components\\finalize\\FinalizeDialog.tsx",
+      "size_bytes": 7840
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\components\\layout\\ActionBar.tsx",
+      "size_bytes": 4468
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\components\\layout\\HeaderBar.tsx",
+      "size_bytes": 3190
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\components\\note\\SoapEditor.tsx",
+      "size_bytes": 7435
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\components\\patient\\PatientPanel.tsx",
+      "size_bytes": 4405
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\components\\transcript\\TranscriptViewer.tsx",
+      "size_bytes": 3898
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\components\\validation\\ValidationPanel.tsx",
+      "size_bytes": 9237
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\hooks\\useEncounter.ts",
+      "size_bytes": 320
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\pages\\EncounterPage.tsx",
+      "size_bytes": 10614
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\pages\\HomePage.tsx",
+      "size_bytes": 14309
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\services\\api.ts",
+      "size_bytes": 1803
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\types\\clinical.ts",
+      "size_bytes": 2894
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "frontend\\src\\utils\\format.ts",
+      "size_bytes": 825
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "legacy\\pipeline_demo.py",
+      "size_bytes": 8454
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "mock_ehr\\requirements.txt",
+      "size_bytes": 106
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "mock_ehr\\api\\main.py",
+      "size_bytes": 3448
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "mock_ehr\\api\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "reports\\evaluation_report.md",
+      "size_bytes": 5553
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "reports\\metrics.json",
+      "size_bytes": 11372
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "scripts\\build_eval_cases.py",
+      "size_bytes": 15307
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "scripts\\convert_mts_dialog.py",
+      "size_bytes": 2795
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "scripts\\evaluate.py",
+      "size_bytes": 3554
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\conftest.py",
+      "size_bytes": 1629
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\evaluation\\test_regression.py",
+      "size_bytes": 1725
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\evaluation\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\integration\\test_api.py",
+      "size_bytes": 5346
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\integration\\test_team_c_export.py",
+      "size_bytes": 1643
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\integration\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\unit\\test_adapter.py",
+      "size_bytes": 2838
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\unit\\test_extraction.py",
+      "size_bytes": 7260
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\unit\\test_grounding.py",
+      "size_bytes": 4375
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\unit\\test_llm_layer.py",
+      "size_bytes": 7430
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\unit\\test_safety.py",
+      "size_bytes": 6382
+    },
+    {
+      "repo": "repo_b",
+      "rel_path": "tests\\unit\\__init__.py",
+      "size_bytes": 0
+    }
+  ],
+  "repo_c": [
+    {
+      "repo": "repo_c",
+      "rel_path": ".env.example",
+      "size_bytes": 925
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": ".gitignore",
+      "size_bytes": 266
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docker-compose.yml",
+      "size_bytes": 1629
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "README.md",
+      "size_bytes": 2380
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\pytest.ini",
+      "size_bytes": 45
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\requirements.txt",
+      "size_bytes": 221
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\auth.py",
+      "size_bytes": 1547
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\config.py",
+      "size_bytes": 961
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\database.py",
+      "size_bytes": 544
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\logging_config.py",
+      "size_bytes": 1283
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\main.py",
+      "size_bytes": 2110
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\api\\ehr.py",
+      "size_bytes": 1300
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\api\\encounters.py",
+      "size_bytes": 10366
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\api\\__init__.py",
+      "size_bytes": 63
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\integrations\\ehr.py",
+      "size_bytes": 1453
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\integrations\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\models\\orm.py",
+      "size_bytes": 3060
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\models\\__init__.py",
+      "size_bytes": 117
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\schemas\\team_b.py",
+      "size_bytes": 2469
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\schemas\\__init__.py",
+      "size_bytes": 401
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\services\\demo.py",
+      "size_bytes": 6569
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\services\\encounter.py",
+      "size_bytes": 2557
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\services\\fhir.py",
+      "size_bytes": 8272
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\services\\pdf.py",
+      "size_bytes": 5972
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\services\\__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\validators\\conflicts.py",
+      "size_bytes": 11511
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\validators\\grounding.py",
+      "size_bytes": 4631
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\app\\validators\\__init__.py",
+      "size_bytes": 174
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\tests\\test_api_contract.py",
+      "size_bytes": 835
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\tests\\test_pipeline.py",
+      "size_bytes": 445
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "backend\\tests\\test_safety.py",
+      "size_bytes": 4720
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docker\\backend.Dockerfile",
+      "size_bytes": 366
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docker\\frontend.Dockerfile",
+      "size_bytes": 356
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docker\\init-db.sql",
+      "size_bytes": 27
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docker\\mock_ehr.Dockerfile",
+      "size_bytes": 368
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docker\\nginx.conf",
+      "size_bytes": 409
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docker\\README.md",
+      "size_bytes": 454
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\api.md",
+      "size_bytes": 1771
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\architecture.md",
+      "size_bytes": 2595
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\team-b.example.json",
+      "size_bytes": 1328
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\build_report.py",
+      "size_bytes": 34936
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\content_ch1_3.py",
+      "size_bytes": 42315
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\content_ch4_6.py",
+      "size_bytes": 48339
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\content_ch7_9.py",
+      "size_bytes": 56402
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\diagrams.py",
+      "size_bytes": 23977
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\postprocess_report.ps1",
+      "size_bytes": 1387
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig1_1_context.png",
+      "size_bytes": 81952
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig4_1_architecture.png",
+      "size_bytes": 146179
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig4_2_dfd0.png",
+      "size_bytes": 92676
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig4_3_dfd1.png",
+      "size_bytes": 152061
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig4_4_er.png",
+      "size_bytes": 142825
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig4_5_usecase.png",
+      "size_bytes": 236498
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig4_6_class.png",
+      "size_bytes": 134949
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig4_7_sequence.png",
+      "size_bytes": 106410
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig4_8_state.png",
+      "size_bytes": 64810
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig5_1_gantt.png",
+      "size_bytes": 91760
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig8_1_home.png",
+      "size_bytes": 73907
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig8_2_encounter.png",
+      "size_bytes": 75864
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig8_3_finalize.png",
+      "size_bytes": 72773
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "docs\\report\\figures\\fig8_4_audit.png",
+      "size_bytes": 72813
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\index.html",
+      "size_bytes": 416
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\package-lock.json",
+      "size_bytes": 114314
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\package.json",
+      "size_bytes": 824
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\postcss.config.js",
+      "size_bytes": 87
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\tailwind.config.js",
+      "size_bytes": 2214
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\tsconfig.json",
+      "size_bytes": 600
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\vite.config.ts",
+      "size_bytes": 240
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\App.tsx",
+      "size_bytes": 1319
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\index.css",
+      "size_bytes": 3051
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\main.tsx",
+      "size_bytes": 1063
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\vite-env.d.ts",
+      "size_bytes": 166
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\components\\audit\\AuditDrawer.tsx",
+      "size_bytes": 3277
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\components\\finalize\\FinalizeDialog.tsx",
+      "size_bytes": 7840
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\components\\layout\\ActionBar.tsx",
+      "size_bytes": 4468
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\components\\layout\\HeaderBar.tsx",
+      "size_bytes": 3190
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\components\\note\\SoapEditor.tsx",
+      "size_bytes": 7435
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\components\\patient\\PatientPanel.tsx",
+      "size_bytes": 4405
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\components\\transcript\\TranscriptViewer.tsx",
+      "size_bytes": 3898
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\components\\validation\\ValidationPanel.tsx",
+      "size_bytes": 9237
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\hooks\\useEncounter.ts",
+      "size_bytes": 320
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\pages\\EncounterPage.tsx",
+      "size_bytes": 10614
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\pages\\HomePage.tsx",
+      "size_bytes": 14309
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\services\\api.ts",
+      "size_bytes": 1803
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\types\\clinical.ts",
+      "size_bytes": 2894
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "frontend\\src\\utils\\format.ts",
+      "size_bytes": 825
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "mock_ehr\\requirements.txt",
+      "size_bytes": 106
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "mock_ehr\\api\\main.py",
+      "size_bytes": 3448
+    },
+    {
+      "repo": "repo_c",
+      "rel_path": "mock_ehr\\api\\__init__.py",
+      "size_bytes": 0
+    }
+  ]
+}

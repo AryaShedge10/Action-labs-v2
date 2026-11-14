@@ -1,0 +1,22 @@
+# NVIDIA NeMo-Speech.cpp Realtime Test Environment — Python Dependencies
+# tests/realtime_nvidia/backend/requirements.txt
+#
+# Install ONLY into tests/realtime_nvidia/.venv — NEVER global, NEVER production venv.
+# Installation:
+#   cd tests\realtime_nvidia
+#   python -m venv .venv
+#   .venv\Scripts\pip install -r backend\requirements.txt
+#
+# These packages communicate with a locally-running NeMo-Speech.cpp server.
+# No torch, no NeMo, no whisper, no pyannote needed here.
+# All NVIDIA inference runs inside the native C++ runtime.
+
+fastapi==0.142.2
+uvicorn==0.54.0
+websockets==17.2
+python-dotenv==1.2.4
+numpy==2.4.6
+soundfile==0.14.0
+httpx==0.28.1
+pydantic==2.13.5
+python-multipart==0.0.20
