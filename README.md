@@ -208,3 +208,4 @@ python -m pytest tests -v -o "pythonpath=."
 ## 8. License & Medical Disclaimer
 
 This software is an engineering assistance tool for clinical documentation workflow automation. It is designed to assist physicians by generating structured draft notes from consultation audio. **This system does not independently diagnose, treat, prescribe, or substitute for professional medical judgment.**
+
