@@ -248,6 +248,10 @@ Return ONLY the JSON object, no explanation."""
 
 def validate_groq_config() -> str:
     """Validate Groq config at startup. Returns warning string or empty string."""
+    enable_external = os.getenv("ENABLE_EXTERNAL_LLM", "false").strip().lower() in ("true", "1", "yes")
+    if not enable_external:
+        return ""
+
     api_key = os.getenv("GROQ_API_KEY")
     if not api_key or api_key == "your_groq_api_key_here":
         return ""

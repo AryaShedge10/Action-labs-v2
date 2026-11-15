@@ -7,10 +7,18 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def _team_c_schema():
-    spec = importlib.util.spec_from_file_location("team_c_schema", ROOT / "backend/app/schemas/team_b.py")
+    candidates = [
+        ROOT.parents[1] / "backend/dashboard/app/schemas/team_b.py",
+        ROOT / "backend/app/schemas/team_b.py",
+        ROOT.parents[1] / "shared/contracts/clinical_analysis.py",
+    ]
+    target_path = next((p for p in candidates if p.exists()), None)
+    if not target_path:
+        raise FileNotFoundError(f"Could not locate Team C schema in candidates: {candidates}")
+    spec = importlib.util.spec_from_file_location("team_c_schema", target_path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return mod.TeamBPayload
+    return getattr(mod, "TeamBPayload", getattr(mod, "ClinicalAnalysisContract", None))
 
 
 def test_real_team_a_sample_maps_to_team_c(pipeline):

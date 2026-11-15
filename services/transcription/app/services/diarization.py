@@ -10,7 +10,10 @@ import warnings
 from typing import List, Dict, Optional
 from pathlib import Path
 from dotenv import load_dotenv
-import torch
+try:
+    import torch
+except ImportError:
+    torch = None
 
 # Suppress harmless torchcodec and pyannote warnings on Windows
 warnings.filterwarnings("ignore", category=UserWarning, module="pyannote")
@@ -55,6 +58,10 @@ def get_diarization_pipeline():
             print("   3. Set HF_TOKEN in .env file")
             return None
         
+        if torch is None:
+            print("[WARN] torch not installed; diarization pipeline unavailable")
+            return None
+
         # Detect device
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         
@@ -206,9 +213,12 @@ def diarize(audio_path: str, min_speakers: int = None, max_speakers: int = None)
             kwargs['max_speakers'] = max_speakers
         
         # Preload audio into memory tensor to avoid torchcodec dependency
-        import torchaudio
-        waveform, sample_rate = torchaudio.load(audio_path)
-        audio_input = {"waveform": waveform, "sample_rate": sample_rate}
+        try:
+            import torchaudio
+            waveform, sample_rate = torchaudio.load(audio_path)
+            audio_input = {"waveform": waveform, "sample_rate": sample_rate}
+        except Exception:
+            audio_input = audio_path
         
         # Run diarization in inference mode for maximum speed & lower memory
         with _gpu_lock:

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type HTMLMotionProps } from "framer-motion";
 import { AlertTriangle, FileDown, FileText, ScrollText, Send, ShieldCheck } from "lucide-react";
 
 export default function ActionBar({
@@ -106,12 +106,13 @@ export default function ActionBar({
 
 function PrimaryButton({
   children,
+  className,
   ...props
-}: React.ButtonHTMLAttributes<HTMLButtonElement>) {
+}: HTMLMotionProps<"button">) {
   return (
     <motion.button
       whileTap={{ scale: 0.97 }}
-      className="rounded-xl bg-gradient-to-br from-clinical-700 to-clinical-900 px-3.5 py-2 text-sm font-semibold text-white shadow-soft hover:shadow-lift disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:shadow-soft"
+      className={`rounded-xl bg-gradient-to-br from-clinical-700 to-clinical-900 px-3.5 py-2 text-sm font-semibold text-white shadow-soft hover:shadow-lift disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:shadow-soft ${className ?? ""}`}
       {...props}
     >
       {children}
@@ -121,12 +122,13 @@ function PrimaryButton({
 
 function SecondaryButton({
   children,
+  className,
   ...props
-}: React.ButtonHTMLAttributes<HTMLButtonElement>) {
+}: HTMLMotionProps<"button">) {
   return (
     <motion.button
       whileTap={{ scale: 0.97 }}
-      className="rounded-xl border border-ink-200 bg-white px-3 py-2 text-sm font-medium text-ink-700 shadow-soft transition-colors hover:border-clinical-300 hover:text-clinical-800 disabled:cursor-not-allowed disabled:opacity-50"
+      className={`rounded-xl border border-ink-200 bg-white px-3 py-2 text-sm font-medium text-ink-700 shadow-soft transition-colors hover:border-clinical-300 hover:text-clinical-800 disabled:cursor-not-allowed disabled:opacity-50 ${className ?? ""}`}
       {...props}
     >
       {children}

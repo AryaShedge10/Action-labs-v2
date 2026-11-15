@@ -78,9 +78,10 @@ export default function EncounterPage() {
   const ehr = useMutation({
     mutationFn: () => api.handoff(encounterId!),
     onSuccess: (data) => {
-      setHandoff(data as Record<string, unknown>);
+      const res = data as Record<string, unknown>;
+      setHandoff(res);
       toast.success("Sent to mock EHR", {
-        description: `Status: ${String(data.status ?? "complete")}`,
+        description: `Status: ${String(res?.status ?? "complete")}`,
       });
     },
     onError: (err: Error) => {

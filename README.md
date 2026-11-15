@@ -93,7 +93,25 @@ docker compose up --build -d
 - Node.js 18+ & npm
 - FFmpeg (for audio format conversions)
 
-### Windows Setup Commands:
+### Helper Automation Scripts (Windows PowerShell):
+```powershell
+# Automated setup (installs Python packages, npm dependencies, creates .env)
+.\scripts\setup_windows.ps1
+
+# Run all test suites (Root, Dashboard, Clinical NLP, Transcription, Frontend build)
+.\scripts\run_all_tests.ps1
+
+# Check live health status of all running services
+python .\scripts\check_health.py
+
+# Launch local development environment guide
+.\scripts\run_local.ps1
+
+# Clean temporary test files and pycache without deleting databases
+.\scripts\cleanup.ps1
+```
+
+### Windows Manual Setup Commands:
 ```powershell
 # 1. Install dashboard dependencies
 cd backend\dashboard

@@ -49,7 +49,12 @@ async def startup_event():
     Both models load in background threads — server is ready immediately
     but models will be hot by the time the first recording starts.
     """
+    import os
     import threading
+
+    if os.getenv("DISABLE_MODEL_WARMUP", "false").lower() in ("true", "1", "yes") or os.getenv("TESTING", "false").lower() in ("true", "1"):
+        print("[Startup] Model warmup skipped (test / lightweight mode enabled).")
+        return
 
     groq_warning = validate_groq_config()
     if groq_warning:

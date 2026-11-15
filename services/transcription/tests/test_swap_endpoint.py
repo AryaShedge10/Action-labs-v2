@@ -5,6 +5,9 @@ NOTE: faster_whisper, pyannote, and sounddevice are GPU/native packages that may
 not be installed in lightweight CI environments. We mock them before importing
 app.main so the FastAPI app boots without those packages.
 """
+import os
+os.environ["DISABLE_MODEL_WARMUP"] = "true"
+os.environ["TESTING"] = "true"
 import sys
 import types
 import pytest

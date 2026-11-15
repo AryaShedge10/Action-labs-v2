@@ -20,7 +20,10 @@ try:
 except Exception:
     pass
 
-from faster_whisper import WhisperModel
+try:
+    from faster_whisper import WhisperModel
+except ImportError:
+    WhisperModel = None
 from typing import List, Dict
 import numpy as np
 import time
@@ -38,6 +41,10 @@ def get_whisper_model(model_name: str = "base.en", device: str = "auto", compute
     Honors WHISPER_DEVICE from environment if set, otherwise auto-detects CUDA.
     """
     global _whisper_model, _whisper_model_name
+
+    if WhisperModel is None:
+        print("[WhisperService] [WARN] faster_whisper not installed; whisper model unavailable")
+        return None
 
     if _whisper_model is not None and _whisper_model_name == model_name:
         return _whisper_model
@@ -121,6 +128,11 @@ class WhisperService:
         - language is fixed to 'en' — skips language detection step
         """
         t0 = time.time()
+        if self.model is None:
+            return []
+        if self.model is None:
+            print(f"\n[Whisper] Transcribing: {Path(audio_path).name} (Model unavailable/CPU lightweight mode)")
+            return []
         print(f"\n[Whisper] Transcribing: {Path(audio_path).name}")
 
         segments_iter, info = self.model.transcribe(
@@ -172,6 +184,8 @@ class WhisperService:
             offset_seconds:  seconds to add to all timestamps
         """
         t0 = time.time()
+        if self.model is None:
+            return []
 
         # Silero VAD (inside faster-whisper) requires float32; librosa returns float64
         if audio_data.dtype != np.float32:
