@@ -40,6 +40,11 @@ SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 app = FastAPI(title="Mock EHR Adapter", docs_url="/docs")
 
 
+@app.get("/health")
+def health():
+    return {"status": "ok", "service": "mock_ehr"}
+
+
 @app.on_event("startup")
 def startup() -> None:
     Base.metadata.create_all(bind=engine)
