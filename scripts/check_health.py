@@ -10,25 +10,25 @@ import urllib.error
 SERVICES = [
     {
         "name": "Dashboard Backend",
-        "url": "http://localhost:8000/api/health",
+        "url": "http://127.0.0.1:8000/api/health",
         "expected_status": 200,
         "critical": True,
     },
     {
         "name": "Clinical NLP & Safety Service",
-        "url": "http://localhost:8002/v1/health",
+        "url": "http://127.0.0.1:8002/v1/health",
         "expected_status": 200,
         "critical": True,
     },
     {
         "name": "Transcription Service",
-        "url": "http://localhost:8003/api/v1/health",
+        "url": "http://127.0.0.1:8003/api/v1/health",
         "expected_status": 200,
         "critical": True,
     },
     {
         "name": "Mock EHR Service",
-        "url": "http://localhost:8001/health",
+        "url": "http://127.0.0.1:8001/health",
         "expected_status": 200,
         "critical": False,
     },
@@ -41,7 +41,7 @@ def check_service(service):
     expected = service["expected_status"]
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "ClinicalScribe-HealthCheck"})
-        with urllib.request.urlopen(req, timeout=3) as resp:
+        with urllib.request.urlopen(req, timeout=10) as resp:
             code = resp.getcode()
             body = resp.read().decode("utf-8", errors="replace")
             try:
