@@ -1,0 +1,269 @@
+{
+ "HELD-001": {
+  "entities": [
+   {
+    "type": "ALLERGY",
+    "surface_text": "Penicilin",
+    "normalized": "penicillin",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "Penicilin gives me hives",
+    "value": null,
+    "unit": null,
+    "attributes": {
+     "reaction": "hives"
+    }
+   },
+   {
+    "type": "SYMPTOM",
+    "surface_text": "sore throat",
+    "normalized": "sore throat",
+    "status": "PRESENT",
+    "segment_id": "S003",
+    "quote": "You have a bad sore throat",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   },
+   {
+    "type": "MEDICATION",
+    "surface_text": "amoxicilin",
+    "normalized": "amoxicillin",
+    "status": "PRESCRIBED",
+    "segment_id": "S003",
+    "quote": "I will start you on amoxicilin 500 mg three times a day",
+    "value": null,
+    "unit": null,
+    "attributes": {
+     "dose": "500 mg",
+     "frequency": "three times a day",
+     "duration": "seven days"
+    }
+   }
+  ]
+ },
+ "HELD-002": {
+  "entities": [
+   {
+    "type": "ALLERGY",
+    "surface_text": "sulfa drugs",
+    "normalized": "sulfa drugs",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "I am allergic to sulfa drugs",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   },
+   {
+    "type": "MEDICATION",
+    "surface_text": "Septran",
+    "normalized": "sulfamethoxazole-trimethoprim",
+    "status": "PRESCRIBED",
+    "segment_id": "S003",
+    "quote": "I will prescribe Septran twice a day for five days",
+    "value": null,
+    "unit": null,
+    "attributes": {
+     "frequency": "twice a day",
+     "duration": "five days"
+    }
+   }
+  ]
+ },
+ "HELD-003": {
+  "entities": [
+   {
+    "type": "SYMPTOM",
+    "surface_text": "fever",
+    "normalized": "fever",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "I have fever",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   },
+   {
+    "type": "MEDICATION",
+    "surface_text": "Dolo 650",
+    "normalized": "acetaminophen",
+    "status": "CURRENT",
+    "segment_id": "S002",
+    "quote": "I took Dolo 650 in the morning",
+    "value": null,
+    "unit": null,
+    "attributes": {
+     "dose": "650 mg"
+    }
+   },
+   {
+    "type": "MEDICATION",
+    "surface_text": "Crocin",
+    "normalized": "Crocin",
+    "status": "CURRENT",
+    "segment_id": "S002",
+    "quote": "Crocin at night",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   }
+  ]
+ },
+ "HELD-004": {
+  "entities": [
+   {
+    "type": "ALLERGY",
+    "surface_text": "Augmentin",
+    "normalized": "amoxicillin-clavulanate",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "I took Augmentin and my face swelled up",
+    "value": null,
+    "unit": null,
+    "attributes": {
+     "reaction": "facial swelling, trouble breathing"
+    }
+   },
+   {
+    "type": "MEDICATION",
+    "surface_text": "cefuroxime",
+    "normalized": "cefuroxime",
+    "status": "PRESCRIBED",
+    "segment_id": "S003",
+    "quote": "I will prescribe cefuroxime 250 mg twice a day",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   },
+   {
+    "type": "DIAGNOSIS",
+    "surface_text": "ear infection",
+    "normalized": "otitis media",
+    "status": "PRESENT",
+    "segment_id": "S003",
+    "quote": "For your ear infection",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   }
+  ]
+ },
+ "HELD-005": {
+  "entities": [
+   {
+    "type": "SYMPTOM",
+    "surface_text": "tummy has been hurting",
+    "normalized": "abdominal pain",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "My tummy has been hurting since yesterday",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   },
+   {
+    "type": "SYMPTOM",
+    "surface_text": "giddy",
+    "normalized": "dizziness",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "I feel giddy",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   },
+   {
+    "type": "SYMPTOM",
+    "surface_text": "loose motions",
+    "normalized": "diarrhea",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "I have loose motions",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   }
+  ]
+ },
+ "HELD-006": {
+  "entities": [
+   {
+    "type": "SYMPTOM",
+    "surface_text": "cough",
+    "normalized": "cough",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "I can't deny the cough has been bad this week",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   }
+  ]
+ },
+ "HELD-007": {
+  "entities": [
+   {
+    "type": "MEDICATION",
+    "surface_text": "codeine syrup",
+    "normalized": "codeine",
+    "status": "PRESCRIBED",
+    "segment_id": "S002",
+    "quote": "I will prescribe codeine syrup",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   },
+   {
+    "type": "MEDICATION",
+    "surface_text": "ibuprofen",
+    "normalized": "ibuprofen",
+    "status": "PRESCRIBED",
+    "segment_id": "S002",
+    "quote": "ibuprofen 600 mg twice a day",
+    "value": null,
+    "unit": null,
+    "attributes": {
+     "dose": "600 mg"
+    }
+   },
+   {
+    "type": "SYMPTOM",
+    "surface_text": "fever",
+    "normalized": "fever",
+    "status": "PRESENT",
+    "segment_id": "S001",
+    "quote": "He has a fever and ear pain",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   }
+  ]
+ },
+ "HELD-008": {
+  "entities": [
+   {
+    "type": "SYMPTOM",
+    "surface_text": "bukhar",
+    "normalized": "fever",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "mujhe bukhar hai",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   },
+   {
+    "type": "SYMPTOM",
+    "surface_text": "sar dard",
+    "normalized": "headache",
+    "status": "PRESENT",
+    "segment_id": "S002",
+    "quote": "sar dard bhi hai",
+    "value": null,
+    "unit": null,
+    "attributes": {}
+   }
+  ]
+ }
+}
