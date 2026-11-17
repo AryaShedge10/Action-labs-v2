@@ -221,6 +221,17 @@ class LLMExtractor:
             generics = resolve_brand(low)
             if generics:
                 return list(generics), {"brand": candidate}
+        # The model sometimes pads the name ("codeine syrup", "ibuprofen 600 mg twice daily", "allergic to sulfa
+        # drugs"): accept it only if exactly one known drug / allergen class term is inside the phrase.
+        for candidate in (proposed, surface):
+            low = _norm(candidate)
+            if etype == EntityType.ALLERGY:
+                terms = {t for t in ALLERGEN_CLASS_TERMS if re.search(rf"\b{re.escape(t)}\b", low)}
+                if len(terms) == 1:
+                    return [terms.pop()], {}
+            found = {m.canonical for m in self.matcher.find(low, {EntityType.MEDICATION})}
+            if len(found) == 1:
+                return [found.pop()], {}
         low = _norm(proposed)
         if is_known_drug(low):
             return [low], {}

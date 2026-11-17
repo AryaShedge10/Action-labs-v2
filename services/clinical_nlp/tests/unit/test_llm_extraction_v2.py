@@ -130,6 +130,20 @@ def test_indian_brands_map_to_generics():
     assert not any(e.attributes.get("unknown_drug") for e in result.entities)
 
 
+def test_padded_drug_names_resolve_only_when_unambiguous():
+    turns = [("DOCTOR", "I allergic to sulfa drugs. Codeine syrup and ibuprofen 600 mg twice daily, plus warfarin or aspirin.")]
+    fake = FakeLLMClient({"entities": [
+        ent("ALLERGY", "sulfa drugs", "allergic to sulfa drugs", "PRESENT", "S001", "I allergic to sulfa drugs"),
+        ent("MEDICATION", "Codeine syrup", "codeine syrup", "PRESCRIBED", "S001", "Codeine syrup and ibuprofen"),
+        ent("MEDICATION", "ibuprofen", "ibuprofen 600 mg twice daily", "PRESCRIBED", "S001", "ibuprofen 600 mg twice daily"),
+        ent("MEDICATION", "x", "warfarin or aspirin", "CURRENT", "S001", "plus warfarin or aspirin"),   # ambiguous
+    ]})
+    result = LLMExtractor(fake).extract(make_transcript(*turns))
+    assert [e.normalized for e in result.entities[:3]] == ["sulfa drugs", "codeine", "ibuprofen"]
+    ambiguous = result.entities[3]
+    assert ambiguous.attributes.get("unknown_drug") == "True"          # not guessed -> flagged for review
+
+
 def test_lay_terms_normalise_to_clinical_terms():
     turns = [("PATIENT", "My tummy is hurting, I feel giddy, I have loose motions and I am breathless.")]
     fake = FakeLLMClient({"entities": [
