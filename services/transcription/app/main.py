@@ -1,5 +1,5 @@
-"""
-FastAPI Server — NVIDIA NeMo-Speech.cpp Clinical Scribe (Production)
+﻿"""
+FastAPI Server â€” NVIDIA NeMo-Speech.cpp Clinical Scribe (Production)
 app/main.py
 
 Runs on port 8000.
@@ -7,15 +7,15 @@ ZERO cloud connectivity. ZERO API keys required.
 
 Architecture:
   Browser mic (PCM16 16kHz mono)
-      ↓ binary WebSocket frames
+      â†“ binary WebSocket frames
   This server (port 8000)
-      ↓ local WebSocket
+      â†“ local WebSocket
   NeMo-Speech.cpp (port 8090)
-      ↓ Nemotron-3.5 ASR + Nemotron-3-Diarization
-      ↓ streaming events
-  This server — transcript state machine
-      ↓ RealtimeEvent JSON
-  Browser — in-place Doctor/Patient transcript UI
+      â†“ Nemotron-3.5 ASR + Nemotron-3-Diarization
+      â†“ streaming events
+  This server â€” transcript state machine
+      â†“ RealtimeEvent JSON
+  Browser â€” in-place Doctor/Patient transcript UI
 """
 
 import asyncio
@@ -40,7 +40,7 @@ from .models import RealtimeEvent
 
 
 app = FastAPI(
-    title="Clinical Scribe — NVIDIA Local Realtime",
+    title="Clinical Scribe â€” NVIDIA Local Realtime",
     version="1.0.0",
     description="NVIDIA NeMo-Speech.cpp realtime transcription. No cloud. No API keys.",
 )
@@ -65,14 +65,16 @@ FRONTEND_INDEX = STATIC_DIR / "index.html"
 # UI
 # ============================================================
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/")
 async def serve_ui():
-    if FRONTEND_INDEX.exists():
-        return FRONTEND_INDEX.read_text(encoding="utf-8")
-    return (
-        "<h1>tests/realtime_nvidia/frontend/index.html not found</h1>"
-        "<p>Run <code>run_nemo_server.bat</code> to start the NVIDIA runtime first.</p>"
-    )
+    return JSONResponse({
+        "service": "transcription",
+        "provider": "nvidia_nemo_local",
+        "docs": "/docs",
+        "health": "/health",
+        "realtime_ui": "http://127.0.0.1:8000",
+        "api": "/api/v1/consultations",
+    })
 
 
 # ============================================================
@@ -145,17 +147,17 @@ async def websocket_stream_endpoint(websocket: WebSocket, session_id: str):
     """
     Bidirectional WebSocket for realtime audio streaming and event delivery.
 
-    Client → Server:
+    Client â†’ Server:
       - Binary frames: PCM16 16kHz mono audio (100ms per frame)
       - JSON: {"action": "stop"} to initiate graceful shutdown
 
-    Server → Client:
+    Server â†’ Client:
       - JSON RealtimeEvent objects:
-          segment_update    — LIVE or FINAL transcript segment
-          speaker_revision  — speaker identity update
-          session_status    — "ready" / "error"
-          final_summary     — all segments + metrics on stop
-          error             — runtime or connection error
+          segment_update    â€” LIVE or FINAL transcript segment
+          speaker_revision  â€” speaker identity update
+          session_status    â€” "ready" / "error"
+          final_summary     â€” all segments + metrics on stop
+          error             â€” runtime or connection error
     """
     session = session_manager.get_session(session_id)
     if not session:
@@ -171,7 +173,7 @@ async def websocket_stream_endpoint(websocket: WebSocket, session_id: str):
             while True:
                 msg = await websocket.receive()
                 if "bytes" in msg and msg["bytes"]:
-                    # Binary PCM16 frame — forward to NeMo-Speech.cpp
+                    # Binary PCM16 frame â€” forward to NeMo-Speech.cpp
                     await session.push_audio(msg["bytes"])
                 elif "text" in msg and msg["text"]:
                     try:
@@ -217,10 +219,10 @@ async def replay_audio_endpoint(
 ):
     """
     Mode B: Recorded Audio Replay (Phase 35).
-    Streams audio through the same REALTIME path as live mic — NOT batch transcription.
+    Streams audio through the same REALTIME path as live mic â€” NOT batch transcription.
     Enables reproducible comparison testing.
 
-    Audio → realtime frames (100ms) → NeMo-Speech.cpp → transcript events
+    Audio â†’ realtime frames (100ms) â†’ NeMo-Speech.cpp â†’ transcript events
     """
     # Load audio
     if upload_file:
@@ -336,12 +338,12 @@ async def list_recordings():
 if __name__ == "__main__":
     import uvicorn
     print("=" * 72)
-    print("NVIDIA NeMo-Speech.cpp Clinical Scribe — Production")
+    print("NVIDIA NeMo-Speech.cpp Clinical Scribe â€” Production")
     print(f"  URL:          http://127.0.0.1:8000")
     print(f"  ASR Model:    {settings.nvidia_asr_model}")
     print(f"  Diarization:  {settings.nvidia_diarization_model}")
     print(f"  NeMo Runtime: ws://{settings.nemo_speech_host}:{settings.nemo_speech_ws_port}/v1/audio/transcriptions/realtime")
-    print(f"  Cloud:        NONE — all inference local")
+    print(f"  Cloud:        NONE â€” all inference local")
     print(f"  API Key:      NOT REQUIRED")
     print("=" * 72)
     print()
@@ -352,7 +354,7 @@ if __name__ == "__main__":
 
 
 # ============================================================
-# Team B Integration — TranscriptPayload Contract Endpoint
+# Team B Integration â€” TranscriptPayload Contract Endpoint
 # ============================================================
 # Team B's Clinical NLP service polls:
 #   GET /api/v1/consultations/{consultation_id}
@@ -438,3 +440,4 @@ async def health_check():
         "diarization_model": settings.nvidia_diarization_model,
         "port": 8003,
     })
+
