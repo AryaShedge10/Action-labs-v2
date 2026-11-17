@@ -52,6 +52,8 @@ Rules:
 10. For VITAL put the number in "value" and the unit in "unit". For MEDICATION put dose, frequency, duration,
    route in "attributes". For DEMOGRAPHIC use normalized "sex" or "age" with the value in "value".
 11. Bracketed tokens such as [NAME_1] are redacted personal data; never output them.
+12. One entity per fact: never join two items ("fever and headache"). "normalized" is ONE clean term with no dose,
+   frequency, quantity or filler words ("allergic to", "syrup"); put those details in "attributes".
 
 Output must match the provided JSON schema. Example entity:
 {{"type": "SYMPTOM", "surface_text": "sore throat", "normalized": "sore throat", "status": "PRESENT", "segment_id": "S002",
@@ -227,8 +229,8 @@ class LLMExtractor:
             low = _norm(candidate)
             if etype == EntityType.ALLERGY:
                 terms = {t for t in ALLERGEN_CLASS_TERMS if re.search(rf"\b{re.escape(t)}\b", low)}
-                if len(terms) == 1:
-                    return [terms.pop()], {}
+                if terms and len({ALLERGEN_CLASS_TERMS[t] for t in terms}) == 1:    # "sulfa" + "sulfa drugs" = one class
+                    return [max(terms, key=len)], {}
             found = {m.canonical for m in self.matcher.find(low, {EntityType.MEDICATION})}
             if len(found) == 1:
                 return [found.pop()], {}
