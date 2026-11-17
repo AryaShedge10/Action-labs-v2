@@ -99,14 +99,15 @@ class ClinicalPipeline:
         lap("grounding")
 
         llm_used = extraction.mode_used in ("llm", "hybrid") or generation.mode_used == "llm"
-        warnings = self.init_warnings + extraction.warnings + generation.warnings
+        review = review_reasons(entities)
+        warnings = self.init_warnings + extraction.warnings + generation.warnings + review
         if not safety_enabled:
             warnings.append("Safety engine DISABLED (evaluation ablation only)")
         timings["total"] = round(sum(timings.values()), 1)
 
         result = ConsultationAnalysis(
             consultation_id=transcript.consultation_id,
-            safety_status=decide_status(safety, grounding),
+            safety_status=decide_status(safety, grounding, review),
             patient_info=build_patient_info(entities, transcript),
             soap_note=generation.note.render(),
             soap_claims=generation.note,
@@ -133,10 +134,31 @@ class ClinicalPipeline:
         return result
 
 
-def decide_status(safety: SafetyResult, grounding: GroundingReport) -> SafetyStatus:
+def review_reasons(entities: EntitySet) -> list[str]:
+    """Reasons an extraction cannot be called SAFE without a physician looking at it.
+
+    LLM-only drugs / allergies / doses and unrecognised prescribed drugs were never confirmed by the deterministic
+    lexicon, so the safety engine may not have had the full picture. A rule/LLM status disagreement (e.g. a
+    double-negated symptom) is flagged for the same reason.
+    """
+    reasons: list[str] = []
+    for e in entities.items:
+        if e.type == EntityType.MEDICATION and e.attributes.get("unknown_drug") and e.status == EntityStatus.PRESCRIBED:
+            reasons.append(f"Unrecognised prescribed drug '{e.text}' - verify name and safety manually")
+        elif e.source == "llm" and e.type in (EntityType.MEDICATION, EntityType.ALLERGY):
+            reasons.append(f"{e.type.value.title()} '{e.normalized}' was found by the LLM only - physician to confirm")
+        if e.attributes.get("llm_dose"):
+            reasons.append(f"Dose for '{e.normalized}' was supplied by the LLM only - physician to confirm")
+        if e.attributes.get("llm_status"):
+            reasons.append(f"Rule and LLM disagree on '{e.normalized}' ({e.status.value} vs "
+                           f"{e.attributes['llm_status']}) - physician to confirm")
+    return reasons
+
+
+def decide_status(safety: SafetyResult, grounding: GroundingReport, review: list[str] | None = None) -> SafetyStatus:
     if any(c.status == ConflictStatus.BLOCKED for c in safety.conflicts):
         return SafetyStatus.CONFLICT_DETECTED
-    if (any(c.status == ConflictStatus.REVIEW_REQUIRED for c in safety.conflicts)
+    if (review or any(c.status == ConflictStatus.REVIEW_REQUIRED for c in safety.conflicts)
             or grounding.unsupported or grounding.contradicted or grounding.removed_claims):
         return SafetyStatus.REVIEW_REQUIRED
     return SafetyStatus.SAFE

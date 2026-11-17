@@ -3,7 +3,8 @@
 Merge policy for hybrid mode (deterministic wins on disagreement):
 * same (type, normalized) found by both  -> keep rule entity, add LLM evidence, small confidence boost
                                             if statuses agree; penalty + `llm_status` attribute if not.
-* LLM-only entity                        -> added (already quote-verified), source="llm".
+* LLM-only entity                        -> added (already quote-verified), source="llm". The pipeline
+                                            then forces REVIEW_REQUIRED for LLM-only drugs / allergies / doses.
 * LLM "medication" that is a known allergen of this patient -> dropped (classic LLM confusion).
 """
 
@@ -110,7 +111,10 @@ def merge(rule_set: EntitySet, llm_entities: list[ClinicalEntity]) -> EntitySet:
                 base.attributes["llm_status"] = llm_entity.status.value
                 base.confidence = round(max(0.0, base.confidence - 0.15), 3)
             for k, v in llm_entity.attributes.items():
-                base.attributes.setdefault(k, v)
+                if k not in base.attributes:
+                    base.attributes[k] = v
+                    if k == "dose":
+                        base.attributes["llm_dose"] = "True"   # dose that only the LLM supplied -> physician must confirm
         else:
             merged[key] = llm_entity
     return EntitySet(items=assign_ids(list(merged.values())))
