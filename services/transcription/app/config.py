@@ -1,9 +1,6 @@
-"""
-Configuration for NVIDIA NeMo Realtime Test Environment
-tests/realtime_nvidia/backend/app/config.py
-
-Reads ONLY from tests/realtime_nvidia/.env — never touches production .env.
-No AssemblyAI keys. No cloud credentials.
+﻿"""
+Configuration for NVIDIA NeMo-Speech.cpp Clinical Scribe (Production)
+app/config.py
 """
 
 import os
@@ -11,11 +8,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
-# Resolve test root: tests/realtime_nvidia/
-TEST_ROOT = Path(__file__).resolve().parent.parent.parent  # tests/realtime_nvidia/
-ENV_PATH = TEST_ROOT / ".env"
+# Project root: EDI_Accion_lab/
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+ENV_PATH = PROJECT_ROOT / ".env"
 
-# Load test-only .env — never reads production .env at project root
 if ENV_PATH.exists():
     load_dotenv(ENV_PATH, override=True)
 
@@ -56,7 +52,7 @@ class Settings(BaseModel):
     )
     # Streaming latency mode (NeMo-Speech.cpp option):
     # low_latency (~1.04s buffer), very_low_latency (~0.64s), ultra_low_latency (~0.32s)
-    # Note: buffer delay only — real latency = buffer + compute + event propagation.
+    # Note: buffer delay only â€” real latency = buffer + compute + event propagation.
     # Start with low_latency for GTX 1650; benchmark before changing.
     asr_latency_mode: str = Field(
         default_factory=lambda: os.getenv("ASR_LATENCY_MODE", "low_latency")
@@ -83,12 +79,12 @@ class Settings(BaseModel):
     )
 
     # ------------------------------------------------------------
-    # Audio Format (16 kHz PCM16 mono — required by Nemotron ASR)
+    # Audio Format (16 kHz PCM16 mono â€” required by Nemotron ASR)
     # ------------------------------------------------------------
     sample_rate: int = Field(
         default_factory=lambda: int(os.getenv("SAMPLE_RATE", "16000"))
     )
-    # 100ms audio frames — continuous streaming, not batched windows
+    # 100ms audio frames â€” continuous streaming, not batched windows
     audio_frame_ms: int = Field(default=100)
 
     # ------------------------------------------------------------
@@ -102,24 +98,24 @@ class Settings(BaseModel):
     )
 
     # ------------------------------------------------------------
-    # Test Server
+    # Server â€” runs on port 8000 as production
     # ------------------------------------------------------------
     host: str = Field(
         default_factory=lambda: os.getenv("HOST", "127.0.0.1")
     )
     port: int = Field(
-        default_factory=lambda: int(os.getenv("TEST_PORT", "8004"))
+        default_factory=lambda: int(os.getenv("PORT", "8003"))
     )
 
     # ------------------------------------------------------------
-    # Directory Layout (all inside tests/realtime_nvidia/)
+    # Directory Layout â€” project root
     # ------------------------------------------------------------
-    models_dir: Path = TEST_ROOT / "models"
-    model_cache_dir: Path = TEST_ROOT / "model_cache"
-    recordings_dir: Path = TEST_ROOT / "recordings"
-    logs_dir: Path = TEST_ROOT / "logs"
-    reports_dir: Path = TEST_ROOT / "reports"
-    frontend_dir: Path = TEST_ROOT / "frontend"
+    models_dir: Path = PROJECT_ROOT / "models"
+    model_cache_dir: Path = PROJECT_ROOT / "model_cache"
+    recordings_dir: Path = PROJECT_ROOT / "recordings"
+    logs_dir: Path = PROJECT_ROOT / "logs"
+    reports_dir: Path = PROJECT_ROOT / "reports"
+    frontend_dir: Path = PROJECT_ROOT / "static"
 
 
 settings = Settings()
@@ -133,3 +129,5 @@ for _d in [
     settings.reports_dir,
 ]:
     _d.mkdir(parents=True, exist_ok=True)
+
+

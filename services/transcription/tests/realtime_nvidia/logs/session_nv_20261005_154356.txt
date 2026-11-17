@@ -1,9 +1,0 @@
-Session: nv_20261005_154356
-Provider: NVIDIA NeMo Local (no cloud)
-ASR: nemotron-3.5 | Diarization: nemotron-3-diarization
-Audio: 50.69s | Wall: 60.97s | RTF: 1.203
-First Text: 3225.98ms | First Partial: 3225.98ms | Final Turn: 53259.4ms
-================================================================
-
-Doctor: Good morning, Mister Johnson. How are you feeling today? Good morning, doctor. I've been experiencing some pain in my chest and shortness of breath. It's been bothering me for a few weeks now. I'm glad you came in it's important not to ignore any chest related symptoms. Let me ask you a few questions to better understand your condition Have you noticed if these symptoms occurred during any specific activities or times of the day? Yes, I've noticed that it happens mostly when I push myself physically, like when I'm climbing stairs or walking fast. All right, do you have any history of heart disease in your family? Not that I'm aware of. My parents and siblings don't have any heart related issues
-
