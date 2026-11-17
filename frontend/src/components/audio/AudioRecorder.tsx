@@ -28,7 +28,7 @@ import type { Encounter } from "../../types/clinical";
 // ── Config ────────────────────────────────────────────────────────────────
 // Our transcription service runs on port 8003.
 // NeMo-Speech.cpp serves on port 8090 (backend talks to it directly).
-const TRANSCRIPTION_BASE = "http://127.0.0.1:8003";
+const TRANSCRIPTION_BASE = ""  // Use Vite proxy — routes /test/* to port 8003;
 
 interface TranscriptSegment {
   segment_id: string;
@@ -127,7 +127,7 @@ export default function AudioRecorder({ onSuccess }: AudioRecorderProps) {
       // 2. Open WebSocket to our backend
       const proto = window.location.protocol === "https:" ? "wss:" : "ws:";
       const ws = new WebSocket(
-        `${proto}//127.0.0.1:8003/test/realtime/${session_id}/stream`
+        `${proto}//${window.location.host}/test/realtime/${session_id}/stream`
       );
       wsRef.current = ws;
 
@@ -558,3 +558,5 @@ export default function AudioRecorder({ onSuccess }: AudioRecorderProps) {
     </div>
   );
 }
+
+
