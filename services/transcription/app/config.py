@@ -30,7 +30,7 @@ class Settings(BaseModel):
         default_factory=lambda: int(os.getenv("NEMO_SPEECH_GRPC_PORT", "50051"))
     )
     nemo_speech_ws_port: int = Field(
-        default_factory=lambda: int(os.getenv("NEMO_SPEECH_WS_PORT", "8080"))
+        default_factory=lambda: int(os.getenv("NEMO_SPEECH_WS_PORT", "8090"))
     )
     # Protocol preference: "grpc" or "ws"
     nemo_speech_protocol: str = Field(
@@ -129,5 +129,6 @@ for _d in [
     settings.reports_dir,
 ]:
     _d.mkdir(parents=True, exist_ok=True)
+
 
 
