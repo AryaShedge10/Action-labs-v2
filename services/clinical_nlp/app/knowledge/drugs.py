@@ -7,6 +7,7 @@ a clinician before the rule version is bumped.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 
@@ -213,6 +214,45 @@ NON_DRUG_ALLERGENS: dict[str, tuple[str, ...]] = {
     "adhesive tape": ("adhesive tape", "tape", "adhesives"),
     "nickel": ("nickel",),
 }
+
+
+# Indian (and other South-Asian market) brand names -> canonical generic name(s) from DRUGS.
+# Combination products map to several generics. Dose suffixes ("dolo 650") are stripped before lookup.
+# Used to build the LLM prompt and to decide whether a drug is "known"; deliberately NOT added to the
+# rule lexicon, so rule-only extraction behaves exactly as before.
+BRAND_TO_GENERIC: dict[str, tuple[str, ...]] = {
+    "dolo": ("acetaminophen",),
+    "crocin": ("acetaminophen",),
+    "calpol": ("acetaminophen",),
+    "combiflam": ("ibuprofen", "acetaminophen"),
+    "brufen": ("ibuprofen",),
+    "septran": ("sulfamethoxazole-trimethoprim",),
+    "augmentin": ("amoxicillin-clavulanate",),
+    "azithral": ("azithromycin",),
+    "ciplox": ("ciprofloxacin",),
+    "ecosprin": ("aspirin",),
+    "disprin": ("aspirin",),
+    "glycomet": ("metformin",),
+    "amlong": ("amlodipine",),
+    "pan": ("pantoprazole",),
+    "omez": ("omeprazole",),
+    "cetzine": ("cetirizine",),
+}
+
+_DOSE_SUFFIX = re.compile(r"[\s\-]*\d+(\.\d+)?\s*(mg|mcg|g|ml)?$", re.I)
+
+
+def resolve_brand(term: str) -> tuple[str, ...] | None:
+    """Generic name(s) for a brand such as 'Dolo 650', or None if `term` is not a known brand."""
+    key = _DOSE_SUFFIX.sub("", term.strip().lower())
+    return BRAND_TO_GENERIC.get(key)
+
+
+def is_known_drug(term: str) -> bool:
+    """True if `term` is a canonical drug, a drug class / class allergen term, or a known brand."""
+    t = term.strip().lower()
+    return (t in DRUGS or t in ALLERGEN_CLASS_TERMS or t in CLASS_LABELS or t in NON_DRUG_ALLERGENS
+            or resolve_brand(t) is not None)
 
 
 def drug_aliases() -> dict[str, str]:

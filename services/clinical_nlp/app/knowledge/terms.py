@@ -175,3 +175,23 @@ ALLERGY_REACTIONS: dict[str, tuple[str, ...]] = {
     "itching": ("itching", "itchy"),
     "nausea/vomiting": ("vomiting", "threw up", "nausea"),
 }
+
+
+# Lay / colloquial (incl. common Hindi) phrases -> canonical SYMPTOMS key. Injected into the LLM prompt so the
+# model normalises to the same vocabulary the rule extractor and safety engine use. Not used by the rule matcher.
+LAY_TERMS: dict[str, str] = {
+    "tummy hurting": "abdominal pain",
+    "tummy pain": "abdominal pain",
+    "pet dard": "abdominal pain",
+    "giddy": "dizziness",
+    "head spinning": "dizziness",
+    "loose motions": "diarrhea",
+    "running stomach": "diarrhea",
+    "breathless": "shortness of breath",
+    "can't catch my breath": "shortness of breath",
+    "throwing up": "vomiting",
+    "bukhar": "fever",
+    "sar dard": "headache",
+    "khansi": "cough",
+    "badan dard": "body aches",
+}
