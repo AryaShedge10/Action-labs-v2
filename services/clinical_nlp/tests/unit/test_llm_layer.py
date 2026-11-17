@@ -118,7 +118,7 @@ def test_scrub_keeps_allergy_documentation():
 
 def test_llm_failure_falls_back_to_template(team_a_payload):
     class Failing(FakeLLMClient):
-        def generate_json(self, prompt, temperature=0.0):
+        def generate_json(self, prompt, temperature=0.0, **kwargs):
             raise LLMError("boom")
 
     p = ClinicalPipeline(Settings(store_results=False), llm_client=Failing())

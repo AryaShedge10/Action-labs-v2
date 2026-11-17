@@ -2,7 +2,7 @@
 
 * Refuses non-local endpoints unless ALLOW_REMOTE_LLM=true (PHI must not leave the network).
 * Never logs prompts or completions — they contain PHI.
-* Disables Qwen3 "thinking" output and requests JSON mode, then still parses defensively.
+* Disables Qwen3 "thinking" output and requests JSON mode (or a JSON schema), then still parses defensively.
 """
 
 from __future__ import annotations
@@ -91,7 +91,8 @@ class OllamaClient:
         self._availability = (now, ok)
         return ok
 
-    def generate(self, prompt: str, temperature: float = 0.0, json_mode: bool = True) -> str:
+    def generate(self, prompt: str, temperature: float = 0.0, json_mode: bool = True,
+                 schema: dict | None = None) -> str:
         body = {
             "model": self.model,
             "prompt": prompt,
@@ -99,7 +100,9 @@ class OllamaClient:
             "think": False,
             "options": {"temperature": temperature, "seed": 7, "num_ctx": 8192},
         }
-        if json_mode:
+        if schema is not None:
+            body["format"] = schema      # Ollama structured output: decoding is constrained to this JSON schema
+        elif json_mode:
             body["format"] = "json"
         try:
             resp = self.session.post(f"{self.base_url}/api/generate", json=body, timeout=self.timeout_s)
@@ -110,5 +113,6 @@ class OllamaClient:
             raise LLMError(f"LLM returned HTTP {resp.status_code}")
         return resp.json().get("response", "")
 
-    def generate_json(self, prompt: str, temperature: float = 0.0) -> dict:
-        return parse_json_object(self.generate(prompt, temperature=temperature, json_mode=True))
+    def generate_json(self, prompt: str, temperature: float = 0.0, schema: dict | None = None) -> dict:
+        """Plain JSON mode, or schema-constrained decoding when `schema` (a JSON schema dict) is given."""
+        return parse_json_object(self.generate(prompt, temperature=temperature, json_mode=True, schema=schema))

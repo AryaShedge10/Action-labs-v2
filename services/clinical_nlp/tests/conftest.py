@@ -36,13 +36,18 @@ class FakeLLMClient:
         self.responses = list(responses)
         self.available = available
         self.prompts = []
+        self.schemas = []
 
     def is_available(self, cache_s=30.0):
         return self.available
 
-    def generate_json(self, prompt, temperature=0.0):
+    def generate_json(self, prompt, temperature=0.0, schema=None):
         self.prompts.append(prompt)
-        return self.responses.pop(0)
+        self.schemas.append(schema)
+        response = self.responses.pop(0)
+        if isinstance(response, Exception):
+            raise response
+        return response
 
 
 @pytest.fixture(scope="session")
