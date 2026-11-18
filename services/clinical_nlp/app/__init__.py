@@ -7,5 +7,5 @@ Version constants are bumped independently:
 """
 
 PIPELINE_VERSION = "1.0.0"
-RULE_VERSION = "1.0.0"
+RULE_VERSION = "1.1.0"
 SCHEMA_VERSION = "1.0"

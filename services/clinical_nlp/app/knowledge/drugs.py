@@ -342,8 +342,7 @@ INTERACTIONS: list[Interaction] = [
                 "Monitor potassium and renal function."),
     Interaction("arbs", "potassium_sparing_diuretics", "MEDIUM", False, "hyperkalaemia",
                 "Monitor potassium and renal function."),
-    Interaction("ace_inhibitors", "arbs", "MEDIUM", False, "dual RAAS blockade (hyperkalaemia, renal injury)",
-                "Avoid combination unless specialist-directed."),
+    # ace_inhibitors + arbs: now GUIDELINE_COMBINATION (STG Hypertension 2016, p49) in safety/guideline_rules.py
     Interaction("clopidogrel", "omeprazole", "MEDIUM", False, "reduced antiplatelet effect of clopidogrel",
                 "Consider pantoprazole instead of omeprazole."),
 ]

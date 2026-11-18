@@ -13,6 +13,11 @@ from ..models.schemas import Conflict, ConflictStatus, ConflictType, EntitySet, 
 from ..safety.allergy_rules import AllergyCrossReactivityRule, AllergyMedicationRule
 from ..safety.clinical_rules import InconsistentHistoryRule, TranscriptionQualityRule, VitalSignRule
 from ..safety.demographic_rules import AgeContraindicationRule, PregnancyContraindicationRule, SexSpecificRule
+from ..safety.guideline_rules import (
+    BPCrisisRule,
+    GuidelineCombinationRule,
+    GuidelineContraindicationRule,
+)
 from ..safety.medication_rules import DoseRangeRule, DrugInteractionRule, DuplicateTherapyRule
 from ..safety.rules import SafetyContext, SafetyRule
 
@@ -33,6 +38,9 @@ def default_rules() -> list[SafetyRule]:
         PregnancyContraindicationRule(),
         AgeContraindicationRule(),
         VitalSignRule(),
+        GuidelineContraindicationRule(),
+        GuidelineCombinationRule(),
+        BPCrisisRule(),
         InconsistentHistoryRule(),
         TranscriptionQualityRule(),
     ]
