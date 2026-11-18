@@ -43,7 +43,7 @@ import websockets
 from .config import settings
 
 # ── Log directory ──────────────────────────────────────────────────────────
-_LOGS_DIR = Path(__file__).resolve().parent.parent.parent.parent / "logs"
+_LOGS_DIR = Path(__file__).resolve().parent.parent / "logs"
 
 
 # ── Logging helpers ────────────────────────────────────────────────────────
