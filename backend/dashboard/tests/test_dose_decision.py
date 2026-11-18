@@ -142,3 +142,22 @@ def test_prescribed_drugs_proxy(client, monkeypatch):
     r = client.get(f"/api/encounters/{client.enc_id}/prescribed-drugs")
     assert r.status_code == 200 and r.json()[0]["medication"] == "Amlodipine"
     assert client.get("/api/encounters/nope/prescribed-drugs").status_code == 404
+
+
+def test_fetch_falls_back_to_patient_facts_when_no_nlp_analysis(monkeypatch):
+    import asyncio
+
+    import httpx
+
+    calls = []
+
+    async def fake_post(body):
+        calls.append(body)
+        if "consultation_id" in body:
+            return httpx.Response(404, text='{"detail":"No analysis stored for consultation \'x\'"}')
+        return httpx.Response(200, json={"status": "NEEDS_INFO"})
+
+    monkeypatch.setattr(dose_api, "_post_dose", fake_post)
+    out = asyncio.run(dose_api.fetch_dose_suggestion("x", "amlodipine", {"age_years": 60}))
+    assert out["status"] == "NEEDS_INFO"
+    assert "consultation_id" in calls[0] and calls[1] == {"drug": "amlodipine", "patient": {"age_years": 60}}

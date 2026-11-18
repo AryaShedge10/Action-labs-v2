@@ -63,16 +63,25 @@ def _encounter(db: Session, encounter_id: str) -> Encounter:
     return row
 
 
-async def fetch_dose_suggestion(consultation_id: str, drug: str, patient: dict | None) -> dict:
-    body: dict[str, Any] = {"drug": drug, "consultation_id": consultation_id}
-    if patient:
-        body["patient"] = patient
+async def _post_dose(body: dict) -> httpx.Response:
     settings = get_settings()
     try:
         async with httpx.AsyncClient(timeout=30.0) as client:
-            resp = await client.post(f"{settings.clinical_nlp_url}/dose/suggest", json=body)
+            return await client.post(f"{settings.clinical_nlp_url}/dose/suggest", json=body)
     except httpx.HTTPError as exc:
         raise HTTPException(status_code=502, detail=f"Clinical NLP service unreachable: {type(exc).__name__}") from exc
+
+
+async def fetch_dose_suggestion(consultation_id: str, drug: str, patient: dict | None) -> dict:
+    """Use the NLP analysis stored for this encounter when there is one; encounters that never went through the NLP
+    service (e.g. the demo encounter) fall back to the patient-record facts the physician sees. Missing facts still
+    produce NEEDS_INFO."""
+    body: dict[str, Any] = {"drug": drug, "consultation_id": consultation_id}
+    if patient:
+        body["patient"] = patient
+    resp = await _post_dose(body)
+    if resp.status_code == 404 and "No analysis stored" in resp.text:
+        resp = await _post_dose({"drug": drug, "patient": patient or {}})
     if resp.status_code >= 400:
         raise HTTPException(status_code=502 if resp.status_code >= 500 else resp.status_code,
                             detail=f"Dose service error ({resp.status_code}): {resp.text[:300]}")
