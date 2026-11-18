@@ -18,7 +18,7 @@ from ..safety.rules import SafetyContext, SafetyRule
 
 logger = logging.getLogger(__name__)
 
-_SEVERITY_ORDER = {Severity.HIGH: 0, Severity.MEDIUM: 1, Severity.LOW: 2}
+_SEVERITY_ORDER = {Severity.CRITICAL: -1, Severity.HIGH: 0, Severity.MEDIUM: 1, Severity.LOW: 2}
 _STATUS_ORDER = {ConflictStatus.BLOCKED: 0, ConflictStatus.REVIEW_REQUIRED: 1}
 
 
@@ -73,7 +73,7 @@ class SafetyEngine:
         for c in conflicts:
             key = (c.rule_id, c.type, tuple(sorted(c.entity_ids)), c.message)
             unique.setdefault(key, c)
-        ordered = sorted(unique.values(), key=lambda c: (_STATUS_ORDER[c.status], _SEVERITY_ORDER[c.severity],
+        ordered = sorted(unique.values(), key=lambda c: (c.severity != Severity.CRITICAL, _STATUS_ORDER[c.status], _SEVERITY_ORDER[c.severity],
                                                           c.rule_id, c.message))
         for i, conflict in enumerate(ordered, start=1):
             conflict.conflict_id = f"K{i:03d}"

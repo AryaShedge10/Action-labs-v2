@@ -71,12 +71,16 @@ _VITAL_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
     ("oxygen saturation", re.compile(
         r"\b(?:oxygen saturation|o2 sat(?:uration)?s?|sats?|spo2|pulse ox|oxygen(?: level)?)\s*(?:is|was|of|at|:|=)?"
         r"\s*(?:about|around)?\s*(?P<v>\d{2,3})\s*(?:%|percent)?", _I)),
+    ("egfr", re.compile(
+        r"\b(?:egfr|estimated gfr)\s*(?:is|was|of|at|:|=)?\s*(?:about|around)?\s*(?P<v>\d{1,3})\b", _I)),
+    ("creatinine clearance", re.compile(
+        r"\b(?:creatinine clearance|crcl)\s*(?:is|was|of|at|:|=)?\s*(?:about|around)?\s*(?P<v>\d{1,3})\b", _I)),
     ("weight", re.compile(
         r"\b(?:weigh(?:s|t)?|weight)\s*(?:is|was|of|:|=|about|around)?\s*(?P<v>\d{2,3}(?:\.\d)?)\s*"
         r"(?P<u>kg|kilos?|kilograms?|lbs?|pounds)\b", _I)),
 ]
 _VITAL_UNITS = {"blood pressure": "mmHg", "heart rate": "bpm", "respiratory rate": "breaths/min",
-                "oxygen saturation": "%"}
+                "oxygen saturation": "%", "egfr": "mL/min", "creatinine clearance": "mL/min"}
 
 _AGE_PATTERNS = [
     re.compile(r"\b(?P<age>\d{1,3})[\s\-](?:years?|yrs?)[\s\-]old\b", _I),

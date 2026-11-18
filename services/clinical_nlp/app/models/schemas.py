@@ -159,6 +159,7 @@ class EntitySet(BaseModel):
 # --------------------------------------------------------------------------- safety
 
 class Severity(str, Enum):
+    CRITICAL = "CRITICAL"                # immediate-action alert (e.g. hypertensive emergency)
     LOW = "LOW"
     MEDIUM = "MEDIUM"
     HIGH = "HIGH"
@@ -184,6 +185,13 @@ class ConflictType(str, Enum):
     RULE_ENGINE_ERROR = "RULE_ENGINE_ERROR"
 
 
+class GuidelineCitation(BaseModel):
+    """Pointer into the source guideline PDF (page numbers are printed page = PDF page)."""
+    document: str
+    page: int
+    table_or_section: str
+
+
 class Conflict(BaseModel):
     conflict_id: str = ""
     rule_id: str
@@ -199,6 +207,7 @@ class Conflict(BaseModel):
     evidence: list[Evidence] = Field(default_factory=list)
     recommendation: str | None = None
     confidence: float = Field(default=1.0, ge=0.0, le=1.0)
+    citations: list[GuidelineCitation] = Field(default_factory=list)   # set by guideline-derived rules
 
 
 # --------------------------------------------------------------------------- SOAP + grounding
