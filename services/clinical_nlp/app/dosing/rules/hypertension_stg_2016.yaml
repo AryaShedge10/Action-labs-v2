@@ -1,0 +1,528 @@
+# Dose-suggestion knowledge base extracted from ONE document:
+#   MoHFW (India), Standard Treatment Guidelines: Hypertension, Quick Reference Guide, May 2016.
+#
+# Rules for editing this file
+#   * Every fact is a mapping that carries `source: {page, table_or_section, quote}`.
+#     `page` is the PRINTED page number, which equals the PDF page index in this document.
+#     `quote` is verbatim text from that page so a reviewer can check the value in seconds
+#     (tests/unit/test_dosing_knowledge.py verifies each quote against the PDF text).
+#   * Do NOT add a value that is not in the PDF. If the PDF is silent, leave the field out / null.
+#   * `reviewed_by_clinician` stays false until a doctor or pharmacist has verified every value.
+
+schema_version: 1
+reviewed_by_clinician: false
+
+source_document:
+  title: "Standard Treatment Guidelines: Hypertension - Screening, Diagnosis, Assessment, and Management of Primary Hypertension in Adults in India (Quick Reference Guide)"
+  issuer: "Ministry of Health & Family Welfare, Government of India"
+  date: "May 2016"
+  file: "docs/references/stg_hypertension_2016.pdf"
+  pages: 54
+  page_numbering: "Printed page number equals PDF page index (pages 53-54 are the unnumbered Ready Reckoner)."
+  population: "Adults (primary hypertension)"
+  population_source:
+    page: 1
+    table_or_section: "Title page"
+    quote: "Management of Primary Hypertension in Adults in India"
+
+# ---------------------------------------------------------------------------------------------
+# Known discrepancies INSIDE the PDF (engine follows the value marked `used`).
+# ---------------------------------------------------------------------------------------------
+document_discrepancies:
+  - id: enalapril_max_dose
+    description: >-
+      Enalapril maximum is stated three ways: 20 mg/day (Annexure 3, p49), 10-20 mg (Table 12, p20) and
+      20-40 mg (management pathway, p19). Engine uses 20 mg/day (formulary + Table 12 upper bound, lowest of the three).
+    used: "20 mg/day"
+    sources:
+      - {page: 49, table_or_section: "Annexure 3 - Enalapril - Dose, titration, and use in combinations", quote: "the maximum dose mentioned for hypertension is 20 mg per day"}
+      - {page: 20, table_or_section: "Table 12", quote: "Enalapril 2.5 mg 5 mg 10-20 mg 1-2"}
+      - {page: 19, table_or_section: "Management pathway - Maximal doses", quote: "A : enalapril 20-40 mg"}
+  - id: emergency_diastolic_threshold
+    description: >-
+      Hypertensive emergency diastolic threshold is ">110" (Table 3, Table 4, 4.10.1) but ">110-120" (Table 4, Pathway 7)
+      and ">120" (4.9.1). Engine uses SBP>180 and/or DBP>110 as the screening trigger (lowest threshold).
+    used: "SBP>180 and/or DBP>110"
+    sources:
+      - {page: 8, table_or_section: "Table 4", quote: "Hypertensive emergency >180 and /or >110-120"}
+      - {page: 25, table_or_section: "4.9.1", quote: "diastolic (> 120 mm Hg)"}
+  - id: elderly_age_definition
+    description: >-
+      "Elderly" is not defined in the amlodipine formulary entry. The PDF uses >60 years for calcium channel blockers (p19)
+      and >65 years for enalapril (p20). Engine uses >60 for amlodipine and >65 for enalapril.
+    used: "amlodipine >60; enalapril >65"
+    sources:
+      - {page: 19, table_or_section: "Management pathway - footnote 1", quote: "Calcium channel blockers are antihypertensives of choice in the elderly (> 60 years)"}
+      - {page: 20, table_or_section: "Table 12 - footnote section sign", quote: "Reduce dose to enalapril 2.5 mg when it is used in elderly (>65 years)"}
+
+# ---------------------------------------------------------------------------------------------
+# Table 4 - classification of hypertension (page 8)
+# ---------------------------------------------------------------------------------------------
+bp_classification:
+  source: {page: 8, table_or_section: "Table 4: Classification of hypertension", quote: "Grade 3 Hypertension"}
+  # Bounds are inclusive lower bounds, evaluated per component; category = the higher of the SBP and DBP categories.
+  categories:
+    - {label: "Optimal", sbp_min: 0, dbp_min: 0, rank: 0, source: {page: 8, table_or_section: "Table 4", quote: "Optimal <120 and<80"}}
+    - {label: "Normal", sbp_min: 120, dbp_min: 80, rank: 1, source: {page: 8, table_or_section: "Table 4", quote: "Normal 120 - 129 and/or 80 - 84"}}
+    - {label: "High Normal", sbp_min: 130, dbp_min: 85, rank: 2, source: {page: 8, table_or_section: "Table 4", quote: "High Normal 130 - 139 and/or 85 - 89"}}
+    - {label: "Grade 1 Hypertension", sbp_min: 140, dbp_min: 90, rank: 3, source: {page: 8, table_or_section: "Table 4", quote: "Grade 1 Hypertension 140 - 159 and/or 90 - 99"}}
+    - {label: "Grade 2 Hypertension", sbp_min: 160, dbp_min: 100, rank: 4, source: {page: 8, table_or_section: "Table 4", quote: "Grade 2 Hypertension 160 - 179 and/or 100 - 109"}}
+    - {label: "Grade 3 Hypertension", sbp_min: 180, dbp_min: 110, rank: 5, source: {page: 8, table_or_section: "Table 4", quote: "Grade 3 Hypertension 180 and/or 110"}}
+  isolated_systolic:
+    sbp_min: 140
+    dbp_below: 90
+    label: "Isolated Systolic Hypertension"
+    source: {page: 8, table_or_section: "Table 4", quote: "Isolated Systolic 140 and 90"}
+
+# ---------------------------------------------------------------------------------------------
+# Hypertensive crisis (Table 3 p7, Table 4 p8, 4.9.1 p25, 4.10.1 p26, Pathway 7 p37)
+# ---------------------------------------------------------------------------------------------
+hypertensive_crisis:
+  # Strictly greater than, as written in Table 4 ("Hypertensive urgency >180 and/or >110").
+  sbp_greater_than: 180
+  dbp_greater_than: 110
+  threshold_source: {page: 8, table_or_section: "Table 4: Hypertensive urgency / Hypertensive emergency", quote: "Hypertensive urgency >180 and/or >110"}
+  emergency_rule_source: {page: 7, table_or_section: "Table 3: Suggested response to initial BP readings", quote: "In cases of acute target organ damage, treat as hypertensive emergency"}
+  urgency_rule_source: {page: 26, table_or_section: "4.10.1 Hypertensive urgencies", quote: "is not associated with any signs of acute or ongoing organ damage"}
+  pathway_source: {page: 37, table_or_section: "Pathway 7: Hypertensive crisis", quote: "One or more of symptoms"}
+  # ABCDEFG warning symptoms (Table 3 footnote, p7). `terms` are normalized entity names produced by the extractor.
+  warning_symptoms:
+    - {letter: "A", label: "Altered consciousness", terms: ["altered consciousness"], source: {page: 7, table_or_section: "Table 3 footnote (ABCDEFG)", quote: "A: Altered consciousness"}}
+    - {letter: "B", label: "Breathlessness", terms: ["shortness of breath"], source: {page: 7, table_or_section: "Table 3 footnote (ABCDEFG)", quote: "B: Breathlessness"}}
+    - {letter: "C", label: "Chest pain (ischemic)", terms: ["chest pain"], source: {page: 7, table_or_section: "Table 3 footnote (ABCDEFG)", quote: "C: Chest pain(Ischemic)"}}
+    - {letter: "D", label: "Deficit (weakness of limbs) or decreased urine output", terms: ["limb weakness", "decreased urine output"], source: {page: 7, table_or_section: "Table 3 footnote (ABCDEFG)", quote: "D: Deficit (weakness of limbs) or Decreased urine output"}}
+    - {letter: "E", label: "Edema", terms: ["edema", "swelling"], source: {page: 7, table_or_section: "Table 3 footnote (ABCDEFG)", quote: "E: Edema"}}
+    - {letter: "F", label: "Fundus showing hemorrhages, exudates, papilledema", terms: ["papilledema", "retinal hemorrhage", "retinal exudates"], source: {page: 7, table_or_section: "Table 3 footnote (ABCDEFG)", quote: "F: Fundus if feasible which is showing hemorrhages, exudates, papilledema"}}
+    - {letter: "G", label: "Generalised seizures", terms: ["seizure"], source: {page: 7, table_or_section: "Table 3 footnote (ABCDEFG)", quote: "G: Generalised seizures"}}
+
+# ---------------------------------------------------------------------------------------------
+# Table 10 - compelling and possible contraindications (page 16)
+# `classes` are internal drug-class keys from app/knowledge/drugs.py.
+# `conditions` are normalized condition names (DIAGNOSIS entities / PatientContext.conditions).
+# ---------------------------------------------------------------------------------------------
+table_10_contraindications:
+  - id: diuretics
+    group: "Diuretics"
+    classes: [thiazide_diuretics, loop_diuretics]
+    compelling:
+      - {id: gout, label: "Gout", conditions: ["gout"], source: {page: 16, table_or_section: "Table 10", quote: "Diuretics Gout"}}
+    possible:
+      - {id: metabolic, label: "Metabolic syndrome, glucose intolerance, hypokalemia, hypercalcemia", conditions: ["metabolic syndrome", "glucose intolerance", "hypokalemia", "hypercalcemia"], source: {page: 16, table_or_section: "Table 10", quote: "Metabolic syndrome, glucose intolerance, hypokalemia, hypercalcemia"}}
+  - id: beta_blockers
+    group: "Beta-blockers"
+    classes: [beta_blockers]
+    compelling:
+      - {id: asthma, label: "Asthma", conditions: ["asthma"], source: {page: 16, table_or_section: "Table 10", quote: "Beta-blockers Asthma, AV block (grade 2 or 3)"}}
+      - {id: av_block, label: "AV block (grade 2 or 3)", conditions: ["av block (grade 2 or 3)"], source: {page: 16, table_or_section: "Table 10", quote: "Beta-blockers Asthma, AV block (grade 2 or 3)"}}
+    possible:
+      - {id: metabolic_copd, label: "Metabolic syndrome, glucose intolerance, chronic obstructive pulmonary disease", conditions: ["metabolic syndrome", "glucose intolerance", "copd"], source: {page: 16, table_or_section: "Table 10", quote: "Metabolic syndrome, glucose intolerance, chronic obstructive"}}
+  - id: dihydropyridine_ccbs
+    group: "Calcium channel blockers (dihydropyridines)"
+    classes: [calcium_channel_blockers]
+    compelling: []
+    possible:
+      - {id: tachyarrhythmia_hf, label: "Tachyarrhythmia, heart failure", conditions: ["tachyarrhythmia", "heart failure"], source: {page: 16, table_or_section: "Table 10", quote: "Tachyarrhythmia, heart failure"}}
+  - id: ace_inhibitors
+    group: "ACE inhibitors"
+    classes: [ace_inhibitors]
+    compelling:
+      - {id: pregnancy, label: "Pregnancy", conditions: ["pregnancy"], handled_by_existing_rule: PREGNANCY_CONTRAINDICATION, source: {page: 16, table_or_section: "Table 10", quote: "ACE inhibitors Pregnancy"}}
+      - {id: hyperkalaemia, label: "Hyperkalaemia", conditions: ["hyperkalemia"], source: {page: 16, table_or_section: "Table 10", quote: "Hyperkalemia"}}
+      - {id: bilateral_ras, label: "Bilateral renal artery stenosis", conditions: ["bilateral renal artery stenosis"], source: {page: 16, table_or_section: "Table 10", quote: "Bilateral renal artery stenosis"}}
+    possible:
+      - {id: childbearing, label: "Women with childbearing potential", conditions: [], source: {page: 16, table_or_section: "Table 10", quote: "Women with childbearing potential"}}
+  - id: arbs
+    group: "Angiotensin receptor blockers"
+    classes: [arbs]
+    compelling:
+      - {id: pregnancy, label: "Pregnancy", conditions: ["pregnancy"], handled_by_existing_rule: PREGNANCY_CONTRAINDICATION, source: {page: 16, table_or_section: "Table 10", quote: "Angiotensin receptor blockers Pregnancy"}}
+      - {id: hyperkalaemia, label: "Hyperkalaemia", conditions: ["hyperkalemia"], source: {page: 16, table_or_section: "Table 10", quote: "Hyperkalemia"}}
+      - {id: bilateral_ras, label: "Bilateral renal artery stenosis", conditions: ["bilateral renal artery stenosis"], source: {page: 16, table_or_section: "Table 10", quote: "Bilateral renal artery stenosis"}}
+    possible:
+      - {id: childbearing, label: "Women with childbearing potential", conditions: [], source: {page: 16, table_or_section: "Table 10", quote: "Women with childbearing potential"}}
+  - id: mineralocorticoid_receptor_antagonists
+    group: "Mineralocorticoid receptor antagonists (e.g. spironolactone)"
+    classes: [potassium_sparing_diuretics]
+    compelling:
+      - {id: egfr_lt_30, label: "Acute or severe renal failure (eGFR < 30 ml/min)", egfr_below: 30, source: {page: 16, table_or_section: "Table 10", quote: "Acute or severe renal failure"}, corroborating_sources: [{page: 16, table_or_section: "Table 10", quote: "(eGFR<30 ml/min)"}]}
+    possible: []
+
+# ---------------------------------------------------------------------------------------------
+# Drug-combination and dose-cap rules (Annexure 3 formulary, page 48-51)
+# ---------------------------------------------------------------------------------------------
+combination_rules:
+  - id: ace_inhibitor_plus_arb
+    kind: class_pair
+    classes_a: [ace_inhibitors]
+    classes_b: [arbs]
+    severity: HIGH
+    label: "not recommended"
+    message: "ACE inhibitor combined with an ARB - the guideline states ACE inhibitors should not be combined with ARBs"
+    source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Dose, titration, and use in combinations", quote: "ACE inhibitors should not be combined with ARBs"}
+  - id: thiazide_plus_beta_blocker
+    kind: class_pair
+    classes_a: [thiazide_diuretics]
+    classes_b: [beta_blockers]
+    severity: LOW
+    label: "not preferred"
+    message: "Thiazide diuretic combined with a beta-blocker is not preferred (increases risk of new-onset diabetes and has an adverse effect on lipids)"
+    source: {page: 51, table_or_section: "Annexure 3 - Thiazide diuretics - Dose, titration, and use in combinations", quote: "The combination of thiazide diuretics with beta-blockers is not preferred"}
+  - id: amlodipine_plus_simvastatin
+    kind: dose_cap
+    drug_a: amlodipine
+    drug_b: simvastatin
+    capped_drug: simvastatin
+    max_daily_dose: 20
+    unit: mg
+    severity: HIGH
+    message: "Amlodipine increases exposure to simvastatin; simvastatin dose should not exceed 20 mg per day"
+    source: {page: 48, table_or_section: "Annexure 3 - Amlodipine - Cautions (drug interactions)", quote: "Amlodipine increases exposure to simvastatin (dose of simvastatin should not exceed 20 mg per day)"}
+
+# ---------------------------------------------------------------------------------------------
+# Drugs for which the PDF holds NO usable dose data but which a user might select.
+# ---------------------------------------------------------------------------------------------
+unsupported_drugs:
+  - name: metoprolol
+    reason: "Table 12 gives doses for metoprolol SUCCINATE only; the formulation was not specified, so no dose is suggested."
+    source: {page: 20, table_or_section: "Table 12", quote: "Metoprolol succinate 50 mg 100 mg 2"}
+  - name: spironolactone
+    reason: "Spironolactone is named only as an example mineralocorticoid receptor antagonist (Table 10); the PDF gives no dose."
+    source: {page: 16, table_or_section: "Table 10", quote: "antagonists ( e.g. spironolactone)"}
+
+# ---------------------------------------------------------------------------------------------
+# Drugs.  evidence_tier:
+#   formulary        - full Annexure 3 entry (amlodipine, enalapril, thiazides)
+#   dose_table_only  - only Table 12 (page 20) start / max / doses-per-day; no formulary text
+# `drug_class` is the internal class key from app/knowledge/drugs.py.
+# lower_start_conditions[].test.op:
+#   gt / lt  - numeric comparison on `fact`          is_true - boolean fact
+#   other_drug_in_classes - patient is on a different drug from these classes
+#   judgment - the PDF gives no measurable criterion; never auto-applied, surfaced as a warning
+# ---------------------------------------------------------------------------------------------
+drugs:
+
+  amlodipine:
+    generic_name: amlodipine
+    names: ["amlodipine", "amlodipine besilate", "amlodipine mesilate", "amlodipine maleate"]
+    drug_class: calcium_channel_blockers
+    evidence_tier: formulary
+    class_label:
+      value: "Calcium channel blocker (dihydropyridine)"
+      source: {page: 47, table_or_section: "Annexure 3 - Calcium channel blockers", quote: "the dihydropyridines CCBs which includes amlodipine,nifedipine, felodipine"}
+    indication:
+      value: "Hypertension; chronic stable angina; coronary artery disease without heart failure or an ejection fraction <40%"
+      source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Indications", quote: "Used alone or in combination for hypertension, chronic stable angina"}
+    start_dose:
+      value: 5
+      unit: mg
+      source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Dose, titration, and use in combinations", quote: "Initial dose: 5 mg once daily."}
+    frequency:
+      value: "once daily"
+      doses_per_day_min: 1
+      doses_per_day_max: 1
+      source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Dose, titration, and use in combinations", quote: "Initial dose: 5 mg once daily."}
+    max_daily_dose:
+      value: 10
+      unit: mg
+      source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Dose, titration, and use in combinations", quote: "Doses may be increased up to a maximum of 10 mg once daily."}
+    titration_interval:
+      value: "7-14 days"
+      min_days: 7
+      max_days: 14
+      source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Dose, titration, and use in combinations", quote: "Dose may be increased at intervals of 7-14 days to achieve BP goals."}
+    lower_start_conditions:
+      - id: elderly
+        description: "Elderly patient (PDF defines elderly as >60 years for calcium channel blockers)"
+        test: {op: gt, fact: age_years, threshold: 60}
+        start_dose: {value: 2.5, unit: mg}
+        source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Dose, titration, and use in combinations", quote: "In elderly, small patients, and patients with hepatic impairment, the initial dose may be 2.5 mg once daily."}
+        age_definition_source: {page: 19, table_or_section: "Management pathway - footnote 1", quote: "Calcium channel blockers are antihypertensives of choice in the elderly (> 60 years)"}
+      - id: hepatic_impairment
+        description: "Hepatic impairment"
+        test: {op: is_true, fact: hepatic_impairment}
+        start_dose: {value: 2.5, unit: mg}
+        source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Dose, titration, and use in combinations", quote: "In elderly, small patients, and patients with hepatic impairment, the initial dose may be 2.5 mg once daily."}
+      - id: added_to_other_antihypertensive
+        description: "Amlodipine is being added to another antihypertensive agent"
+        test:
+          op: other_drug_in_classes
+          fact: current_medications
+          classes: [ace_inhibitors, arbs, beta_blockers, thiazide_diuretics, loop_diuretics, potassium_sparing_diuretics, calcium_channel_blockers]
+        start_dose: {value: 2.5, unit: mg}
+        source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Dose, titration, and use in combinations", quote: "The dose of 2.5 mg may also be used when adding amlodipine to other antihypertensive agents."}
+        corroborating_sources:
+          - {page: 17, table_or_section: "4.6.4", quote: "When amlodipine is used as an add-on therapy, the initial dose used should be 2.5 mg."}
+      - id: small_patient
+        description: "Small / low-body-weight patient (no weight cut-off is given in the PDF)"
+        test: {op: judgment}
+        start_dose: {value: 2.5, unit: mg}
+        source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Dose, titration, and use in combinations", quote: "In elderly, small patients, and patients with hepatic impairment, the initial dose may be 2.5 mg once daily."}
+        corroborating_sources:
+          - {page: 20, table_or_section: "Table 12 footnote", quote: "Reduce dose of amlodipine to 2.5 mg once a day when it is started in low body weight elderly patients"}
+    renal_adjustments:
+      - id: no_modification
+        description: "No dose modification required in renal impairment"
+        test: {op: none}
+        source: {page: 48, table_or_section: "Annexure 3 - Amlodipine - Renal impairment", quote: "Renal impairment: No modification of drug dose is required."}
+    hepatic:
+      effect: lower_start
+      text: "May need dose reduction"
+      source: {page: 48, table_or_section: "Annexure 3 - Amlodipine - Hepatic impairment", quote: "Hepatic impairment: may need dose reduction"}
+    contraindications:
+      - id: listed
+        text: "Cardiogenic shock, unstable angina, significant aortic stenosis"
+        conditions: ["cardiogenic shock", "unstable angina", "aortic stenosis"]
+        source: {page: 47, table_or_section: "Annexure 3 - Amlodipine - Contraindications", quote: "Cardiogenic shock, unstable angina, significant aortic stenosis."}
+    cautions:
+      - text: "Beta-blockers enhance the hypotensive effect of amlodipine."
+        source: {page: 48, table_or_section: "Annexure 3 - Amlodipine - Cautions (drug interactions)", quote: "Beta-blockers enhance hypotensive effect of amlodipine."}
+      - text: "Amlodipine increases exposure to simvastatin; simvastatin dose should not exceed 20 mg per day."
+        source: {page: 48, table_or_section: "Annexure 3 - Amlodipine - Cautions (drug interactions)", quote: "Amlodipine increases exposure to simvastatin (dose of simvastatin should not exceed 20 mg per day)."}
+      - text: "Amlodipine increases exposure to ciclosporin and tacrolimus."
+        source: {page: 48, table_or_section: "Annexure 3 - Amlodipine - Cautions (drug interactions)", quote: "Amlodipine also increases exposure to ciclosporin and tacrolimus."}
+      - text: "Pedal edema is the chief side effect (around 10% of people on 10 mg daily)."
+        source: {page: 48, table_or_section: "Annexure 3 - Amlodipine - Side effects", quote: "Pedal edema is the chief side effect, seen in around 10% of people on 10 mg daily"}
+    pregnancy:
+      effect: warning
+      text: "Pregnancy Class C. Use if potential benefits outweigh risk. Avoid in lactation."
+      source: {page: 48, table_or_section: "Annexure 3 - Amlodipine - Use in Pregnancy and breast feeding", quote: "Pregnancy Class C. Use if potential benefits outweigh risk. Avoid in lactation."}
+
+  enalapril:
+    generic_name: enalapril
+    names: ["enalapril", "enalapril maleate"]
+    drug_class: ace_inhibitors
+    evidence_tier: formulary
+    class_label:
+      value: "ACE inhibitor"
+      source: {page: 49, table_or_section: "Annexure 3 - Angiotensin converting enzyme inhibitors", quote: "Angiotensin converting enzyme inhibitors with focus on enalapril"}
+    indication:
+      value: "Hypertension, heart failure (all stages), nephropathy (non-diabetic and diabetic), cardio-protection in early phase acute MI and post-MI LV dysfunction"
+      source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Indications", quote: "Hypertension, heart failure (all stages), nephropathy"}
+    start_dose:
+      value: 5
+      unit: mg
+      source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Dose, titration, and use in combinations", quote: "Initial dose in hypertension: 5 mg in one or two divided doses daily."}
+    frequency:
+      value: "once or twice daily (one or two divided doses)"
+      doses_per_day_min: 1
+      doses_per_day_max: 2
+      source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Dose, titration, and use in combinations", quote: "Initial dose in hypertension: 5 mg in one or two divided doses daily."}
+    max_daily_dose:
+      value: 20
+      unit: mg
+      note: "PDF also says additional benefit above 10 mg may be minimal; see document_discrepancies.enalapril_max_dose."
+      source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Dose, titration, and use in combinations", quote: "the maximum dose mentioned for hypertension is 20 mg per day"}
+    usual_ceiling_dose:
+      value: 10
+      unit: mg
+      source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Dose, titration, and use in combinations", quote: "usually increased to 10 mg above which the additional benefit may be minimal"}
+    titration_interval:
+      value: "approximately 2-4 weeks (general guideline interval, not specific to enalapril)"
+      min_days: 14
+      max_days: 28
+      source: {page: 17, table_or_section: "4.6.3", quote: "The dose of drugs can be increased or a new drug added at approximately 2- to 4-week intervals."}
+    lower_start_conditions:
+      - id: elderly
+        description: "Elderly patient (PDF Table 12 defines elderly as >65 years for enalapril)"
+        test: {op: gt, fact: age_years, threshold: 65}
+        start_dose: {value: 2.5, unit: mg}
+        source: {page: 20, table_or_section: "Table 12 footnote (section sign)", quote: "Reduce dose to enalapril 2.5 mg when it is used in elderly (>65 years) and when the patient has been on diuretic therapy."}
+        corroborating_sources:
+          - {page: 49, table_or_section: "Annexure 3 - Enalapril - Dose, titration, and use in combinations", quote: "In patients who have received diuretics, those who were elderly, the initial does may be 2.5 mg"}
+      - id: on_diuretic
+        description: "Patient is on / has received a diuretic (first-dose hypotension risk)"
+        test:
+          op: other_drug_in_classes
+          fact: current_medications
+          classes: [thiazide_diuretics, loop_diuretics, potassium_sparing_diuretics]
+        start_dose: {value: 2.5, unit: mg}
+        source: {page: 20, table_or_section: "Table 12 footnote (section sign)", quote: "Reduce dose to enalapril 2.5 mg when it is used in elderly (>65 years) and when the patient has been on diuretic therapy."}
+        corroborating_sources:
+          - {page: 17, table_or_section: "4.6.4", quote: "if an ACE inhibitor like enalapril is added to a diuretic, the initial dose used may be 2.5 mg to avoid hypotension."}
+    renal_adjustments:
+      - id: crcl_lt_30
+        description: "Creatinine clearance below 30 ml/min (approx. serum creatinine 3 mg/dl)"
+        test: {op: lt, fact: creatinine_clearance_ml_min, threshold: 30}
+        effect: set_dose
+        start_dose: {value: 2.5, unit: mg}
+        frequency: "once a day"
+        source: {page: 50, table_or_section: "Annexure 3 - Enalapril - Renal impairment", quote: "may need dose reduction when creatinine clearance is less than <30 ml/min (approximate serum creatinine 3 mg/dl), when dose should be 2.5 mg once a day."}
+    hepatic:
+      effect: warning
+      text: "May need dose reduction, and close monitoring."
+      source: {page: 50, table_or_section: "Annexure 3 - Enalapril - Hepatic impairment", quote: "Hepatic impairment: may need dose reduction, and close monitoring."}
+    contraindications:
+      - id: listed
+        text: "Pregnancy; bilateral renal artery stenosis; history of hypersensitivity (including angioedema)"
+        conditions: ["pregnancy", "bilateral renal artery stenosis", "angioedema", "ace inhibitor hypersensitivity"]
+        source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Contraindications", quote: "Pregnancy is a contraindication for use of ACE inhibitors. Bilateral renal artery stenosis, History of hypersensitivity (including angioedema)."}
+    cautions:
+      - text: "Renal function may be assessed before starting therapy."
+        source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Cautions", quote: "Renal function may be assessed before starting therapy."}
+      - text: "In patients receiving diuretics (especially high-dose) there is a risk of first-dose hypotension; use a low dose of enalapril with close medical supervision."
+        source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Cautions", quote: "there is a risk of first dose hypotension, which may be minimised by using a low dose of enalapril, close medical supervision."}
+      - text: "Up to 30% increase in serum creatinine may occur on starting (reversible). Hyperkalemia can occur with renal impairment or potassium-containing salt substitutes."
+        source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Cautions", quote: "Up to 30% increase in serum creatinine may occur on starting ACE inhibitors, which is reversible."}
+      - text: "ACE inhibitors should not be combined with ARBs."
+        source: {page: 49, table_or_section: "Annexure 3 - Enalapril - Dose, titration, and use in combinations", quote: "ACE inhibitors should not be combined with ARBs."}
+    pregnancy:
+      effect: contraindicated
+      text: "Pregnancy Class D. Contraindicated; use in second and third trimesters confers risk of oligohydramnios and birth malformations."
+      source: {page: 50, table_or_section: "Annexure 3 - Enalapril - Pregnancy", quote: "Pregnancy Class D Use in second and third trimesters confers risk of oligohydramnios, and birth malformations."}
+      corroborating_sources:
+        - {page: 49, table_or_section: "Annexure 3 - ACE inhibitors - Pharmacology", quote: "Use of all ACE inhibitors is contraindicated in pregnancy."}
+
+  hydrochlorothiazide:
+    generic_name: hydrochlorothiazide
+    names: ["hydrochlorothiazide", "hydrochlorthiazide", "hctz"]
+    drug_class: thiazide_diuretics
+    evidence_tier: formulary
+    class_label:
+      value: "Thiazide diuretic"
+      source: {page: 51, table_or_section: "Annexure 3 - Thiazide diuretics", quote: "Thiazide diuretics for use in hypertension with special focus on low dose hydrochlorothiazide"}
+    indication:
+      value: "Hypertension, heart failure"
+      source: {page: 51, table_or_section: "Annexure 3 - Thiazides - Indications", quote: "Hypertension, Heart failure"}
+    start_dose:
+      value: 12.5
+      unit: mg
+      source: {page: 51, table_or_section: "Annexure 3 - Thiazides - Dose, titration, and use in combinations in hypertension", quote: "Dose in hypertension: 12. 5 mg once daily."}
+    frequency:
+      value: "once daily"
+      doses_per_day_min: 1
+      doses_per_day_max: 1
+      source: {page: 51, table_or_section: "Annexure 3 - Thiazides - Dose, titration, and use in combinations in hypertension", quote: "Dose in hypertension: 12. 5 mg once daily."}
+    max_daily_dose:
+      value: 25
+      unit: mg
+      note: "Formulary notes 25 mg may not add antihypertensive effect but increases hyperglycemia risk. The maximum itself is stated in Table 12."
+      source: {page: 20, table_or_section: "Table 12", quote: "Hydrochlorothiazide 12.5 mg 25 mg 1"}
+      corroborating_sources:
+        - {page: 51, table_or_section: "Annexure 3 - Thiazides - Dose, titration, and use in combinations in hypertension", quote: "Increasing the dose to 25 mg daily may not increase antihypertensive effect but can increase risk of hyperglycemia."}
+    titration_interval:
+      value: "approximately 2-4 weeks (general guideline interval, not specific to hydrochlorothiazide)"
+      min_days: 14
+      max_days: 28
+      source: {page: 17, table_or_section: "4.6.3", quote: "The dose of drugs can be increased or a new drug added at approximately 2- to 4-week intervals."}
+    lower_start_conditions: []
+    renal_adjustments:
+      - id: crcl_lt_30
+        description: "Creatinine clearance below 30 ml/min (approx. serum creatinine 3 mg/dl)"
+        test: {op: lt, fact: creatinine_clearance_ml_min, threshold: 30}
+        effect: avoid
+        text: "Avoid if creatinine clearance is less than 30 ml/min; thiazides may be ineffective."
+        source: {page: 52, table_or_section: "Annexure 3 - Thiazides - Renal impairment", quote: "Renal impairment: Avoid if creatinine clearance is less than <30 ml/min (approximate serum creatinine 3 mg/dl), when they may be ineffective."}
+    hepatic:
+      effect: warning
+      text: "Avoid in severe liver disease (hypokalemia may precipitate hepatic encephalopathy). Severity is not captured by this tool - clinician to judge."
+      source: {page: 51, table_or_section: "Annexure 3 - Thiazides - Hepatic impairment", quote: "Hepatic impairment: Avoid in severe liver disease; hypokalemia may precipitate hepatic encephalopathy"}
+    contraindications:
+      - id: listed
+        text: "Severe hypokalemia, hyponatremia, hypercalcemia"
+        conditions: ["hypokalemia", "hyponatremia", "hypercalcemia"]
+        source: {page: 51, table_or_section: "Annexure 3 - Thiazides - Contraindications", quote: "Contraindications: severe hypokalemia, hyponatremia, hypercalcemia."}
+    cautions:
+      - text: "Thiazides can worsen glycemic control and gout."
+        source: {page: 51, table_or_section: "Annexure 3 - Thiazides - Cautions", quote: "Thiazides can worsen glycemiccontrol and gout."}
+      - text: "Combination with beta-blockers is not preferred (risk of new-onset diabetes, adverse effect on lipids)."
+        source: {page: 51, table_or_section: "Annexure 3 - Thiazides - Dose, titration, and use in combinations in hypertension", quote: "The combination of thiazide diuretics with beta-blockers is not preferred"}
+    pregnancy:
+      effect: not_recommended
+      text: "Not used to treat hypertension in pregnancy; third-trimester administration carries risk of neonatal thrombocytopenia."
+      source: {page: 51, table_or_section: "Annexure 3 - Thiazides - Pregnancy", quote: "Pregnancy: Not used to treat hypertension in pregnancy."}
+
+  # ------------------------- Table 12 only (page 20): start / max / doses-per-day, no formulary text -------------------------
+
+  lisinopril:
+    generic_name: lisinopril
+    names: ["lisinopril"]
+    drug_class: ace_inhibitors
+    evidence_tier: dose_table_only
+    start_dose: {value: 5, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Lisinopril 5 mg 10 mg 1"}}
+    frequency: {value: "once daily", doses_per_day_min: 1, doses_per_day_max: 1, source: {page: 20, table_or_section: "Table 12", quote: "Lisinopril 5 mg 10 mg 1"}}
+    max_daily_dose: {value: 10, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Lisinopril 5 mg 10 mg 1"}}
+    lower_start_conditions: []
+    renal_adjustments: []
+    contraindications: []
+    cautions: []
+    pregnancy: null
+
+  losartan:
+    generic_name: losartan
+    names: ["losartan", "losartan potassium"]
+    drug_class: arbs
+    evidence_tier: dose_table_only
+    start_dose: {value: 50, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Losartan 25 mg 50 mg 100 mg 1-2"}}
+    frequency: {value: "once or twice daily", doses_per_day_min: 1, doses_per_day_max: 2, source: {page: 20, table_or_section: "Table 12", quote: "Losartan 25 mg 50 mg 100 mg 1-2"}}
+    max_daily_dose: {value: 100, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Losartan 25 mg 50 mg 100 mg 1-2"}}
+    lower_start_conditions:
+      - id: weight_lt_50kg
+        description: "Body weight below 50 kg (PDF cites Canadian labelling)"
+        test: {op: lt, fact: weight_kg, threshold: 50}
+        start_dose: {value: 25, unit: mg}
+        source: {page: 20, table_or_section: "Table 12 footnote (#)", quote: "Use dose of 25 mg in patients less than 50 kg (Canadian labelling)"}
+    renal_adjustments: []
+    contraindications: []
+    cautions: []
+    pregnancy: null
+
+  telmisartan:
+    generic_name: telmisartan
+    names: ["telmisartan"]
+    drug_class: arbs
+    evidence_tier: dose_table_only
+    start_dose: {value: 40, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Telmisartan 40 mg 80 mg 1"}}
+    frequency: {value: "once daily", doses_per_day_min: 1, doses_per_day_max: 1, source: {page: 20, table_or_section: "Table 12", quote: "Telmisartan 40 mg 80 mg 1"}}
+    max_daily_dose: {value: 80, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Telmisartan 40 mg 80 mg 1"}}
+    lower_start_conditions: []
+    renal_adjustments: []
+    contraindications: []
+    cautions: []
+    pregnancy: null
+
+  chlorthalidone:
+    generic_name: chlorthalidone
+    names: ["chlorthalidone", "chlortalidone"]
+    drug_class: thiazide_diuretics
+    evidence_tier: dose_table_only
+    start_dose: {value: 12.5, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Chlorthalidone 12.5 mg 25 mg 1"}}
+    frequency: {value: "once daily", doses_per_day_min: 1, doses_per_day_max: 1, source: {page: 20, table_or_section: "Table 12", quote: "Chlorthalidone 12.5 mg 25 mg 1"}}
+    max_daily_dose: {value: 25, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Chlorthalidone 12.5 mg 25 mg 1"}}
+    lower_start_conditions: []
+    renal_adjustments: []
+    contraindications: []
+    cautions: []
+    pregnancy: null
+
+  atenolol:
+    generic_name: atenolol
+    names: ["atenolol"]
+    drug_class: beta_blockers
+    evidence_tier: dose_table_only
+    start_dose: {value: 50, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Atenolol 25 mg 50 mg 100 mg 1"}}
+    frequency: {value: "once daily", doses_per_day_min: 1, doses_per_day_max: 1, source: {page: 20, table_or_section: "Table 12", quote: "Atenolol 25 mg 50 mg 100 mg 1"}}
+    max_daily_dose: {value: 100, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Atenolol 25 mg 50 mg 100 mg 1"}}
+    lower_start_conditions:
+      - id: low_dose_certain_situations
+        description: "Table 12 lists 25 mg as a 'low dose in certain situations' for atenolol but does not define the situations"
+        test: {op: judgment}
+        start_dose: {value: 25, unit: mg}
+        source: {page: 20, table_or_section: "Table 12", quote: "Atenolol 25 mg 50 mg 100 mg 1"}
+    renal_adjustments: []
+    contraindications: []
+    cautions: []
+    pregnancy: null
+
+  metoprolol succinate:
+    generic_name: metoprolol succinate
+    names: ["metoprolol succinate"]
+    drug_class: beta_blockers
+    evidence_tier: dose_table_only
+    start_dose: {value: 50, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Metoprolol succinate 50 mg 100 mg 2"}}
+    frequency: {value: "twice daily (as printed in Table 12: 2 doses per day)", doses_per_day_min: 2, doses_per_day_max: 2, source: {page: 20, table_or_section: "Table 12", quote: "Metoprolol succinate 50 mg 100 mg 2"}}
+    max_daily_dose: {value: 100, unit: mg, source: {page: 20, table_or_section: "Table 12", quote: "Metoprolol succinate 50 mg 100 mg 2"}}
+    lower_start_conditions: []
+    renal_adjustments: []
+    contraindications: []
+    cautions: []
+    pregnancy: null
