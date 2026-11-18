@@ -16,6 +16,7 @@ from typing import Literal
 
 from fastapi import Body, FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
 
 from . import PIPELINE_VERSION, RULE_VERSION, SCHEMA_VERSION
 from .config import Settings, get_settings
@@ -23,6 +24,9 @@ from .ingestion.adapter import TranscriptFormatError
 from .ingestion.team_a_client import TeamAClient, TeamAError, TeamANotFoundError
 from .models.contracts import CONSULTATION_ID_PATTERN, LegacyTranscriptIn, TeamATranscriptIn
 from .models.schemas import ConsultationAnalysis
+from .dosing.builder import patient_context_from_analysis
+from .dosing.engine import DoseEngine
+from .dosing.models import DoseSuggestion, PatientContext
 from .export.team_c import to_team_c_payload
 from .pipeline import ClinicalPipeline
 from .storage.repository import ConsultationStore
@@ -35,6 +39,14 @@ ExtractionMode = Literal["auto", "rule", "hybrid", "llm"]
 GenerationMode = Literal["auto", "template", "llm"]
 
 
+class DoseSuggestRequest(BaseModel):
+    """Either a stored consultation_id, an explicit patient, or both (explicit non-null patient fields win)."""
+
+    drug: str = Field(min_length=1, max_length=120)
+    consultation_id: str | None = Field(default=None, pattern=CONSULTATION_ID_PATTERN)
+    patient: PatientContext | None = None
+
+
 def create_app(settings: Settings | None = None, pipeline: ClinicalPipeline | None = None,
                team_a_client: TeamAClient | None = None) -> FastAPI:
     settings = settings or get_settings()
@@ -43,6 +55,7 @@ def create_app(settings: Settings | None = None, pipeline: ClinicalPipeline | No
     async def lifespan(app: FastAPI):
         app.state.settings = settings
         app.state.pipeline = pipeline or ClinicalPipeline(settings)
+        app.state.dose_engine = DoseEngine()
         app.state.store = ConsultationStore(settings.store_path) if settings.store_results else None
         app.state.team_a = team_a_client or TeamAClient(settings.team_a_base_url, settings.team_a_timeout_s)
         yield
@@ -141,6 +154,25 @@ def create_app(settings: Settings | None = None, pipeline: ClinicalPipeline | No
         result = get_consultation(request, consultation_id)
         return to_team_c_payload(result, {"id": patient_id, "name": patient_name,
                                           "age": patient_age, "sex": patient_sex})
+
+    @app.post("/dose/suggest", response_model=DoseSuggestion, tags=["dose"])
+    def dose_suggest(request: Request, body: DoseSuggestRequest) -> DoseSuggestion:
+        """Rule-based dose suggestion from the MoHFW STG Hypertension 2016 extract. Deterministic, no LLM.
+        Decision support prototype, not for clinical use: a suggestion for the doctor, never an order."""
+        if body.consultation_id is None and body.patient is None:
+            raise HTTPException(status_code=422, detail="Provide consultation_id and/or patient")
+        context = PatientContext()
+        if body.consultation_id is not None:
+            store = request.app.state.store
+            analysis = store.get(body.consultation_id) if store else None
+            if analysis is None:
+                raise HTTPException(status_code=404,
+                                    detail=f"No analysis stored for consultation '{body.consultation_id}'")
+            context = patient_context_from_analysis(analysis)
+        if body.patient is not None:
+            overrides = {k: v for k, v in body.patient.model_dump(exclude_unset=True).items() if v is not None}
+            context = context.model_copy(update=overrides)
+        return request.app.state.dose_engine.suggest(body.drug, context)
 
     @app.get("/v1/consultations", tags=["team-c"])
     def list_consultations(request: Request, limit: int = Query(50, ge=1, le=500)):

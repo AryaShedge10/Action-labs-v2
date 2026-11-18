@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
+from .api.dose import router as dose_router
 from .api.ehr import router as ehr_router
 from .api.encounters import router as encounter_router
 from .config import get_settings
@@ -65,4 +66,5 @@ def health():
 
 
 app.include_router(encounter_router)
+app.include_router(dose_router)
 app.include_router(ehr_router)
