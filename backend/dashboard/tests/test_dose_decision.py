@@ -132,3 +132,13 @@ def test_suggestion_proxy_passes_consultation_id(client, monkeypatch):
                     json={"drug": "amlodipine", "patient": {"hepatic_impairment": False}})
     assert r.status_code == 200 and r.json()["status"] == "SUGGESTED"
     assert seen == {"c": client.enc_id, "d": "amlodipine", "p": {"hepatic_impairment": False}}
+
+
+def test_prescribed_drugs_proxy(client, monkeypatch):
+    async def fake(consultation_id):
+        return [{"medication": "Amlodipine", "intent": "PRESCRIBED", "dose": None, "frequency": None}]
+
+    monkeypatch.setattr(dose_api, "fetch_prescribed_drugs", fake)
+    r = client.get(f"/api/encounters/{client.enc_id}/prescribed-drugs")
+    assert r.status_code == 200 and r.json()[0]["medication"] == "Amlodipine"
+    assert client.get("/api/encounters/nope/prescribed-drugs").status_code == 404

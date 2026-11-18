@@ -4,6 +4,7 @@ import { AlertCircle, ArrowLeft } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { toast } from "sonner";
+import DoseSuggestionPanel from "../components/dose/DoseSuggestionPanel";
 import ActionBar from "../components/layout/ActionBar";
 import AuditDrawer from "../components/audit/AuditDrawer";
 import FinalizeDialog from "../components/finalize/FinalizeDialog";
@@ -205,14 +206,17 @@ export default function EncounterPage() {
           }}
           onCitation={onCitation}
         />
-        <ValidationPanel
-          encounter={encounter}
-          activeClaimId={activeClaimId}
-          onSelectClaim={(id, citations) => {
-            setActiveClaimId(id);
-            if (citations[0]) setActiveSegmentId(citations[0]);
-          }}
-        />
+        <div className="flex min-w-0 flex-col gap-3">
+          <ValidationPanel
+            encounter={encounter}
+            activeClaimId={activeClaimId}
+            onSelectClaim={(id, citations) => {
+              setActiveClaimId(id);
+              if (citations[0]) setActiveSegmentId(citations[0]);
+            }}
+          />
+          <DoseSuggestionPanel encounterId={encounter.encounter_id} patient={encounter.patient} locked={locked} />
+        </div>
       </div>
       <TranscriptViewer
         segments={encounter.transcript.segments}

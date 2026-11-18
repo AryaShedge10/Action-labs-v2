@@ -125,3 +125,38 @@ export interface AuditEvent {
   detail: string;
   physician_id: string;
 }
+
+export type DoseStatus = "SUGGESTED" | "NEEDS_INFO" | "NOT_RECOMMENDED" | "NOT_SUPPORTED";
+
+export interface DoseCitation {
+  page: number;
+  table_or_section: string;
+  quote: string | null;
+  supports: string;
+}
+
+export interface DoseSuggestion {
+  status: DoseStatus;
+  drug: string;
+  resolved_drug: string | null;
+  start_dose: number | null;
+  unit: string | null;
+  frequency: string | null;
+  max_daily_dose: number | null;
+  titration_interval: string | null;
+  adjustments_applied: string[];
+  warnings: string[];
+  reasons: string[];
+  needs_info: string[];
+  citations: DoseCitation[];
+  knowledge_source: string;
+  reviewed_by_clinician: boolean;
+  disclaimer: string;
+}
+
+export interface PrescribedDrug {
+  medication: string;
+  intent: string;
+  dose: string | null;
+  frequency: string | null;
+}

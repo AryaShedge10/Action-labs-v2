@@ -1,4 +1,10 @@
-import type { AuditEvent, Encounter, EncounterListItem } from "../types/clinical";
+import type {
+  AuditEvent,
+  DoseSuggestion,
+  Encounter,
+  EncounterListItem,
+  PrescribedDrug,
+} from "../types/clinical";
 
 const API = import.meta.env.VITE_API_URL ?? "";
 
@@ -37,6 +43,17 @@ export const api = {
     request(`/api/encounters/${id}/validate`, { method: "POST" }),
   finalize: (id: string, body: unknown) =>
     request<Encounter>(`/api/encounters/${id}/finalize`, {
+      method: "POST",
+      body: JSON.stringify(body),
+    }),
+  prescribedDrugs: (id: string) => request<PrescribedDrug[]>(`/api/encounters/${id}/prescribed-drugs`),
+  doseSuggestion: (id: string, drug: string, patient?: Record<string, unknown>) =>
+    request<DoseSuggestion>(`/api/encounters/${id}/dose-suggestion`, {
+      method: "POST",
+      body: JSON.stringify({ drug, patient }),
+    }),
+  doseDecision: (id: string, body: unknown) =>
+    request<{ recorded: boolean; action: string }>(`/api/encounters/${id}/dose-decision`, {
       method: "POST",
       body: JSON.stringify(body),
     }),

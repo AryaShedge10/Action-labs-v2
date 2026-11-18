@@ -79,6 +79,30 @@ async def fetch_dose_suggestion(consultation_id: str, drug: str, patient: dict |
     return resp.json()
 
 
+async def fetch_prescribed_drugs(consultation_id: str) -> list[dict]:
+    """Drugs the clinician prescribed/recommended, from the NLP analysis stored for this encounter (may be none)."""
+    settings = get_settings()
+    try:
+        async with httpx.AsyncClient(timeout=15.0) as client:
+            resp = await client.get(f"{settings.clinical_nlp_url}/v1/consultations/{consultation_id}")
+    except httpx.HTTPError:
+        return []
+    if resp.status_code != 200:
+        return []
+    return [{"medication": d["medication"], "intent": d["intent"], "dose": d.get("dose"),
+             "frequency": d.get("frequency")} for d in resp.json().get("draft_prescriptions", [])]
+
+
+@router.get("/encounters/{encounter_id}/prescribed-drugs")
+async def prescribed_drugs(
+    encounter_id: str,
+    db: Session = Depends(get_db),
+    _: Principal = Depends(require_physician),
+):
+    _encounter(db, encounter_id)
+    return await fetch_prescribed_drugs(encounter_id)
+
+
 @router.post("/encounters/{encounter_id}/dose-suggestion")
 async def dose_suggestion(
     encounter_id: str,
